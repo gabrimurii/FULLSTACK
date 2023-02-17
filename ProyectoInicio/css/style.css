@@ -146,18 +146,24 @@ h3{
 
     ALGUNAS PROPIEDADES MÁS UTILIZADAS
 
-    text-align          Alineación de texto
-    color               Color de la tipografía
-    background-color    Color de fondo
-    text-transform      Transformación de texto
-    margin              Distancia desde el borde de un elemento hacia el siguiente
-    padding             Distancia desde el borde de un elemento hasta el borde del mismo
-    font-family         Fuente del texto ya vienen algunas integradas
-    font-size           Tamaño de la fuente
-    border              Define el borde de un elemento, el ancho
-    border-radius       Radio que quiero que me de a los bordes. Redondea
-    max-width           Ancho máximo de un elemento
-    max-height          Alto máximo de un elemento
+    text-align              Alineación de texto
+    color                   Color de la tipografía
+    background-color        Color de fondo
+    text-transform          Transformación de texto, mayúsculas, minúsculas, cursiva...
+    margin                  Distancia desde el borde de un elemento hasta el elemento siguiente
+    padding                 Distancia desde el borde de un elemento hasta el borde del mismo
+    font-family             Fuente del texto ya vienen algunas integradas
+    font-size               Tamaño de la fuente
+    border                  Define el borde de un elemento, el ancho
+    border-radius           Radio que quiero que me de a los bordes. Redondea
+    max-width               Ancho máximo de un elemento
+    max-height              Alto máximo de un elemento
+
+    display es como viene por defecto
+       
+        display: block;            Coge el ancho de la página
+        display: inline;           Coge el ancho que necesite
+
 
     UNIDADES DE MEDIDA
 
@@ -168,21 +174,18 @@ h3{
             medida fija
     1 rem = 16 px
 
+
     TIPOS DE SELECTORES
     
-    Selectores de elementos:        h1, p...
-    Selectores de clase:            Hay que definir una clase en el html y para hacerle
-                                    referencia se le pone un .  Buena práctica
-
+    Selectores de elementos:        h1, p... Selecciona todos los elementos
+    Selectores de clase:            Hay que definir una clase en el html y para hacerle referencia se le pone un .  Buena práctica
                                     Para actuar sobre un único h2 que está dentro de un div tendrías que poner: .contenedor .rojo {...}. Antes tienes que atribuirle la clase contenedor al div y rojo al h2
-
                                     .contenedor > h2{...} aplicaría el estilo a todos los h2
-
-    Selectores de ID:               Hay que definir un ID en el html y para hacerle
-                                    referencia se le pone un #. Son UNICOS 
+    Selectores de ID:               Hay que definir un ID en el html y para hacerle referencia se le pone un #. Son UNICOS 
     Selector de atributo:           A los atributos de las etiquetas se les puede poner
 
     Los selectores de clase y de ID tienen más especificidad que los de elementos
+
 
     EJERCICIO PARA DESCENDIENTES (NO SE HARÍA ASÍ)
 
@@ -206,8 +209,7 @@ h3{
 
     ESPECIFICIDAD
 
-    Es cómo mi navegador va a interpretar mi código. Pone niveles de importancia
-    !important es la etiqueta más específica que hay. Si podemos no utilizarlo.
+    Es cómo mi navegador va a interpretar mi código. Pone niveles de importancia !important es la etiqueta más específica que hay. Si podemos no utilizarlo.
 
     Orden: 
         !important
