@@ -229,7 +229,7 @@ h3{
     Para reutilizarla tantas veces como la necesitamos
     No se pueden repetir nombres de variables en la misma hoja
     Colores corporativos
-    Tipografía: tipografiatucarreradigital
+    Tipografía: --tipografiatucarreradigital
 
     Se escribe lo primero
 
@@ -237,6 +237,7 @@ h3{
         --nombredevariable: valor;
     }
 
+    var(--nombredevariable);
 
     AÑADIR FUENTES EXTERNAS
 
