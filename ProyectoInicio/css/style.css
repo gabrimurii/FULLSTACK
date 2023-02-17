@@ -1,0 +1,261 @@
+/* Esta relación hace que un rem == 10 px */
+html{
+    font-size: 62.5%;
+}
+/* Esta relación hace que un rem == 10 px */
+body{
+    font-size: 16px;
+}
+
+:root{  /* Aquí están todas las variables */
+    --rosatucarrera: #F76666;
+    --negrotucarrera: #02052F;
+    --fuentetucarrera: sans-serif;
+    --font-family: 'Babylonica', cursive; /* Fuente copiada de Google fonts */
+}
+
+/* a{
+    color: blue !important;
+} */
+
+.Login{
+    background-color: transparent;
+    text-align: right;
+    /* margin-left: 500px; */
+}
+
+.Login a{
+    color: var(--rosatucarrera);
+    text-decoration: none;
+    font-family: sans-serif;
+    float: right;
+}
+
+
+.navegacion a{
+    color: black;
+    text-decoration: none;
+     /* background-image: ; */
+
+}
+
+.banner-top{
+    padding-top: 80px;
+    padding-bottom: 180px;
+    background-image: url(../img/banner.png);
+    background-size: cover;
+    background-position: top left;
+}
+
+.container{
+    margin-right: 400px;
+    margin-left: 80px;
+    font-family: sans-serif; /* var(--font-family); */
+} 
+
+.container h1{
+    background-color: rgba(248, 102, 102, 0.65);
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    font-size: 47px;
+    padding: 35px;
+    color: white;
+    line-height: 1.2;
+    text-align: left;
+}
+
+.cursos {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+    font-weight: 550;
+    float: right;
+    padding: 24px 94px;
+    font-family: "DinBold", sans-serif;
+    text-transform: uppercase;
+}
+
+.logos{
+    margin-top: -120px;
+    background-color: white;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.logos-oficiales{
+    max-width: 100%;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+h2{                                 /* Seletor de elemento */
+    color:red;
+    text-align: center;
+    background-color: #F76666;
+    /* text-transform: uppercase; */ /* Escribe todo en mayúsculas. Capitalize para poner la primera de cada palabra en mayúscula, */
+    margin:200px 200px 0px 0px; /* margin-top ; margin-right ; margin-bottom ; margin-left === margin:200px 200px 200px 200px */
+    padding-top: 500px;
+    padding-bottom: 500px;
+}
+
+h3{
+    padding: 100px;
+    margin: 100px;
+    background-color:greenyellow;
+}
+
+.contactar{
+    text-align: center;
+    background-color:var (--rosatucarrera);
+}
+
+
+
+#boli{
+    background-color: blue;
+}
+
+.descendentes p,h2{                    /* Se puede poner con > p o sin. 
+                                          El > selecciona todos
+                                          Con la , podemos añadir más elementos */
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+/* 
+
+    ALGUNAS PROPIEDADES MÁS UTILIZADAS
+
+    text-align          Alineación de texto
+    color               Color de la tipografía
+    background-color    Color de fondo
+    text-transform      Transformación de texto
+    margin              Distancia desde el borde de un elemento hacia el siguiente
+    padding             Distancia desde el borde de un elemento hasta el borde del mismo
+    font-family         Fuente del texto ya vienen algunas integradas
+    font-size           Tamaño de la fuente
+    border              Define el borde de un elemento, el ancho
+    border-radius       Radio que quiero que me de a los bordes. Redondea
+    max-width           Ancho máximo de un elemento
+    max-height          Alto máximo de un elemento
+
+    UNIDADES DE MEDIDA
+
+    Elemento padre es el elemento de un nivel superior
+    px      Me da un valor de medida fijo. No es bueno para responsive
+    em      Se basa en el tamaño que tiene definido el elemento padre 
+    rem     Relativo al documento. El más utilizado. Excepto cuando queremos que tenga una
+            medida fija
+    1 rem = 16 px
+
+    TIPOS DE SELECTORES
+    
+    Selectores de elementos:        h1, p...
+    Selectores de clase:            Hay que definir una clase en el html y para hacerle
+                                    referencia se le pone un .  Buena práctica
+
+                                    Para actuar sobre un único h2 que está dentro de un div tendrías que poner: .contenedor .rojo {...}. Antes tienes que atribuirle la clase contenedor al div y rojo al h2
+
+                                    .contenedor > h2{...} aplicaría el estilo a todos los h2
+
+    Selectores de ID:               Hay que definir un ID en el html y para hacerle
+                                    referencia se le pone un #. Son UNICOS 
+    Selector de atributo:           A los atributos de las etiquetas se les puede poner
+
+    Los selectores de clase y de ID tienen más especificidad que los de elementos
+
+    EJERCICIO PARA DESCENDIENTES (NO SE HARÍA ASÍ)
+
+    <section class="JM">    
+        <section id="Ej5">
+            <div class="Div1">
+                <div class="Div2">
+                    <p></p>
+                </div>
+                <div class="Div3">
+                    <h4></h4>           Cambiarle color
+                </div>
+            </div>
+        </section>
+    </section>
+
+    .JM #Ej5 .Div1 .Div3 h4{
+        color: blue;
+    }
+
+
+    ESPECIFICIDAD
+
+    Es cómo mi navegador va a interpretar mi código. Pone niveles de importancia
+    !important es la etiqueta más específica que hay. Si podemos no utilizarlo.
+
+    Orden: 
+        !important
+        ID
+        Clases
+        Elementos
+
+
+    COLORES
+
+    Hexadecimal, nombres predefinidos, hsl, rgb
+    Transparencia rgba() 1 es opaco 0 es transparente
+
+
+    VARIABLES
+
+    Para reutilizarla tantas veces como la necesitamos
+    No se pueden repetir nombres de variables en la misma hoja
+    Colores corporativos
+    Tipografía: tipografiatucarreradigital
+
+    Se escribe lo primero
+
+    :root{
+        --nombredevariable: valor;
+    }
+
+
+    AÑADIR FUENTES EXTERNAS
+
+    Google Fonts (también hay google icons)
+    Seleccionamos la letra que queramos
+    Regular 400
+    Copiamos el link y lo pegamos en HTML antes de cargar la hoja de estilo
+    Copia el link de reglas CSS
+
+
+    NORMALIZE
+
+    Sirve para que se vea igual en todos los navegadores
+
+    Buscamos normalize.css
+    Copiamos todo y creamos un nuevo archivo llamado normalize.css
+    Lo pegamos
+    Lo implementamos en index.html encima de todo en el head. Con la precarga y en enlace
+        <link rel="preload" href="css/normalize.css" as="style">
+        <link href="css/normalize.css" rel="stylesheet">
+
+
+    
+*/
