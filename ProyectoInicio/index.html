@@ -34,39 +34,36 @@
 
     <!-- <p></p> Etiqueta de párrafo. Etiqueta de apertura y cierre en distintas lineas. ALT + SHIFT +  F para ordenarlo -->
 
-    <header class="contenedor"> <!-- Cabecera de la página -->
-        <nav> <!-- Menú de navegación -->
-            <div class="Login"> <!-- Los div por defecto tienen display=block -->
-                <a href="#"> <!-- Etiqueta <a> para los enlaces seguido siempre de href -->
-                    Login Alumnos
-                </a>
+    <header class="contenedor nav-principal"> <!-- Cabecera de la página -->
+        <nav class="Login">         <!-- Menú de navegación --> <!-- class="nav-margin nav-padding" -->
+                                    <!-- Los div por defecto tienen display=block -->
+            <a href="#">            <!-- Etiqueta <a> para los enlaces seguido siempre de href -->
+                Login Alumnos
+            </a>
 
-                <a href="#"> <!-- # para decir que ahí va un link -->
-                    Login Empresas
-                </a>
-            </div>
+            <a href="#">            <!-- # para decir que ahí va un link -->
+                Login Empresas
+            </a>
         </nav>
 
-        <nav>
-            <div class="navegacion">
-                <a href="#"> <!-- Los enlaces por defecto tienen display=inline -->
-                    <img src="img/Tu-carrera-digital-general.png">
-                </a>
-            </div>
+        <nav class="posicion-imagen">
+            <a href="#">            <!-- Los enlaces por defecto tienen display=inline -->
+                <img src="img/Tu-carrera-digital-general.png">
+            </a>
+        </nav>
 
-            <div>
-                <a href="#">
-                    Cursos
-                </a>
+        <nav class="navegacion paginas">
+            <a href="#">
+                Cursos
+            </a>
 
-                <a href="#">
-                    Sobre Nosotros
-                </a>
+            <a href="#">
+                Sobre Nosotros
+            </a>
 
-                <a href="#">
-                    Infórmate
-                </a>
-            </div>
+            <a href="#">
+                Infórmate
+            </a>
         </nav>
     </header>
 
@@ -83,7 +80,7 @@
 
             <img src="img/ico-centro.png"> <!-- ../ = solo / -->
 
-            <a href="#" class="cursos">
+            <a href="#" class="boton-cursos">
                 Ver cursos
             </a>
         </div>
@@ -180,16 +177,21 @@
         </h3>
 
         <h2>
-            Si quieres dar un giro a tu carrera profesional y formarte en profesiones digitales con futuro, este es tu
+            Si quieres dar un giro a tu carrera profesional y formarte en profesiones digitales con futuro, este
+            es tu
             lugar.
         </h2>
 
         <p>
-            Cuando eliges un curso en Tu Carrera Digital, estás dando el paso definitivo hacia las profesiones con más
-            demanda del momento, como Marketing Digital, Desarrollo Web Full Stack y Programación de Videojuegos, Diseño
+            Cuando eliges un curso en Tu Carrera Digital, estás dando el paso definitivo hacia las profesiones
+            con más
+            demanda del momento, como Marketing Digital, Desarrollo Web Full Stack y Programación de
+            Videojuegos, Diseño
             3D
-            y Realidad Virtual. Nosotros te ofrecemos formación con docentes expertos y contenidos alineados a las
-            necesidades de las empresas. Queremos que saques el máximo partido a estos cursos y que potencies tus
+            y Realidad Virtual. Nosotros te ofrecemos formación con docentes expertos y contenidos alineados a
+            las
+            necesidades de las empresas. Queremos que saques el máximo partido a estos cursos y que potencies
+            tus
             posibilidades de encontrar un empleo.
         </p>
 
@@ -305,7 +307,8 @@
             <br>
 
             <label>Nombre* <!-- Etiqueta del formulario, como el campo -->
-                <input type="text" placeholder="Tu nombre"> <!-- input es lo que espera recibir el formulario -->
+                <input type="text" placeholder="Tu nombre">
+                <!-- input es lo que espera recibir el formulario -->
             </label>
 
             <label>Apellidos
@@ -412,3 +415,80 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+<!-- <a class="Hola1 Block">Hola1</a>
+    <a class="Hola2 Block">Hola2</a>
+    <a class="Hola3 Block">Hola3</a>
+    
+    <p class="Parrafo1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil harum dolores molestias nisi assumenda. Quae iure temporibus, ea non nesciunt, assumenda magnam unde velit necessitatibus quam dolor sequi repellat dolores.
+</p>
+<p class="Parrafo2">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odit ipsa vero iure recusandae temporibus
+    quaerat corporis reprehenderit omnis voluptate iusto incidunt delectus nulla, perferendis exercitationem natus
+    facilis eos eum.
+</p>
+<p class="Parrafo3">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero est esse maxime dignissimos culpa a
+    facilis adipisci cum. Consectetur debitis, eveniet maiores eaque laboriosam recusandae autem dolores cumque
+    optio.
+</p>
+<p class="Parrafo4">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit id architecto eos magni, quos repudiandae
+    corrupti, autem neque, voluptatem nisi repellat odio libero quis accusantium soluta! Nesciunt, sit earum!
+    Nostrum!
+</p>
+
+
+<p class="Parrafo1 Inline">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil harum dolores molestias nisi assumenda. Quae
+    iure temporibus, ea non nesciunt, assumenda magnam unde velit necessitatibus quam dolor sequi repellat
+    dolores.
+</p>
+<p class="Parrafo2 Inline">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odit ipsa vero iure recusandae temporibus
+    quaerat corporis reprehenderit omnis voluptate iusto incidunt delectus nulla, perferendis exercitationem
+    natus facilis eos eum.
+</p>
+<p class="Parrafo3 Inline">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero est esse maxime dignissimos culpa a
+    facilis adipisci cum. Consectetur debitis, eveniet maiores eaque laboriosam recusandae autem dolores cumque
+    optio.
+</p>
+<p class="Parrafo4 Inline">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit id architecto eos magni, quos repudiandae
+    corrupti, autem neque, voluptatem nisi repellat odio libero quis accusantium soluta! Nesciunt, sit earum!
+    Nostrum!
+</p>
+
+<br><br>
+
+<div class="Inline">
+    <p class="Parrafo1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil harum dolores molestias nisi assumenda. Quae
+        iure
+        temporibus, ea non nesciunt, assumenda magnam unde velit necessitatibus quam dolor sequi repellat dolores.
+    </p>
+    <p class="Parrafo2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae odit ipsa vero iure recusandae temporibus
+        quaerat corporis reprehenderit omnis voluptate iusto incidunt delectus nulla, perferendis exercitationem
+        natus
+        facilis eos eum.
+    </p>
+    <p class="Parrafo3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio libero est esse maxime dignissimos culpa a
+        facilis adipisci cum. Consectetur debitis, eveniet maiores eaque laboriosam recusandae autem dolores cumque
+        optio.
+    </p>
+    <p class="Parrafo4">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit id architecto eos magni, quos repudiandae
+        corrupti, autem neque, voluptatem nisi repellat odio libero quis accusantium soluta! Nesciunt, sit earum!
+        Nostrum!
+    </p>
+</div> -->

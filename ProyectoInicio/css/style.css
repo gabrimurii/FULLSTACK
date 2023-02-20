@@ -1,16 +1,19 @@
-:root{  /* Aquí están todas las variables */
+:root {
+    /* Aquí están todas las variables */
     --rosatucarrera: #F76666;
     --negrotucarrera: #02052F;
     --fuentetucarrera: sans-serif;
-    --font-family: 'Babylonica', cursive; /* Fuente copiada de Google fonts */
+    --font-family: 'Babylonica', cursive;
+    /* Fuente copiada de Google fonts */
 }
 
 /* Esta relación hace que un rem == 10 px */
-html{
+html {
     font-size: 62.5%;
 }
+
 /* Esta relación hace que un rem == 10 px */
-body{
+body {
     font-size: 16px;
 }
 
@@ -20,24 +23,28 @@ body{
 } */
 
 
-            /* CONTENEDOR */
+/* CONTENEDOR */
 
-.contenedor{                        /* Está en el body, le da estructura a toda la página */
-    width: 114rem;                  /* 1140 px */
-   
+.contenedor {
+    /* Está en el body, le da estructura a toda la página */
+    width: 114rem;
+    /* 1140 px */
+
     /* Objetivo, centrar el contenido */
     margin-top: 0;
-    margin-right: auto;             /* Hace que el contenido quede centrado en caso de que la pantalla sea más      
+    margin-right: auto;
+    /* Hace que el contenido quede centrado en caso de que la pantalla sea más      
                                        grande */
     margin-bottom: 0;
-    margin-left: auto;              /* Si es más pequeño entra los queris */
+    margin-left: auto;
+    /* Si es más pequeño entra los queris */
     /* 
     margin: 0 auto 0 auto;             Es exactamente igual  
     margin: 0 auto;                    Es exactamente igual */
 
-                                    /* Que la clase contenedor no se aplique a la sección de imagen */
-                                    /* Ir sección a sección seleccionando si me interesa */
-                                    /* En vez de aplicarlo al body, lo aplicamos a cada sección */
+    /* Que la clase contenedor no se aplique a la sección de imagen */
+    /* Ir sección a sección seleccionando si me interesa */
+    /* En vez de aplicarlo al body, lo aplicamos a cada sección */
 
 }
 
@@ -45,34 +52,68 @@ body{
 
 
 
+/* MENÚ DE NAVEGACIÓN */
 
-            /* LOGIN */
-
-.Login{
-    background-color: transparent;
-    text-align: right;
-    /* margin-left: 500px; */
+.nav-margin {
+    background-color: var(--rosatucarrera);
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
-.Login a{
-    color: var(--rosatucarrera);
+.nav-padding {
+    background-color: var(--rosatucarrera);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.nav-principal {
+    padding: 15px 0px 10px; /* Si no se pone nada al final, se entiende que es 0 */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a{
     text-decoration: none;
+}
+
+.Login {
+    flex: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    /* text-align: right; */
+    /* margin-left: 500px; */ 
+}
+
+.Login a {
+    color: var(--rosatucarrera);
     font-family: sans-serif;
-    float: right;
+    /* float: right; */
+}
+
+.posicion-imagen {
+    flex: 33.33%;
+    max-width: 33.33%;
 }
 
 
-.navegacion a{
+.navegacion a {
     color: black;
     text-decoration: none;
-     /* background-image: ; */
-
+    /* background-image: ; */
 }
+
+.paginas {
+    flex: 66.66%;
+    max-width: 66.66%;
+}
+
+
+
 
 /* SECCIÓN 1 */
 
-.banner{
-    
+.banner {
+
     background-image: url(../img/banner.png);
     /* padding-top: 80px;
     padding-bottom: 180px;
@@ -80,7 +121,7 @@ body{
     background-position: top left; */
 }
 
-.contenedor h1{
+.contenedor h1 {
     background-color: rgba(248, 102, 102, 0.65);
     margin-top: 0px;
     margin-bottom: 10px;
@@ -92,7 +133,7 @@ body{
     text-align: left;
 }
 
-.cursos {
+.boton-cursos {
     color: white;
     background-color: var(--negrotucarrera);
     text-decoration: none;
@@ -103,7 +144,7 @@ body{
     text-transform: uppercase;
 }
 
-            /* LOGOS */
+/* LOGOS */
 
 /* .logos{
     margin-top: -120px;
@@ -120,16 +161,20 @@ body{
 } */
 
 
-            /* LOCALIZACIONES */
 
-.localizaciones{
+
+
+
+/* LOCALIZACIONES */
+
+.localizaciones {
     color: white;
     background-color: black;
 }
 
-            /* CONTACTAR */
+/* CONTACTAR */
 
-.contactar{
+.contactar {
     text-align: center;
     background-color: var(--rosatucarrera);
 }
@@ -166,11 +211,57 @@ body{
     background-color: blue;
 } */
 
-.descendentes p,h2{                    /* Se puede poner con > p o sin. 
+.descendentes p,
+h2 {
+    /* Se puede poner con > p o sin. 
                                           El > selecciona todos
                                           Con la , podemos añadir más elementos */
     text-transform: uppercase;
 }
+
+
+
+
+
+/* .Hola1{
+    background-color: red;
+}
+
+.Hola2{
+    background-color: green;
+}
+
+.Hola3{
+    background-color: blue;
+}
+
+.Inline {
+    display: inline;
+}
+
+.Inline p{
+    display: inline;
+}
+
+.Block{
+    display: block;
+}
+
+.Parrafo1{
+    background-color: orange;
+}
+
+.Parrafo2{
+    background-color: red;
+}
+
+.Parrafo3{
+    background-color: blue;
+}
+
+.Parrafo4{
+    background-color: purple;
+} */
 
 
 
@@ -298,4 +389,29 @@ body{
 
 
     
+    DISPLAY
+    
+    Block       Hace que ocupe todo el ancho de la pantalla. El siguiente elemento pasa a la siguiente línea. <p>
+    Inline      Tiene su tamaño. El siguiente elemento se posiciona a continuación. <a>
+
+    Para cambiarles la naturaleza hay que ponerle | display:block; | al elemento padre
+
+    display:flex;       
+    display:grid;
+
+    FLEXBOX
+
+    Me permite dar forma a los objetos en una única dirección, ya sea fila o columna
+    Se utiliza para alinear elementos
+    Sustituye a los floats y a los table-cell
+    Es Unidimensional
+    row = fila              Se aplica por defecto al poner display:flex
+    column = columna        
+    row-reverse             De izquierda a derecha
+    column-reverse          De abajo a arriba
+
+    flex:direction
+
+
+
 */
