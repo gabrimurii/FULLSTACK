@@ -16,12 +16,14 @@
         }                   /* llave de cierre */
     </style> -->
 
-    <link rel="preload" href="css/normalize.css" as="style"> <!-- Precarga la hoja de normalize antes de que sea requerida -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <!-- Precarga la hoja de normalize antes de que sea requerida -->
     <link href="css/normalize.css" rel="stylesheet">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap" rel="stylesheet"> <!-- Link para fuente externa --> 
+    <link href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap" rel="stylesheet">
+    <!-- Link para fuente externa -->
 
     <link rel="preload" href="css/style.css" as="style"> <!-- Precarga la hoja de estilos antes de que sea requerida -->
     <link href="css/style.css" rel="stylesheet">
@@ -32,38 +34,49 @@
 
     <!-- <p></p> Etiqueta de párrafo. Etiqueta de apertura y cierre en distintas lineas. ALT + SHIFT +  F para ordenarlo -->
 
-    <header> <!-- Cabecera de la página -->
-        <nav class="Login"> <!-- Menú de navegación -->
-            <a href="#"> <!-- Etiqueta <a> para los enlaces seguido siempre de href -->
-                Login Alumnos
-            </a>
-            <a href="#"> <!-- # para decir que ahí va un link -->
-                Login Empresas
-            </a>
+    <header class="contenedor"> <!-- Cabecera de la página -->
+        <nav> <!-- Menú de navegación -->
+            <div class="Login"> <!-- Los div por defecto tienen display=block -->
+                <a href="#"> <!-- Etiqueta <a> para los enlaces seguido siempre de href -->
+                    Login Alumnos
+                </a>
+
+                <a href="#"> <!-- # para decir que ahí va un link -->
+                    Login Empresas
+                </a>
+            </div>
         </nav>
-        <nav class="navegacion">
-            <img src="img/Tu-carrera-digital-general.png">
 
-            <a href="#">
-                Cursos
-            </a>
+        <nav>
+            <div class="navegacion">
+                <a href="#"> <!-- Los enlaces por defecto tienen display=inline -->
+                    <img src="img/Tu-carrera-digital-general.png">
+                </a>
+            </div>
 
-            <a href="#">
-                Sobre Nosotros
-            </a>
+            <div>
+                <a href="#">
+                    Cursos
+                </a>
 
-            <a href="#">
-                Infórmate
-            </a>
+                <a href="#">
+                    Sobre Nosotros
+                </a>
 
+                <a href="#">
+                    Infórmate
+                </a>
+            </div>
         </nav>
     </header>
 
-    <main class="banner-top"> <!-- Contiene el contenido principal. Se suele poner con el <h1> -->
-        <div class="container">
-            <h1> <!-- h1, h2, h3... h6 son para títulos de distintos tamaños 1>6 -->
-                Descubre la formación que te dará la oportunidad de convertirte en un profesional digital
-            </h1>
+    <main class="banner"> <!-- Contiene el contenido principal. Se suele poner con el <h1> -->
+        <div class="contenedor">
+            <div>
+                <h1> <!-- h1, h2, h3... h6 son para títulos de distintos tamaños 1>6 -->
+                    Descubre la formación que te dará la oportunidad de convertirte en un profesional digital
+                </h1>
+            </div>
             <!-- h1 título principal, solo puede haber uno -->
             <!-- el resto de h, lo puedo poner varias veces -->
             <!-- Cada título es un "capítulo" nuevo -->
@@ -88,24 +101,24 @@
         </svg> -->
     </main>
 
-    <section class="logos">
+    <section class="contenedor logos">
         <div class="logos-oficiales">
             <img src="img/Logos-oficiales.png">
         </div>
         <img src="img/Logo-Adecco.png">
     </section>
 
-    <section>
+    <section class="contenedor">
         <h3>
             Cursos
         </h3>
 
-        <h2 id="boli">
+        <h2> <!-- id="boli" -->
             Cambia tu futuro
         </h2>
     </section>
 
-    <section>
+    <section class="contenedor">
         <a href="#">
             Ver todo
         </a>
@@ -151,7 +164,7 @@
         </a>
     </section>
 
-    <section>
+    <section class="contenedor">
         <h3>
             ¿Te interesa algún otro curso en tu ciudad?
         </h3>
@@ -161,7 +174,7 @@
         </a>
     </section>
 
-    <section class="descendentes">
+    <section class="contenedor descendentes">
         <h3>
             ¿Para quién son estos cursos?
         </h3>
@@ -199,84 +212,88 @@
         <img src="img/21643022702_cta_para_quien_centro.png">
     </section>
 
-    <section>
-        <h2>
-            Localizaciones
-        </h2>
+    <section class="localizaciones">
+        <div class="contenedor">
+            <h2>
+                Localizaciones
+            </h2>
 
-        <h3>
-            Madrid
-        </h3>
+            <h3>
+                Madrid
+            </h3>
 
-        <p>
-            Avenida Manoteras 32 28050, Madrid, Madrid.
-        </p>
+            <p>
+                Avenida Manoteras 32 28050, Madrid, Madrid.
+            </p>
 
-        <h3>
-            Pozuelo
-        </h3>
+            <h3>
+                Pozuelo
+            </h3>
 
-        <p>
-            Calle San Juan de la Cruz 2 29223, Madrid, Madrid.
-        </p>
+            <p>
+                Calle San Juan de la Cruz 2 29223, Madrid, Madrid.
+            </p>
 
-        <h3>
-            Madrid
-        </h3>
+            <h3>
+                Madrid
+            </h3>
 
-        <p>
-            Calle San Sotero 3 planta 3ª aula 31 28037, Madrid, Madrid.
-        </p>
+            <p>
+                Calle San Sotero 3 planta 3ª aula 31 28037, Madrid, Madrid.
+            </p>
 
-        <h3>
-            Carbajosa de la sagrada
-        </h3>
+            <h3>
+                Carbajosa de la sagrada
+            </h3>
 
-        <p>
-            Calle segunda 43 37188, Castilla León, Salamanca.
-        </p>
+            <p>
+                Calle segunda 43 37188, Castilla León, Salamanca.
+            </p>
 
-        <h3>
-            Alconbendas y La Moraleja
-        </h3>
+            <h3>
+                Alconbendas y La Moraleja
+            </h3>
 
-        <p>
-            Calle Soria 43 28100, Madrid, Madrid.
-        </p>
+            <p>
+                Calle Soria 43 28100, Madrid, Madrid.
+            </p>
+        </div>
     </section>
 
     <section class="contactar">
-        <h3>
-            Contactar
-        </h3>
+        <div class="contenedor">
+            <h3>
+                Contactar
+            </h3>
 
-        <h2>
-            ¿Tienes dudas? Habla con nosotros:
-        </h2>
+            <h2>
+                ¿Tienes dudas? Habla con nosotros:
+            </h2>
 
-        <img src="img/ico-TLF.png">
+            <img src="img/ico-TLF.png">
 
-        <p>
-            Llámanos
-        </p>
+            <p>
+                Llámanos
+            </p>
 
-        <a href="#">
-            638024408
-        </a>
+            <a href="#">
+                638024408
+            </a>
 
-        <img src="img/ico-EMAIL.png">
+            <img src="img/ico-EMAIL.png">
 
-        <p>
-            Escríbenos
-        </p>
+            <p>
+                Escríbenos
+            </p>
 
-        <a href="#">
-            patric.departearroyo@adecco.com
-        </a>
+            <a href="#">
+                patric.departearroyo@adecco.com
+            </a>
+        </div>
     </section>
 
 
-    <form> <!-- Crea un formulario -->
+    <form class="contenedor"> <!-- Crea un formulario -->
         <fieldset> <!-- Agrupa los campo del formulario -->
             <legend> <!-- Describe el formularuio -->
                 Formulario para acceder a Tu carrera digital
@@ -312,7 +329,7 @@
         </fieldset>
     </form>
 
-    <footer>
+    <footer class="contenedor">
         <h3>
             Cursos zona centro
         </h3>
@@ -331,7 +348,7 @@
         </p>
     </footer>
 
-    <section>
+    <section class="contenedor">
         <img src="img/CTA-informate.png">
         <img src="img/up-top.png">
     </section>

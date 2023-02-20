@@ -1,3 +1,10 @@
+:root{  /* Aquí están todas las variables */
+    --rosatucarrera: #F76666;
+    --negrotucarrera: #02052F;
+    --fuentetucarrera: sans-serif;
+    --font-family: 'Babylonica', cursive; /* Fuente copiada de Google fonts */
+}
+
 /* Esta relación hace que un rem == 10 px */
 html{
     font-size: 62.5%;
@@ -7,16 +14,39 @@ body{
     font-size: 16px;
 }
 
-:root{  /* Aquí están todas las variables */
-    --rosatucarrera: #F76666;
-    --negrotucarrera: #02052F;
-    --fuentetucarrera: sans-serif;
-    --font-family: 'Babylonica', cursive; /* Fuente copiada de Google fonts */
-}
 
 /* a{
     color: blue !important;
 } */
+
+
+            /* CONTENEDOR */
+
+.contenedor{                        /* Está en el body, le da estructura a toda la página */
+    width: 114rem;                  /* 1140 px */
+   
+    /* Objetivo, centrar el contenido */
+    margin-top: 0;
+    margin-right: auto;             /* Hace que el contenido quede centrado en caso de que la pantalla sea más      
+                                       grande */
+    margin-bottom: 0;
+    margin-left: auto;              /* Si es más pequeño entra los queris */
+    /* 
+    margin: 0 auto 0 auto;             Es exactamente igual  
+    margin: 0 auto;                    Es exactamente igual */
+
+                                    /* Que la clase contenedor no se aplique a la sección de imagen */
+                                    /* Ir sección a sección seleccionando si me interesa */
+                                    /* En vez de aplicarlo al body, lo aplicamos a cada sección */
+
+}
+
+
+
+
+
+
+            /* LOGIN */
 
 .Login{
     background-color: transparent;
@@ -39,21 +69,18 @@ body{
 
 }
 
-.banner-top{
-    padding-top: 80px;
-    padding-bottom: 180px;
+/* SECCIÓN 1 */
+
+.banner{
+    
     background-image: url(../img/banner.png);
+    /* padding-top: 80px;
+    padding-bottom: 180px;
     background-size: cover;
-    background-position: top left;
+    background-position: top left; */
 }
 
-.container{
-    margin-right: 400px;
-    margin-left: 80px;
-    font-family: sans-serif; /* var(--font-family); */
-} 
-
-.container h1{
+.contenedor h1{
     background-color: rgba(248, 102, 102, 0.65);
     margin-top: 0px;
     margin-bottom: 10px;
@@ -67,7 +94,7 @@ body{
 
 .cursos {
     color: white;
-    background-color: black;
+    background-color: var(--negrotucarrera);
     text-decoration: none;
     font-weight: 550;
     float: right;
@@ -76,7 +103,9 @@ body{
     text-transform: uppercase;
 }
 
-.logos{
+            /* LOGOS */
+
+/* .logos{
     margin-top: -120px;
     background-color: white;
     flex-wrap: wrap;
@@ -88,46 +117,54 @@ body{
     height: auto;
     padding-top: 30px;
     padding-bottom: 30px;
+} */
+
+
+            /* LOCALIZACIONES */
+
+.localizaciones{
+    color: white;
+    background-color: black;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-h2{                                 /* Seletor de elemento */
-    color:red;
-    text-align: center;
-    background-color: #F76666;
-    /* text-transform: uppercase; */ /* Escribe todo en mayúsculas. Capitalize para poner la primera de cada palabra en mayúscula, */
-    margin:200px 200px 0px 0px; /* margin-top ; margin-right ; margin-bottom ; margin-left === margin:200px 200px 200px 200px */
-    padding-top: 500px;
-    padding-bottom: 500px;
-}
-
-h3{
-    padding: 100px;
-    margin: 100px;
-    background-color:greenyellow;
-}
+            /* CONTACTAR */
 
 .contactar{
     text-align: center;
-    background-color:var (--rosatucarrera);
+    background-color: var(--rosatucarrera);
 }
 
 
 
-#boli{
+
+
+
+
+
+
+
+
+/* h2{                                Seletor de elemento 
+     color:red; 
+     text-align: center; 
+     background-color: #F76666; 
+     text-transform: uppercase;  Escribe todo en mayúsculas. Capitalize para poner la primera de cada palabra en mayúscula, 
+     margin:200px 200px 0px 0px;  margin-top ; margin-right ; margin-bottom ; margin-left === margin:200px 200px 200px 200px 
+     padding-top: 500px; 
+     padding-bottom: 500px; 
+} */
+
+/* h3{
+    padding: 100px;
+    margin: 100px;
+    background-color:greenyellow;
+} */
+
+
+
+/* #boli{
     background-color: blue;
-}
+} */
 
 .descendentes p,h2{                    /* Se puede poner con > p o sin. 
                                           El > selecciona todos
