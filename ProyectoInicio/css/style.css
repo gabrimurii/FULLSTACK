@@ -1,9 +1,9 @@
 :root {
     /* Aquí están todas las variables */
     --rosatucarrera: #F76666;
-    --negrotucarrera: #02052F;
+    --negrotucarrera: black;
     --fuentetucarrera: sans-serif;
-    --font-family: 'Babylonica', cursive;
+    /* --font-family: 'Babylonica', cursive; */
     /* Fuente copiada de Google fonts */
 }
 
@@ -15,6 +15,7 @@ html {
 /* Esta relación hace que un rem == 10 px */
 body {
     font-size: 16px;
+    font-family: var(--fuentetucarrera);
 }
 
 
@@ -37,7 +38,7 @@ body {
                                        grande */
     margin-bottom: 0;
     margin-left: auto;
-    /* Si es más pequeño entra los queris */
+    /* Si es más pequeño entra los query */
     /* 
     margin: 0 auto 0 auto;             Es exactamente igual  
     margin: 0 auto;                    Es exactamente igual */
@@ -84,9 +85,9 @@ a{
     /* margin-left: 500px; */ 
 }
 
-.Login a {
+.Login a, span {
     color: var(--rosatucarrera);
-    font-family: sans-serif;
+    /* font-family: var(--fuentetucarrera); */
     /* float: right; */
 }
 
@@ -95,6 +96,9 @@ a{
     max-width: 33.33%;
 }
 
+.navegacion {
+    display: flex;
+}
 
 .navegacion a {
     color: black;
@@ -105,6 +109,10 @@ a{
 .paginas {
     flex: 66.66%;
     max-width: 66.66%;
+}
+
+.informate {
+    background-color: var(--rosatucarrera);
 }
 
 
@@ -125,6 +133,7 @@ a{
     background-color: rgba(248, 102, 102, 0.65);
     margin-top: 0px;
     margin-bottom: 10px;
+    /* font-family: var(--fuentetucarrera); */
     font-weight: 800;
     font-size: 47px;
     padding: 35px;
@@ -140,24 +149,21 @@ a{
     font-weight: 550;
     float: right;
     padding: 24px 94px;
-    font-family: "DinBold", sans-serif;
+    /* font-family: "DinBold", sans-serif; */
     text-transform: uppercase;
 }
 
 /* LOGOS */
 
-/* .logos{
-    margin-top: -120px;
+.logos{
     background-color: white;
-    flex-wrap: wrap;
     text-align: center;
+    flex-wrap: wrap;
+    /* margin-top: -120px; */
 }
 
-.logos-oficiales{
-    max-width: 100%;
-    height: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
+/* .logos-oficiales{
+   
 } */
 
 
