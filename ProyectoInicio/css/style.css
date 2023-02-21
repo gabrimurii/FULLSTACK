@@ -55,7 +55,7 @@ body {
 
 /* MENÚ DE NAVEGACIÓN */
 
-.nav-margin {
+/* .nav-margin {
     background-color: var(--rosatucarrera);
     margin-top: 30px;
     margin-bottom: 30px;
@@ -65,7 +65,7 @@ body {
     background-color: var(--rosatucarrera);
     padding-top: 30px;
     padding-bottom: 30px;
-}
+} */
 
 .nav-principal {
     padding: 15px 0px 10px; /* Si no se pone nada al final, se entiende que es 0 */
@@ -78,8 +78,10 @@ a{
 }
 
 .Login {
+    display: flex;
     flex: 100%;
     max-width: 100%;
+    justify-content: flex-end; 
     background-color: transparent;
     /* text-align: right; */
     /* margin-left: 500px; */ 
@@ -98,6 +100,7 @@ a{
 
 .navegacion {
     display: flex;
+    justify-content: flex-end;
 }
 
 .navegacion a {
@@ -400,14 +403,14 @@ h2 {
     Block       Hace que ocupe todo el ancho de la pantalla. El siguiente elemento pasa a la siguiente línea. <p>
     Inline      Tiene su tamaño. El siguiente elemento se posiciona a continuación. <a>
 
-    Para cambiarles la naturaleza hay que ponerle | display:block; | al elemento padre
+    Para cambiarles la naturaleza hay que ponerle | display:block; | AL ELEMENTO PADRE
 
     display:flex;       
     display:grid;
 
     FLEXBOX
 
-    Me permite dar forma a los objetos en una única dirección, ya sea fila o columna
+    Es UNIDIRECCIONAL. Me permite dar forma a los objetos en una única dirección, ya sea fila o columna
     Se utiliza para alinear elementos
     Sustituye a los floats y a los table-cell
     Es Unidimensional
@@ -416,7 +419,36 @@ h2 {
     row-reverse             De izquierda a derecha
     column-reverse          De abajo a arriba
 
-    flex:direction
+    display: flex;          
+    flex-direction:         Me asigna la dirección del elemento. Por defecto es row.
+    
+    JUSTIFICAR TEXTO
+    
+    justify-content: center Justifica el contenido en el centro. Para FILAS. flex-direction: row;
+    text-align: center;     Justifica el contenido en el centro. Para COLUMNAS. flex-direction: column;
+
+
+
+    DIFERENTES ESTILOS PARA ESCRIBIR CSS
+
+    BEM                 
+    Bloque, Elemento, Modificador
+    .card {}
+    .card__titulo {}
+    .card__imagen {}
+    .card__boton {}
+    .car__boton-activo {}       cuando lo pongo encima por ejemplo
+
+    UTILITY FIRST
+
+    El nombre identifica la utilidad
+    .text-center {}
+    .color-red-100 {}
+    .bg-blue-200 {}
+
+    MODULOS
+
+    Selecciona el elemento al completo, del módulo. El que menos se utiliza
 
 
 
