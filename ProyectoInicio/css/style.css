@@ -1,41 +1,40 @@
+/* VARIABLES */
+
 :root {
     /* Aquí están todas las variables */
     --rosatucarrera: #F76666;
-    --negrotucarrera: black;
+    --negrotucarrera: #02052F;
     --fuentetucarrera: sans-serif;
+    --colorinfo: #17a2b8;
+    --blancoinfo: white;
     /* --font-family: 'Babylonica', cursive; */
     /* Fuente copiada de Google fonts */
 }
 
-/* Esta relación hace que un rem == 10 px */
+
+/* RELACIÓN TAMAÑO 1REM == 10PX */
+
 html {
     font-size: 62.5%;
 }
 
-/* Esta relación hace que un rem == 10 px */
 body {
     font-size: 16px;
-    font-family: var(--fuentetucarrera);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
 }
-
-
-/* a{
-    color: blue !important;
-} */
 
 
 /* CONTENEDOR */
 
 .contenedor {
-    /* Está en el body, le da estructura a toda la página */
-    width: 114rem;
-    /* 1140 px */
+                                        /* Está en el body, le da estructura a toda la página */
+    width: 114rem;                      /* 1140 px */
 
     /* Objetivo, centrar el contenido */
     margin-top: 0;
     margin-right: auto;
-    /* Hace que el contenido quede centrado en caso de que la pantalla sea más      
-                                       grande */
+    /* Hace que el contenido quede centrado en caso de que la pantalla sea más grande */
     margin-bottom: 0;
     margin-left: auto;
     /* Si es más pequeño entra los query */
@@ -48,9 +47,6 @@ body {
     /* En vez de aplicarlo al body, lo aplicamos a cada sección */
 
 }
-
-
-
 
 
 /* MENÚ DE NAVEGACIÓN */
@@ -68,60 +64,89 @@ body {
 } */
 
 .nav-principal {
-    padding: 15px 0px 10px; /* Si no se pone nada al final, se entiende que es 0 */
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;                    /* Cuando un elemento ocupa más que en ancho, pasa a la siguiente fila */
+    padding: 15px 0px 10px 0px;         /* Si no se pone nada al final, se entiende que es 0 */
+
 }
 
 a{
     text-decoration: none;
+    /* transition: background-color 3s ;    Fusión con hover para cambiarle el color de fondo */
 }
 
-.Login {
-    display: flex;
+.Login {                                /* colxl-12 */
     flex: 100%;
     max-width: 100%;
-    justify-content: flex-end; 
+    display: flex;
+    justify-content: flex-end;          /* Me pone el texto al final del todo */
     background-color: transparent;
     /* text-align: right; */
     /* margin-left: 500px; */ 
 }
 
-.Login a, span {
-    color: var(--rosatucarrera);
+.Login a {
+    color: var(--rosatucarrera);  
     /* font-family: var(--fuentetucarrera); */
     /* float: right; */
 }
 
-.posicion-imagen {
+.raya {
+    color: var(--rosatucarrera);  
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+}
+
+.posicion-imagen {                      /* colxl-4 */
     flex: 33.33%;
     max-width: 33.33%;
+    padding: 17px 0px 0px 0px;
 }
 
-.navegacion {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.navegacion a {
-    color: black;
-    text-decoration: none;
-    /* background-image: ; */
-}
-
-.paginas {
+.navegacion {                           /* colxl-8 */
     flex: 66.66%;
     max-width: 66.66%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 2.4rem;
 }
+
+.navegacion a{
+    font-size: 1.5rem;
+}
+
+.subrayado a:hover {                /* Usar hover para que al poner el ratón encima se aplique */
+    text-decoration: underline;
+    /* background-color: aqua;         Hace que el color cambie al ponerme encima. Necesito transition en el a */
+}
+
+.navcolor {
+    color: var(--negrotucarrera);
+    font-weight: 700;
+    margin-right: 25px;
+}
+
 
 .informate {
+    color: white;
+    font-weight: 700;
+    text-decoration: none !important;
     background-color: var(--rosatucarrera);
+    margin-right: 0px;
+    border-radius: 20px;
+    padding: 8px 12px;
+}
+
+.informate:hover {
+    background-color: var(--colorinfo);
+    transition: background-color 1s;
 }
 
 
 
 
-/* SECCIÓN 1 */
+/* SECCIÓN 1 == BANNER */
 
 .banner {
 
@@ -156,6 +181,7 @@ a{
     text-transform: uppercase;
 }
 
+
 /* LOGOS */
 
 .logos{
@@ -180,6 +206,7 @@ a{
     color: white;
     background-color: black;
 }
+
 
 /* CONTACTAR */
 
@@ -281,7 +308,7 @@ h2 {
 
 /* 
 
-    ALGUNAS PROPIEDADES MÁS UTILIZADAS
+ALGUNAS PROPIEDADES MÁS UTILIZADAS
 
     text-align              Alineación de texto
     color                   Color de la tipografía
@@ -302,7 +329,7 @@ h2 {
         display: inline;           Coge el ancho que necesite
 
 
-    UNIDADES DE MEDIDA
+UNIDADES DE MEDIDA
 
     Elemento padre es el elemento de un nivel superior
     px      Me da un valor de medida fijo. No es bueno para responsive
@@ -312,7 +339,7 @@ h2 {
     1 rem = 16 px
 
 
-    TIPOS DE SELECTORES
+TIPOS DE SELECTORES
     
     Selectores de elementos:        h1, p... Selecciona todos los elementos
     Selectores de clase:            Hay que definir una clase en el html y para hacerle referencia se le pone un .  Buena práctica
@@ -324,7 +351,7 @@ h2 {
     Los selectores de clase y de ID tienen más especificidad que los de elementos
 
 
-    EJERCICIO PARA DESCENDIENTES (NO SE HARÍA ASÍ)
+EJERCICIO PARA DESCENDIENTES (NO SE HARÍA ASÍ)
 
     <section class="JM">    
         <section id="Ej5">
@@ -344,7 +371,7 @@ h2 {
     }
 
 
-    ESPECIFICIDAD
+ESPECIFICIDAD
 
     Es cómo mi navegador va a interpretar mi código. Pone niveles de importancia !important es la etiqueta más específica que hay. Si podemos no utilizarlo.
 
@@ -355,13 +382,13 @@ h2 {
         Elementos
 
 
-    COLORES
+COLORES
 
     Hexadecimal, nombres predefinidos, hsl, rgb
     Transparencia rgba() 1 es opaco 0 es transparente
 
 
-    VARIABLES
+VARIABLES
 
     Para reutilizarla tantas veces como la necesitamos
     No se pueden repetir nombres de variables en la misma hoja
@@ -376,7 +403,8 @@ h2 {
 
     var(--nombredevariable);
 
-    AÑADIR FUENTES EXTERNAS
+
+AÑADIR FUENTES EXTERNAS
 
     Google Fonts (también hay google icons)
     Seleccionamos la letra que queramos
@@ -385,7 +413,7 @@ h2 {
     Copia el link de reglas CSS
 
 
-    NORMALIZE
+NORMALIZE
 
     Sirve para que se vea igual en todos los navegadores
 
@@ -398,7 +426,7 @@ h2 {
 
 
     
-    DISPLAY
+DISPLAY
     
     Block       Hace que ocupe todo el ancho de la pantalla. El siguiente elemento pasa a la siguiente línea. <p>
     Inline      Tiene su tamaño. El siguiente elemento se posiciona a continuación. <a>
@@ -408,28 +436,28 @@ h2 {
     display:flex;       
     display:grid;
 
-    FLEXBOX
+FLEXBOX
 
     Es UNIDIRECCIONAL. Me permite dar forma a los objetos en una única dirección, ya sea fila o columna
     Se utiliza para alinear elementos
     Sustituye a los floats y a los table-cell
     Es Unidimensional
-    row = fila              Se aplica por defecto al poner display:flex
+    row = fila                  Se aplica por defecto al poner display:flex
     column = columna        
-    row-reverse             De izquierda a derecha
-    column-reverse          De abajo a arriba
+    row-reverse                 De izquierda a derecha
+    column-reverse              De abajo a arriba
 
     display: flex;          
-    flex-direction:         Me asigna la dirección del elemento. Por defecto es row.
+    flex-direction:             Me asigna la dirección del elemento. Por defecto es row.
     
-    JUSTIFICAR TEXTO
+JUSTIFICAR TEXTO
     
-    justify-content: center Justifica el contenido en el centro. Para FILAS. flex-direction: row;
-    text-align: center;     Justifica el contenido en el centro. Para COLUMNAS. flex-direction: column;
+    justify-content: center      Justifica el contenido en el centro. Para FILAS. 
+    align-items: center;         Justifica el contenido en el centro. Para COLUMNAS.
 
 
 
-    DIFERENTES ESTILOS PARA ESCRIBIR CSS
+DIFERENTES ESTILOS PARA ESCRIBIR CSS
 
     BEM                 
     Bloque, Elemento, Modificador
@@ -439,16 +467,66 @@ h2 {
     .card__boton {}
     .car__boton-activo {}       cuando lo pongo encima por ejemplo
 
-    UTILITY FIRST
+UTILITY FIRST
 
     El nombre identifica la utilidad
     .text-center {}
     .color-red-100 {}
     .bg-blue-200 {}
 
-    MODULOS
+MODULOS
 
-    Selecciona el elemento al completo, del módulo. El que menos se utiliza
+    Selecciona el elemento al completo, del módulo. El que menos se utiliza.
+    Define el contenido principal y después vas hacia los elementos hijos.
+    Partimos del elemento padre y hacemos uso del sistema de descendencia
+
+
+HOVER
+
+    Se aplica al CSS.
+    Cuando se pasa el ratón por encima de un elemento, el estilo de este cambia.
+
+
+RESPONSIVE DESIGN
+
+    Se suele trabajar con Ordenador, Tablet y Móvil
+    Google Analytics = Te hace un reconocimiento de los usuarios que entran en tu web.
+    Antes tenías que mantener 3 o 4 webs a la vez. Se hacía una específica para cada dispositivo
+    También se hacían recomendaciones al usuario de tamaño de pantalla y navegadores
+    Google penaliza los sitios web que no son responsive
+
+    MEDIA QUERIES
+
+    Solamente son restricciones que afectan al estilo
+    Quiero que este diseño se vea en las pantallas de más de 480px
+    Tamaños estándar
+        Móviles         480px
+        Tablets         768px
+        Ordenadores     1140px
+
+    El código se suele estructurar de mayor a menor
+    
+    @Identificador(restricción){
+            .clase{
+                propiedad: valor;
+            }
+        }
+
+    @media(max-width: 480px){
+            .fondoAzul{
+                propiedad: valor;
+            }
+        }
+    @media(min-width: 768px){
+            .clase{
+                propiedad: valor;
+            }
+        }
+
+
+
+
+
 
 
 

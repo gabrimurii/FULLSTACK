@@ -34,27 +34,23 @@
 
     <!-- <p></p> Etiqueta de párrafo. Etiqueta de apertura y cierre en distintas lineas. ALT + SHIFT +  F para ordenarlo -->
 
-    <header class="contenedor nav-principal"> <!-- Cabecera de la página -->
-        <nav class="Login"> <!-- Menú de navegación --> <!-- class="nav-margin nav-padding" -->
-            <!-- Los div por defecto tienen display=block -->
-            <a href="#"> <!-- Etiqueta <a> para los enlaces seguido siempre de href -->
+ <!--    
+    <nav class="contenedor navPrincipal DisplayFlex">
+        <div class="colxl-12 subrayado"> 
+            <a href="#">
                 Login Alumnos
             </a>
 
-            <span>|</span>
-
-            <a href="#"> <!-- # para decir que ahí va un link -->
+            <a href="#">
                 Login Empresas
             </a>
-        </nav>
+        </div>
 
-        <nav class="posicion-imagen">
-            <a href="#"> <!-- Los enlaces por defecto tienen display=inline -->
-                <img src="img/Tu-carrera-digital-general.png">
-            </a>
-        </nav>
+        <div class="colxl-4">
+            <img src="img/Tu-carrera-digital-general.png">
+        </div>
 
-        <nav class="navegacion paginas">
+        <div class="colxl-8 subrayado">
             <a href="#">
                 Cursos
             </a>
@@ -63,24 +59,64 @@
                 Sobre Nosotros
             </a>
 
+            <a href="#">
+                Infórmate
+            </a>
+        </div>
+    </nav> 
+-->
+    
+    
+    
+    
+    
+    <nav class="contenedor nav-principal">      <!-- Cabecera de la página -->
+        <div class="Login subrayado">           <!-- Menú de navegación --> <!-- class="nav-margin nav-padding" -->
+                                                <!-- Los div por defecto tienen display=block -->
+            <a href="#">                        <!-- Etiqueta <a> para los enlaces seguido siempre de href -->
+                Login Alumnos
+            </a>
+
+            <span class="raya">|</span>
+
+            <a href="#">                        <!-- # para decir que ahí va un link -->
+                Login Empresas
+            </a>
+        </div>
+
+        <div class="posicion-imagen">
+            <a href="#">                        <!-- Los enlaces por defecto tienen display=inline -->
+                <img src="img/Tu-carrera-digital-general.png">
+            </a>
+        </div>
+
+        <div class="navegacion subrayado">
+            <a href="#" class="navcolor">
+                Cursos
+            </a>
+
+            <a href="#" class="navcolor">
+                Sobre Nosotros
+            </a>
+
             <a href="#" class="informate">
                 Infórmate
             </a>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main class="banner"> <!-- Contiene el contenido principal. Se suele poner con el <h1> -->
+    <main class="banner">                       <!-- Contiene el contenido principal. Se suele poner con el <h1> -->
         <div class="contenedor">
             <div>
-                <h1> <!-- h1, h2, h3... h6 son para títulos de distintos tamaños 1>6 -->
+                <h1>                            <!-- h1, h2, h3... h6 son para títulos de distintos tamaños 1>6 -->
                     Descubre la formación que te dará la oportunidad de convertirte en un profesional digital
                 </h1>
             </div>
-            <!-- h1 título principal, solo puede haber uno -->
-            <!-- el resto de h, lo puedo poner varias veces -->
-            <!-- Cada título es un "capítulo" nuevo -->
+                                                <!-- h1 título principal, solo puede haber uno -->
+                                                <!-- el resto de h, lo puedo poner varias veces -->
+                                                <!-- Cada título es un "capítulo" nuevo -->
 
-            <img src="img/ico-centro.png"> <!-- ../ = solo / -->
+            <img src="img/ico-centro.png">      <!-- ../ == solo / -->
 
             <a href="#" class="boton-cursos">
                 Ver cursos
@@ -112,7 +148,7 @@
             Cursos
         </h3>
 
-        <h2> <!-- id="boli" -->
+        <h2>                                    <!-- id="boli" -->
             Cambia tu futuro
         </h2>
     </section>
@@ -296,9 +332,9 @@
         </div>
     </section>
 
-    <form class="contenedor"> <!-- Crea un formulario -->
-        <fieldset> <!-- Agrupa los campo del formulario -->
-            <legend> <!-- Describe el formularuio -->
+    <form class="contenedor">                   <!-- Crea un formulario -->
+        <fieldset>                              <!-- Agrupa los campo del formulario -->
+            <legend>                            <!-- Describe el formularuio -->
                 Formulario para acceder a Tu carrera digital
             </legend>
             <br>
@@ -307,9 +343,9 @@
             </legend>
             <br>
 
-            <label>Nombre* <!-- Etiqueta del formulario, como el campo -->
+            <label>Nombre*                      <!-- Etiqueta del formulario, como el campo -->
                 <input type="text" placeholder="Tu nombre">
-                <!-- input es lo que espera recibir el formulario -->
+                                                <!-- input es lo que espera recibir el formulario -->
             </label>
 
             <label>Apellidos
@@ -319,12 +355,12 @@
 
             <label>Email*
                 <input type="email" placeholder="ejemplo@gmail.com">
-                <!-- Placeholder para que el usuario sepa lo que tiene que escribir -->
+                                                <!-- Placeholder ayuda al usuario sepa lo que tiene que escribir -->
             </label>
             <br><br>
 
             <label>
-                Mensaje <!-- Para poner campos más grandes donde escribir -->
+                Mensaje                         <!-- Para poner campos más grandes donde escribir -->
                 <textarea type="text" placeholder="Escríbenos lo que quieras"></textarea>
             </label>
             <br><br>
