@@ -22,7 +22,36 @@ body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    margin: 0px;                                /* Quita la línea blanca que viene por defecto */
+    /* transform: skew(20deg, 20deg); */
 }
+
+/* Texto introducido por CSS, no se puede copiar desde la web */
+
+/* h1::before{
+    content: "Hola Calera bon día";
+} */
+
+    /* ABSOLUTE Y RELATIVE */
+
+        /* .EjPadre{
+            background-color: red;
+            width: 500px;
+            height: 200px;
+            position: relative;
+        }
+
+        .EjHijo {
+            background-color: yellow;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 80px;
+            right: 80px;
+            bottom: 80px;
+            left: 80px;
+        } */
+
 
 
 
@@ -277,6 +306,7 @@ a {
 
 
 
+
 /* SECCIÓN 1 == BANNER */
 
 .banner {
@@ -287,33 +317,51 @@ a {
     padding-bottom: 180px;
 }
 
-.texto-ppal h1 {
-    background-color: rgba(248, 102, 102, 0.65);
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-weight: 800;
-    font-size: 47px;
-    padding: 35px;
+.texto-ppal {
+    width: 65%;                                 /* Le da separación a la derecha a todo el contenedor */
+}
+
+
+.texto-ppal h1 {                                /* class="TextosZonaCentro" */
     color: white;
+    background-color: rgba(248, 102, 102, 0.65);
+    font-weight: 800;
+    font-size: 4.5rem;
     line-height: 1.2;
+    padding: 35px;
+    margin-bottom: 10px;
     text-align: left;
 }
 
-.margen-banner h1, a {
-    margin-right: 33%;
+.precta {
+    display: block;
+    float: left;
 }
 
-.boton-cursos {
+.boton-cursos {                             /* class="cta" */
     color: white;
-    background-color: var(--negrotucarrera);
+    background: #000 url(../img/ico-flecha-derecha-white.png) no-repeat right 20px center;
     text-decoration: none;
     font-weight: 550;
-    float: right;
-    padding: 24px 94px;
-    /* margin-top: -75px; */
-    /* font-family: "DinBold", sans-serif; */
     text-transform: uppercase;
+    float: right;
+    border: 2px solid black;
+    padding: 24px 94px;  
+    transition: all 5s;
+    /* transform: skew(30deg, 20deg); */
 }
+
+.boton-cursos:hover {
+    color: var(--rosatucarrera);
+    border: 2px solid var(--rosatucarrera);
+    background: white url(../img/ico-flecha-derecha-red.png) no-repeat right 20px center;
+    /* transform: rotate(0.5turn); */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 
 
 /* LOGOS */
@@ -381,8 +429,7 @@ a {
     background-color: blue;
 } */
 
-.descendentes p,
-h2 {
+.descendentes p,h2 {
     /* Se puede poner con > p o sin. 
                                           El > selecciona todos
                                           Con la , podemos añadir más elementos */
@@ -675,7 +722,16 @@ CSS BOX MODEL
         Border      1 px
         Margin      3 px
 
-        28 x 38 px Hay que sumarlo por los dos lados
+        38 x 28 px Hay que sumarlo por los dos lados
+
+
+ABSOLUTE Y RELATIVE
+
+
+
+
+
+
 
 
 
