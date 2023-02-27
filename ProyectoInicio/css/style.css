@@ -54,6 +54,9 @@ body {
         } */
 
 
+a {
+    text-decoration: none;
+}
 
 
 .contenedor {
@@ -64,9 +67,6 @@ body {
     margin-left: auto;
 }
 
-a {
-    text-decoration: none;
-}
 
 .nav-principal {
     display: flex;
@@ -152,7 +152,7 @@ a {
 
 @media (max-width: 768px) {
 
-    .Login-movil {                      /* colsm-12 */
+    .Login-movil {                          /* colsm-12 */
         flex: 100%;
         max-width: 100%;
         display: flex;
@@ -344,7 +344,7 @@ a {
     float: left;
 }
 
-.boton-cursos {                             /* class="cta" */
+.boton-cursos {                               /* class="cta" */
     color: white;
     background: #000 url(../img/ico-flecha-derecha-white.png) no-repeat right 20px center;
     text-decoration: none;
@@ -387,6 +387,12 @@ a {
 .imagenes-cursos div {
     padding: 30px 50px;
     position: relative;
+    transition: 0.5s;
+}
+
+.imagenes-cursos div:hover {
+    transform: scale(105%);
+    box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
 }
 
 .imagenes-cursos div h2 {
@@ -403,12 +409,15 @@ a {
     border: 2px solid #0000;
     position: absolute;
     bottom: 50px;
+    transition: 0.5s;
 }
 
 .imagenes-cursos div a:hover {
     color: white;
     background-color: var(--rosatucarrera);
     border-color: white;
+    transform: scale(120%);
+    box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
 }
 
 .marketing-digital {
