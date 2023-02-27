@@ -339,6 +339,10 @@ a {
     box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
 }
 
+.texto-ppal h1:hover {
+    backdrop-filter: blur(5px);
+}
+
 .precta {
     display: block;
     float: left;
@@ -391,7 +395,7 @@ a {
 }
 
 .imagenes-cursos div:hover {
-    transform: scale(105%);
+    transform: scale(102%);
     box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
 }
 
@@ -404,19 +408,21 @@ a {
     color: var(--rosatucarrera);
     background-color: white;
     text-transform: uppercase;
+    font-size: 14px;
     font-weight: bold;
     padding: 20px 44px;
     border: 2px solid #0000;
     position: absolute;
     bottom: 50px;
     transition: 0.5s;
+    box-sizing: border-box;
 }
 
 .imagenes-cursos div a:hover {
     color: white;
     background-color: var(--rosatucarrera);
     border-color: white;
-    transform: scale(120%);
+    transform: scale(110%);
     box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
 }
 
