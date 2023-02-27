@@ -24,6 +24,7 @@ body {
     font-weight: 400;
     margin: 0px;                                /* Quita la línea blanca que viene por defecto */
     /* transform: skew(20deg, 20deg); */
+    /* background-image: linear-gradient(to top, green 40%, greenyellow 80%, yellow 100%); */
 }
 
 /* Texto introducido por CSS, no se puede copiar desde la web */
@@ -331,6 +332,11 @@ a {
     padding: 35px;
     margin-bottom: 10px;
     text-align: left;
+
+    /* SOMBRA */
+    -webkit-box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
+    -moz-box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
+    box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
 }
 
 .precta {
@@ -361,6 +367,95 @@ a {
 *, *::before, *::after {
     box-sizing: border-box;
 }
+
+
+
+/* OTROS CURSOS */
+
+.imagenes-cursos {
+    display: grid;
+    /* grid-template-rows: 300px 300px; */           /* Valor de las dos filas. Si pongo más valores, hay más filas */
+    /* grid-template-columns: 50% 50%; */            /* Valor de las dos columnas que vamos a hacer */
+    /* grid: 50% 50% / 300px 300px; */               /* Para abreviar. 1º columnas, 2º filas */
+    grid: 300px 300px / 1fr 1fr;                     /* Fracciones, divide el espacio */
+    row-gap: 30px;                                   /* Espacio entre filas */
+    column-gap: 30px;                                /* Espacio entre columnas */
+    gap: 30px 30px;                                  /* Espacio filas y columnas */
+    margin: 0px 15px;
+}
+
+.imagenes-cursos div {
+    padding: 30px 50px;
+    position: relative;
+}
+
+.imagenes-cursos div h2 {
+    color: white;
+    font-size: 27px;
+}
+
+.imagenes-cursos div a {
+    color: var(--rosatucarrera);
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 60px;
+    border: 2px solid #0000;
+    position: absolute;
+    bottom: 50px;
+}
+
+.imagenes-cursos div a:hover {
+    color: white;
+    background-color: var(--rosatucarrera);
+    border-color: white;
+}
+
+.marketing-digital {
+    background-image: url(../img/Curso-marketing-digital-centro.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.videojuegos {
+    background-image: url(../img/Curso-programacion-videojuegos-centro.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+.programacion-web {
+    background-image: url(../img/Curso-programacion-web-full-stack-centro.png);
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+
+
+/* .marketing-digital h2, .videojuegos h2, .programacion-web h2 {
+    color: white;
+    font-size: 27px;
+    padding: 30px 60px;
+} */
+
+
+/* .marketing-digital a, .videojuegos a, .programacion-web a {
+    color: var(--rosatucarrera);
+    background-color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 60px;
+    padding: 20px 44px;
+    border: 2px solid #0000;
+    position: absolute;
+    bottom: 50px;
+}
+
+.marketing-digital a:hover, .videojuegos a:hover, .programacion-web a:hover {
+    color: white;
+    background-color: var(--rosatucarrera);
+    border-color: white;
+} */
+
 
 
 
@@ -726,6 +821,49 @@ CSS BOX MODEL
 
 
 ABSOLUTE Y RELATIVE
+
+
+
+
+DEGRADADOS Y SOMBRAS
+
+    background-image: linear-gradient (sentido y dirección del gradiente, color y momento de ejecución)
+    background-image: linear-gradient (to top, white 0%, var(--rosatucarrera) 100%)
+    Los porcentajes son los puntos donde empieza la transición. Dividimos la página o el elemento en %
+
+    Otra opción...
+    cssmatic.com
+
+    Para sombrear
+
+    -webkit-box-shadow: 19px 23px 0px -10px rgba(0,0,0,1);      Prefijo para chrome
+    -moz-box-shadow: 19px 23px 0px -10px rgba(0,0,0,1);         Prefijo para Firefox
+    box-shadow: 19px 23px 0px -10px rgba(0,0,0,1);
+
+    Primer número: posición horizontal
+    Segundo número: posición vertical
+    Tercer número: blur, difuminado
+    Cuarto número: radio de acción
+
+    caniuse.com
+
+    Ver compatibilidad de propiedades por navegadores
+    Ver el % de adaptabilidad
+    Podemos coger solo la 3º línea
+
+
+
+GRID
+
+    display: grid;
+
+    Nos permite alinear elementos en las dos direcciones
+    Hay que entenderlo como una cuadrícula
+    Se pueden hacer filas y columnas
+    En flex el contenido crece automáticamente
+    En grid el contenido se agrupa dentro de un área definida
+    Se le puede dar el tamaño del área del elemento
+        Se pueden usar juntos en un mismo CSS, no hay problema por juntarlos
 
 
 
