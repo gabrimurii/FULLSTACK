@@ -315,7 +315,7 @@ a {
     background-size: cover;                     /* Contiene la imagen de fondo en mi contenedor */
     background-repeat: no-repeat;               /* Para que la imagen no se repita si es más pequeño el contenedor */
     padding-top: 80px;
-    padding-bottom: 180px;
+    padding-bottom: 250px;
 }
 
 .texto-ppal {
@@ -478,14 +478,34 @@ a {
 
 .logos{
     background-color: white;
-    text-align: center;
+    margin-top: -100px;
+    display: grid;
+    grid: 1fr / 3.5fr 1.5fr;
+    align-items: center;
+    width: 75%;
+    border-radius: 12px;    
+    
+    /* display: flex;
     flex-wrap: wrap;
-    /* margin-top: -120px; */
+    margin-top: -100px;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    border-radius: 12px; */
 }
 
-/* .logos-oficiales{
-   
-} */
+.logos-oficiales{
+   padding: 30px 0px;
+   margin-right: 15px;
+   margin-left: 150px;
+}
+
+.logos-adecco {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 15px;
+}
+
 
 
 
