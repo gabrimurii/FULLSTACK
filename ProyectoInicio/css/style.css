@@ -7,6 +7,8 @@
     --fuentetucarrera: sans-serif;
     --colorinfo: #17a2b8;
     --blancoinfo: white;
+    --grisfooter: #f3f3f5;
+    --azultucarrera: #194584;
     /* --font-family: 'Babylonica', cursive; */
     /* Fuente copiada de Google fonts */
 }
@@ -374,6 +376,78 @@ a {
 
 
 
+/* LOGOS */
+
+.logos{
+    background-color: white;
+    margin-top: -100px;
+    display: grid;
+    grid: 1fr / 3.5fr 1.5fr;
+    align-items: center;
+    width: 90%;
+    border-radius: 12px;    
+}
+
+.logos-oficiales{
+   padding: 30px 0px;
+   margin-right: 15px;
+   margin-left: 150px;
+}
+
+.logos-adecco {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 15px;
+}
+
+
+
+
+/* CURSOS */
+
+.cursos {
+    padding-bottom: 50px;
+}
+
+
+.cursos h3 {
+    color: var(--rosatucarrera);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 17px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.cursos h2 {
+    color: var(--negrotucarrera);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.cursos-sitios {
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    justify-content: center;
+    margin-bottom: 65px;
+}
+
+.cursos-sitios a {
+    color: var(--negrotucarrera);
+    font-weight: bold;
+    padding: 10px 24px;
+    border: 1px solid var(--rosatucarrera);
+    margin-right: 8px;
+}
+
+
+
+
+
 /* OTROS CURSOS */
 
 .imagenes-cursos {
@@ -401,6 +475,7 @@ a {
 
 .imagenes-cursos div h2 {
     color: white;
+    text-transform: uppercase;
     font-size: 27px;
 }
 
@@ -474,42 +549,145 @@ a {
 
 
 
-/* LOGOS */
+/* INTERES */
 
-.logos{
-    background-color: white;
-    margin-top: -100px;
-    display: grid;
-    grid: 1fr / 3.5fr 1.5fr;
-    align-items: center;
-    width: 75%;
-    border-radius: 12px;    
-    
-    /* display: flex;
+.seccion-interesa {
+    padding-top: 100px;
+    padding-bottom: 130px;
+}
+
+.interes {
+    color: var(--negrotucarrera);
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.pidenoslo {
+    text-align: center;
+    margin-top: 72px;
+}
+
+.pidenoslo a {
+    color: white;
+    background-color: var(--rosatucarrera);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    border-radius: 96px;
+}
+
+.pidenoslo a:hover {
+    background-color: var(--negrotucarrera);
+    text-decoration: underline;
+}
+
+
+/* VIDEO */
+
+.seccionvideo {
+    display: flex;
     flex-wrap: wrap;
-    margin-top: -100px;
-    align-items: center;
     justify-content: center;
-    width: 75%;
-    border-radius: 12px; */
 }
 
-.logos-oficiales{
-   padding: 30px 0px;
-   margin-right: 15px;
-   margin-left: 150px;
-}
-
-.logos-adecco {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-left: 15px;
+.video {
+    width: 1110px;
+    height: 624px;
 }
 
 
 
+/* PARA QUIÉN SON ESTOS CURSOS */
+
+.seccionparaquien {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding-top: 70px;
+}
+
+.paraquien{
+    padding-bottom: 100px;
+} 
+
+.paraquien h3 {
+    color: var(--rosatucarrera);
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.paraquien h2 {
+    color: var(--negrotucarrera);
+    font: 27px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.paraquien p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.paraquien p span {
+    color: var(--negrotucarrera);
+    font-weight: 800;
+}
+
+.paraquien h4 {
+    color: var(--negrotucarrera);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 800;
+    width: 85%;
+    line-height: 1.2;
+    
+}
+
+.webgarantia {
+    margin-bottom: 50px;
+}
+
+.webgarantia a {
+    color: var(--rosatucarrera);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.webgarantia img {
+    margin-left: 10px;
+}
+
+.descargate {
+    font-weight: 800;
+    margin-bottom: 25px;
+}
 
 
+.linkdescarga a {
+    display: inline-block;
+    color: var(--blancoinfo);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: var(--rosatucarrera);
+    padding: 20px 40px;
+    border: 2px solid white;
+}
+
+.linkdescarga a:hover {
+    color: var(--rosatucarrera);
+    background-color: var(--blancoinfo);
+    border-color: var(--rosatucarrera);
+}
+
+.paraquienimg {
+    max-width: 100%;
+    height: auto;
+}
 
 
 /* LOCALIZACIONES */
@@ -517,18 +695,191 @@ a {
 .localizaciones {
     color: white;
     background-color: black;
+    padding: 90px 0px 100px 0px;
 }
+
+.localiza {
+    padding: 0px 15px;
+}
+
+.localiza h2 {
+    color: var(--blancoinfo);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+
+.lugares {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+}
+
+.lugares {
+    text-transform: uppercase;
+    padding-bottom: 24px;
+}
+.lugares h3 {
+    margin-bottom: 0px;
+}
+
+.lugares p {
+    font-size: 14px;
+    margin-top: 0px;
+}
+
+
 
 
 /* CONTACTAR */
 
 .contactar {
-    text-align: center;
     background-color: var(--rosatucarrera);
+    padding: 90px 0px 70px 0px;
+}
+
+.contacto {
+    color: var(--blancoinfo);
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 22px;
+}
+
+.contacto h3 {
+    font-size: 17px;
+    font-weight: 300;
+    margin: 0px;
+}
+
+.contacto h2 {
+    font-size: 27px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+
+.telefono-mail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding-bottom: 70px;
+}
+
+.telefono-mail img {
+    max-height: 60px;
+    margin-left: 25px;
+    margin-right: 15px;
+}
+
+.telefono {
+    background-color: var(--blancoinfo);
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    align-items: center;
+    padding: 30px 0px;
+    border-radius: 4px;
+}
+
+.telefono p {
+    color: var(--negrotucarrera);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 26px;
+    margin: 0px;
+}
+
+.telefono a {
+    color: var(--rosatucarrera);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 22px;
+}
+
+.telefono a:hover {
+    text-decoration: underline;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--grisfooter);
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.sobre-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid: 50%;
+    width: 50%;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+}
+
+.sobre-nosotros h3 {
+    color: var(--negrotucarrera);
+    font-weight: 800;
+    padding: 0px 15px;
+    margin-top: 0px;
+}
+
+.sobre-nosotros a {
+    color: var(--negrotucarrera);
+    padding: 0px 15px;
+    margin-top: 0px;
+    text-decoration: underline;
+}
+
+.faq {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 100%;
+    width: 100%;
+    padding: 20px 15px;
+}
+
+.faq a {
+    color: var(--negrotucarrera);
+    font-size: 14px;
+    text-decoration: underline;
+    margin-right: 50px;
+}
+
+.divisor {
+    border-top: 1px solid var(--azultucarrera);
+    border-bottom: 1px solid var(--azultucarrera);
 }
 
 
 
+
+/* SCROLL */
+
+.cta-informate {
+    width: 96px;
+    height: 85px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    position: fixed;
+    bottom: 30%;
+    right: 0px;
+}
+
+.scroll {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    position: fixed;
+    bottom: 75px;
+    right: 40px;
+}
 
 
 
@@ -559,12 +910,12 @@ a {
     background-color: blue;
 } */
 
-.descendentes p,h2 {
+/* .descendentes p,h2 { */
     /* Se puede poner con > p o sin. 
                                           El > selecciona todos
                                           Con la , podemos añadir más elementos */
-    text-transform: uppercase;
-}
+    /* text-transform: uppercase; */
+/* } */
 
 
 
