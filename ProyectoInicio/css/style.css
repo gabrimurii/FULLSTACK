@@ -494,11 +494,13 @@ a {
     font: 27px;
     font-weight: 800;
     line-height: 1.2;
+    text-align: justify;
 }
 
 .paraquien p {
     font-size: 14px;
     line-height: 1.5;
+    text-align: justify;
 }
 
 .paraquien p span {
