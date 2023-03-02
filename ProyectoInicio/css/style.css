@@ -230,7 +230,7 @@ a {
     float: right;
     border: 2px solid black;
     padding: 24px 94px;  
-    transition: all 5s;
+    transition: all 0.5s;
     /* transform: skew(30deg, 20deg); */
 }
 
