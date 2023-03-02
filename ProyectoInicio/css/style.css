@@ -181,135 +181,6 @@ a {
 
 
 
-
-
-
-
-
-
-
-/* CONTENEDOR */
-
-/* .contenedor { */
-                                        /* Está en el body, le da estructura a toda la página */
-    /* width: 114rem; */                      /* 1140 px */
-
-    /* Objetivo, centrar el contenido */
-    /* margin-top: 0;
-    margin-right: auto; */
-    /* Hace que el contenido quede centrado en caso de que la pantalla sea más grande */
-    /* margin-bottom: 0;
-    margin-left: auto; */
-    /* Si es más pequeño entra los query */
-    /* 
-    margin: 0 auto 0 auto;             Es exactamente igual  
-    margin: 0 auto;                    Es exactamente igual */
-
-    /* Que la clase contenedor no se aplique a la sección de imagen */
-    /* Ir sección a sección seleccionando si me interesa */
-    /* En vez de aplicarlo al body, lo aplicamos a cada sección */
-
-/* } */
-
-
-/* MENÚ DE NAVEGACIÓN */
-
-/* .nav-margin {
-    background-color: var(--rosatucarrera);
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.nav-padding {
-    background-color: var(--rosatucarrera);
-    padding-top: 30px;
-    padding-bottom: 30px;
-} */
-
-/* .nav-principal {
-    display: flex;
-    flex-wrap: wrap;  */                   /* Cuando un elemento ocupa más que en ancho, pasa a la siguiente fila */
-   /*  padding: 15px 0px 10px 0px; */         /* Si no se pone nada al final, se entiende que es 0 */
-
-/* } */
-
-/* a{
-    text-decoration: none; */
-    /* transition: background-color 3s ;    Fusión con hover para cambiarle el color de fondo */
-/* } */
-
-/* .Login {  */                               /* colxl-12 */
-    /* flex: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: flex-end;  */         /* Me pone el texto al final del todo */
-    /* background-color: transparent; */
-    /* text-align: right; */
-    /* margin-left: 500px; */ 
-/* } */
-
-/* .Login a {
-    color: var(--rosatucarrera);  */ 
-    /* font-family: var(--fuentetucarrera); */
-    /* float: right; */
-/* } */
-
-/* .raya {
-    color: var(--rosatucarrera);  
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-} */
-
-/* .posicion-imagen { */                      /* colxl-4 */
-    /* flex: 33.33%;
-    max-width: 33.33%;
-    padding: 17px 0px 0px 0px;
-} */
-
-/* .navegacion {   */                         /* colxl-8 */
-   /*  flex: 66.66%;
-    max-width: 66.66%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-top: 2.4rem;
-} */
-
-/* .navegacion a{
-    font-size: 1.5rem;
-} */
-
-/* .subrayado a:hover { */                /* Usar hover para que al poner el ratón encima se aplique */
-    /* text-decoration: underline; */
-    /* background-color: aqua;         Hace que el color cambie al ponerme encima. Necesito transition en el a */
-/* } */
-
-/* .navcolor {
-    color: var(--negrotucarrera);
-    font-weight: 700;
-    margin-right: 25px;
-} */
-
-
-/* .informate {
-    color: white;
-    font-weight: 700;
-    text-decoration: none !important;
-    background-color: var(--rosatucarrera);
-    margin-right: 0px;
-    border-radius: 20px;
-    padding: 8px 12px;
-}
-
-.informate:hover {
-    background-color: var(--colorinfo);
-    transition: background-color 1s;
-} */
-
-
-
-
-
 /* SECCIÓN 1 == BANNER */
 
 .banner {
@@ -962,13 +833,133 @@ a {
 } */
 
 
+/* NO BORRAR HASTA ASEGURARME DE MEDIAQUERY */
+
+/* CONTENEDOR */
+
+/* .contenedor { */
+                                        /* Está en el body, le da estructura a toda la página */
+    /* width: 114rem; */                      /* 1140 px */
+
+    /* Objetivo, centrar el contenido */
+    /* margin-top: 0;
+    margin-right: auto; */
+    /* Hace que el contenido quede centrado en caso de que la pantalla sea más grande */
+    /* margin-bottom: 0;
+    margin-left: auto; */
+    /* Si es más pequeño entra los query */
+    /* 
+    margin: 0 auto 0 auto;             Es exactamente igual  
+    margin: 0 auto;                    Es exactamente igual */
+
+    /* Que la clase contenedor no se aplique a la sección de imagen */
+    /* Ir sección a sección seleccionando si me interesa */
+    /* En vez de aplicarlo al body, lo aplicamos a cada sección */
+
+/* } */
+
+
+/* MENÚ DE NAVEGACIÓN */
+
+/* .nav-margin {
+    background-color: var(--rosatucarrera);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.nav-padding {
+    background-color: var(--rosatucarrera);
+    padding-top: 30px;
+    padding-bottom: 30px;
+} */
+
+/* .nav-principal {
+    display: flex;
+    flex-wrap: wrap;  */                   /* Cuando un elemento ocupa más que en ancho, pasa a la siguiente fila */
+   /*  padding: 15px 0px 10px 0px; */         /* Si no se pone nada al final, se entiende que es 0 */
+
+/* } */
+
+/* a{
+    text-decoration: none; */
+    /* transition: background-color 3s ;    Fusión con hover para cambiarle el color de fondo */
+/* } */
+
+/* .Login {  */                               /* colxl-12 */
+    /* flex: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;  */         /* Me pone el texto al final del todo */
+    /* background-color: transparent; */
+    /* text-align: right; */
+    /* margin-left: 500px; */ 
+/* } */
+
+/* .Login a {
+    color: var(--rosatucarrera);  */ 
+    /* font-family: var(--fuentetucarrera); */
+    /* float: right; */
+/* } */
+
+/* .raya {
+    color: var(--rosatucarrera);  
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+} */
+
+/* .posicion-imagen { */                      /* colxl-4 */
+    /* flex: 33.33%;
+    max-width: 33.33%;
+    padding: 17px 0px 0px 0px;
+} */
+
+/* .navegacion {   */                         /* colxl-8 */
+   /*  flex: 66.66%;
+    max-width: 66.66%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 2.4rem;
+} */
+
+/* .navegacion a{
+    font-size: 1.5rem;
+} */
+
+/* .subrayado a:hover { */                /* Usar hover para que al poner el ratón encima se aplique */
+    /* text-decoration: underline; */
+    /* background-color: aqua;         Hace que el color cambie al ponerme encima. Necesito transition en el a */
+/* } */
+
+/* .navcolor {
+    color: var(--negrotucarrera);
+    font-weight: 700;
+    margin-right: 25px;
+} */
+
+
+/* .informate {
+    color: white;
+    font-weight: 700;
+    text-decoration: none !important;
+    background-color: var(--rosatucarrera);
+    margin-right: 0px;
+    border-radius: 20px;
+    padding: 8px 12px;
+}
+
+.informate:hover {
+    background-color: var(--colorinfo);
+    transition: background-color 1s;
+} */
 
 
 
 
 
 
-/* 
+/*                                         APUNTES
+
 
 ALGUNAS PROPIEDADES MÁS UTILIZADAS
 
@@ -1250,13 +1241,6 @@ GRID
     En grid el contenido se agrupa dentro de un área definida
     Se le puede dar el tamaño del área del elemento
         Se pueden usar juntos en un mismo CSS, no hay problema por juntarlos
-
-
-
-
-
-
-
 
 
 
