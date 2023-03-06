@@ -755,6 +755,88 @@ a {
 }
 
 
+/* CONTENEDOR FLEX */
+
+/* .contenedorDrop {
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    margin-top: 100px;
+}
+
+.columna1 {
+    background-color: yellow;
+    flex: 100%;
+    width: 100%;
+}
+
+.columna2 {
+    background-color: blue;
+    flex: 100%;
+    width: 100%;
+}
+
+.columna3 {
+    background-color: red;
+    flex: 100%;
+    width: 100%;
+} */
+
+
+/* CONTENEDOR GRID */
+
+/* .contenedorDrop2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 100px;
+    height: 200px;
+}
+
+.columna11{
+    background-color: yellow;
+    grid-column: 1/3;
+}
+
+.columna22 {
+    background-color: blue;
+    grid-column: 3/4;
+}
+
+.columna33 {
+    background-color: red;
+    grid-column: 1/3;
+} */
+
+
+
+
+/* 
+.contenedorDrop2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 100px;
+    height: 200px;
+}
+
+.columna11{
+    background-color: yellow;
+    grid-column: 1/3;
+    /* grid-row: 1/3; 
+}
+
+.columna22 {
+    background-color: blue;
+    grid-column: 3/5;
+}
+
+.columna33 {
+    background-color: red;
+    grid-column: 2/4;
+    grid-row: 2/4;
+} */
+
+
 
 
 
@@ -1243,6 +1325,63 @@ GRID
     En grid el contenido se agrupa dentro de un área definida
     Se le puede dar el tamaño del área del elemento
         Se pueden usar juntos en un mismo CSS, no hay problema por juntarlos
+
+
+
+
+
+
+PATRONES PARA RESPONSIVE DESIGN WEB
+
+        Mediaquery
+        Usábamos flex y grid aunque hay más formas de hacerlo
+        Los patrones son recursos preestablecidos para cada tamaño de pantalla
+        P.ej: para móviles se trabaja con 1 o 2 columnas
+
+        2 columnas igual
+        3 columnas iguales
+        Column drop             Ahora la vemos
+        Sidebar
+        Layout shifter
+        Mostly fluid
+
+        COLUMN DROP
+        Puedo decirle que la primera columna ocupe el 100%, que la segunda ocupe el 50% de la siguiente y la tercera el restante 50%
+
+        Ejercicio: en cualquier parte del Proyecto inicio, hacer un elemento padre con clase .contenedorDrop.
+        Haciendo uso de flex organizarlo en fila
+
+        Si inspeccionamos y en el código y le damos a GRID, aparecen unos números, esa es la posición de la columna
+
+        grid-column: posicioninicio/posicionfinal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
