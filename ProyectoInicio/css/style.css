@@ -337,6 +337,7 @@ a {
     padding: 30px 50px;
     position: relative;
     transition: 0.5s;
+    overflow: hidden;
 }
 
 .imagenes-cursos div:hover {
@@ -362,6 +363,7 @@ a {
     bottom: 50px;
     transition: 0.5s;
     box-sizing: border-box;
+   
 }
 
 .imagenes-cursos div a:hover {
