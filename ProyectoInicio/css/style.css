@@ -172,6 +172,27 @@ a {
         margin-bottom: 30px;
     }
 
+    /* .footerfijo {
+        background-color: var(--rosatucarrera);
+        display: none;
+        display: flex;
+        flex: 100%;
+        width: 100%;
+        padding: 10px 0px;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+    } */
+    
+    .fijoinforma {
+        display: none;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    
+
+    
     .cta-informate {
         width: 96px;
         height: 85px;
@@ -183,6 +204,13 @@ a {
         right: 0px;
     }
 
+    .ico-informate{
+        display: none;
+        bottom: 10px;
+        right: 40px;
+    }
+
+    
 }
 
 
@@ -226,30 +254,43 @@ a {
         text-transform: uppercase;
         margin-bottom: 30px;
     }
-
-    .cta-informate {
+    
+    .footerfijo {
+        background-color: var(--rosatucarrera);
         display: flex;
         flex: 100%;
         width: 100%;
-        height: 85px;
-        /* text-align: center; */
-        /* background-position: center center; */
-        /* background-size: cover; */
+        padding: 10px 0px;
         position: fixed;
         bottom: 0px;
-        right: 0px;
-        background-color: var(--rosatucarrera);
+        left: 0px;
+    }
+    
+    .fijoinforma {
+        /* display: none; */
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
     }
 
-    .cta-informate img {
+    .cta-informate {
+        display: none;
         width: 96px;
         height: 85px;
+        text-align: center;
+        background-position: center center;
+        background-size: cover;
         position: fixed;
-        bottom: 0px;
+        bottom: 30%;
         right: 0px;
     }
     
-    
+    .ico-informate{
+        position: fixed;
+        bottom: 10px;
+        right: 40px;
+    }
+
 }
 
 
@@ -816,17 +857,7 @@ a {
 
 /* .fijoinforma */
 
-.footerfijo {
-    background-color: var(--rosatucarrera);
-    padding: 20px 0px;
-}
 
-.fijoinforma {
-    /* display: none; */
-    color: white;
-    text-transform: uppercase;
-    font-weight: 700;
-}
 
 .scroll {
     width: 60px;
