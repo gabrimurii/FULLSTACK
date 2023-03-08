@@ -144,7 +144,7 @@ a {
 
 /* MEDIA QUERIES PARA ORDENADORES */
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
 
     .texto-ppal {
         width: 65%;                                 /* Le da separación a la derecha a todo el contenedor */
@@ -218,7 +218,7 @@ a {
 /* MEDIA QUERIES PARA TABLET */
 
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     
     .Login-movil {                          /* colsm-12 */
         flex: 100%;
@@ -290,6 +290,15 @@ a {
         bottom: 10px;
         right: 40px;
     }
+
+}
+
+
+/* MEDIA QUERY PARA INTERMEDIO */
+
+@media(max-width: 778px) {
+
+    /* Cambiar las imágenes de los cursos, ponerlo en vertical */
 
 }
 
