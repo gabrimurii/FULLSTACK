@@ -175,7 +175,7 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);               // 0
 
     let boolean4 = new Boolean(true);
 
-    console.log("OBJETO BOOLEANO4:", boolean4);
+    console.log("OBJETO BOOLEANO4:", typeof boolean4);
 
 
 
