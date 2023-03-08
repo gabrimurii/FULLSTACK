@@ -296,7 +296,7 @@ a {
 
 /* MEDIA QUERY PARA INTERMEDIO */
 
-@media(max-width: 778px) {
+@media(max-width: 768px) {
 
     /* Cambiar las imágenes de los cursos, ponerlo en vertical */
 
