@@ -26,6 +26,8 @@ body {
     font-weight: 400;
     margin: 0px;                                /* Quita la línea blanca que viene por defecto */
     /* transform: skew(20deg, 20deg); */
+
+                                    /* GRADIENTE */
     /* background-image: linear-gradient(to top, green 40%, greenyellow 80%, yellow 100%); */
 }
 
@@ -76,6 +78,14 @@ a {
     padding: 15px 0px 10px 0px;
 }
 
+.Login {                                /* colxl-12 */
+    display: flex;
+    flex: 100%;
+    max-width: 100%;
+    justify-content: flex-end;
+    background-color: transparent;
+}
+
 .Login a {
     color: var(--rosatucarrera);
 }
@@ -86,8 +96,23 @@ a {
     padding-right: 0.8rem;
 }
 
+.posicion-imagen {                      /* colxl-4 */
+    flex: 33.33%;
+    max-width: 33.33%;
+    padding: 17px 0px 0px 0px;
+}
+
 .subrayado a:hover {
     text-decoration: underline;
+}
+
+.navegacion {                           /* colxl-8 */
+    flex: 66.66%;
+    max-width: 66.66%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-top: 2.4rem;
 }
 
 .navcolor {
@@ -117,43 +142,56 @@ a {
 
 
 
-/* MEDIA QUERIES PARA ORDENADORES Y TABLETS */
+/* MEDIA QUERIES PARA ORDENADORES */
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
 
-    .Login {                                /* colxl-12 */
-        flex: 100%;
-        max-width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        background-color: transparent;
+    .texto-ppal {
+        width: 65%;                                 /* Le da separación a la derecha a todo el contenedor */
+    }    
+
+    .seccionparaquien {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        padding-top: 70px;
     }
 
-    .posicion-imagen {                      /* colxl-4 */
-        flex: 33.33%;
-        max-width: 33.33%;
-        padding: 17px 0px 0px 0px;
+    .lugares {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-between;
     }
 
-    .navegacion {                           /* colxl-8 */
-        flex: 66.66%;
-        max-width: 66.66%;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        margin-top: 2.4rem;
+    .sobre-nosotros {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid: 55%;
+        width: 55%;
+        text-transform: uppercase;
+        margin-bottom: 30px;
     }
+
+    .cta-informate {
+        width: 96px;
+        height: 85px;
+        text-align: center;
+        background-position: center center;
+        background-size: cover;
+        position: fixed;
+        bottom: 30%;
+        right: 0px;
+    }
+
 }
 
 
 
-
-
-/* MEDIA QUERIES PARA MOVIL */
+/* MEDIA QUERIES PARA TABLET */
 
 
 @media (max-width: 768px) {
-
+    
     .Login-movil {                          /* colsm-12 */
         flex: 100%;
         max-width: 100%;
@@ -162,6 +200,56 @@ a {
         background-color: transparent;
         align-items: center;
     }
+    
+    
+    .texto-ppal {
+        width: 100%;                                 /* Le da separación a la derecha a todo el contenedor */
+    }
+
+    .seccionparaquien {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        padding-top: 70px;
+    }
+
+    .lugares {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-content: space-between;
+    }
+
+    .sobre-nosotros {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid: 50%;
+        width: 50%;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    .cta-informate {
+        display: flex;
+        flex: 100%;
+        width: 100%;
+        height: 85px;
+        /* text-align: center; */
+        /* background-position: center center; */
+        /* background-size: cover; */
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        background-color: var(--rosatucarrera);
+    }
+
+    .cta-informate img {
+        width: 96px;
+        height: 85px;
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+    }
+    
+    
 }
 
 
@@ -191,9 +279,9 @@ a {
     padding-bottom: 250px;
 }
 
-.texto-ppal {
-    width: 65%;                                 /* Le da separación a la derecha a todo el contenedor */
-}
+
+/* .texto-ppal */
+
 
 
 .texto-ppal h1 {                                /* class="TextosZonaCentro" */
@@ -262,13 +350,18 @@ a {
 .logos-oficiales{
    padding: 30px 0px;
    margin-right: 15px;
-   margin-left: 150px;
+   margin-left: 8.33%;
 }
 
 .logos-adecco {
     padding-right: 15px;
     padding-left: 15px;
-    margin-left: 15px;
+    margin-left: 8.33%;
+}
+
+.imgfluid {
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -474,12 +567,7 @@ a {
 
 /* PARA QUIÉN SON ESTOS CURSOS */
 
-.seccionparaquien {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    padding-top: 70px;
-}
+/* .seccionparaquien */
 
 .paraquien{
     padding-bottom: 100px;
@@ -585,11 +673,7 @@ a {
     margin-bottom: 50px;
 }
 
-.lugares {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
-}
+/* .lugares */
 
 .lugares {
     text-transform: uppercase;
@@ -683,17 +767,10 @@ a {
     background-color: var(--grisfooter);
     padding-top: 50px;
     padding-bottom: 40px;
+    margin-bottom: 50px;
 }
 
-.sobre-nosotros {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid: 50%;
-    width: 50%;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-
-}
+/* .sobre-nosotros */
 
 .sobre-nosotros h3 {
     color: var(--negrotucarrera);
@@ -704,7 +781,6 @@ a {
 
 .sobre-nosotros a {
     color: var(--negrotucarrera);
-    padding: 0px 15px;
     margin-top: 0px;
     text-decoration: underline;
 }
@@ -734,15 +810,22 @@ a {
 
 /* IMAGENES FIJAS */
 
-.cta-informate {
-    width: 96px;
-    height: 85px;
-    text-align: center;
-    background-position: center center;
-    background-size: cover;
-    position: fixed;
-    bottom: 30%;
-    right: 0px;
+/* .cta-informate */
+
+/* .footerfijo */
+
+/* .fijoinforma */
+
+.footerfijo {
+    background-color: var(--rosatucarrera);
+    padding: 20px 0px;
+}
+
+.fijoinforma {
+    /* display: none; */
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
 }
 
 .scroll {
@@ -755,6 +838,8 @@ a {
     bottom: 75px;
     right: 40px;
 }
+
+
 
 
 /* CONTENEDOR FLEX */
