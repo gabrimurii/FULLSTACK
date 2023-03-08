@@ -39,10 +39,6 @@ console.log(pi);
 
 
 
-
-
-
-
 /* 
 
 DECLARACIÓN DE VARIABLES EN JS
