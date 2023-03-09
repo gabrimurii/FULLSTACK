@@ -1,9 +1,11 @@
+"use strict";                                                   // Correr JS en modo estricto
+
 
 // STRING 
 
-const producto = "Juego de mesa EL PUEBLO DUERME";          // La más utilizada
-const producto1 = String("DOOBLE");                         // La primera letra de String va SIEMPRE con Mayúscula
-const producto2 = new String("UNO");                        // Un string que está dentro de un objeto
+const producto = "Juego de mesa EL PUEBLO DUERME";              // La más utilizada
+const producto1 = String("DOOBLE");                             // La primera letra de String va SIEMPRE con Mayúscula
+const producto2 = new String("UNO");                            // Un string que está dentro de un objeto
 
 console.log("PRODUCTO:",producto);
 console.log("PRODUCTO1 con String:",producto1);
@@ -24,8 +26,8 @@ let numero100 = 100;
 console.log("NUMERO100:", numero100);
 console.log("NUMERO200:", numero200);
 
-console.log("TYPEOF NUMERO100:", typeof numero100);         // Tipo number
-console.log("TYPEOF NUMERO200:", typeof numero200);         // Tipo string
+console.log("TYPEOF NUMERO100:", typeof numero100);             // Tipo number
+console.log("TYPEOF NUMERO200:", typeof numero200);             // Tipo string
 
 
 // MÉTODOS
@@ -49,10 +51,10 @@ console.log("NUMERO2:", numero2);
 console.log("NUMERO3:", numero3);
 console.log("NUMERO4:", numero4);
 
-console.log("TYPEOF NUMERO1:", typeof numero1);            // number
-console.log("TYPEOF NUMERO2:", typeof numero2);            // number
-console.log("TYPEOF NUMERO3:", typeof numero3);            // string
-console.log("TYPEOF NUMERO4:", typeof numero4);            // number
+console.log("TYPEOF NUMERO1:", typeof numero1);                 // number
+console.log("TYPEOF NUMERO2:", typeof numero2);                 // number
+console.log("TYPEOF NUMERO3:", typeof numero3);                 // string
+console.log("TYPEOF NUMERO4:", typeof numero4);                 // number
 
     // PARA OPTIMIZAR AMBOS CÓDIGOS Y AÑADIRLE MÁS INFORMACIÓN QUE QUIERO QUE ME MUESTRE
 
@@ -64,10 +66,10 @@ console.log("NUMERO4 Y TYPEOF NUMERO4:", numero4, typeof numero4, numero4.length
 
 // OPERACIONES
 
-console.log("SUMA DE NUMEROS:", numero1 + numero2);                 // 3
-console.log("SUMA DE NUMERO + STRING:", numero1 + numero3);         // 2200 porque 200 es un string
+console.log("SUMA DE NUMEROS:", numero1 + numero2);             // 3
+console.log("SUMA DE NUMERO + STRING:", numero1 + numero3);     // 2200 porque 200 es un string
 
-console.log("MODULO DE NUMEROS:", numero1 % numero2);               // 0
+console.log("MODULO DE NUMEROS:", numero1 % numero2);           // 0
 
 
 // METODO MATH
@@ -98,7 +100,7 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);               // 0
     let areaRedondeada = Math.round(area);
     console.log("AREA REDONDEADA:", areaRedondeada);
     
-    // area = Math.round(area);                             // Le cambio el valor al número redondeado
+    // area = Math.round(area);                                 // Le cambio el valor al número redondeado
     // console.log("AREA REDONDEADA:", area);
 
 
@@ -137,11 +139,11 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);               // 0
     // Incrementos y decremento
 
     let meGusta = 0;
-    // meGusta ++;                  // Incrementa en 1 el valor de meGusta
+    // meGusta ++;                                                  // Incrementa en 1 el valor de meGusta
 
-    console.log("NÚMERO DE ME GUSTA:", meGusta++);                      // 0    Muestra variable y luego incrementa
-    console.log("NÚMERO DE ME GUSTA TRAS INCREMENTO:", meGusta);        // 1
-    console.log("NÚMERO DE ME GUSTA:", ++meGusta);                      // 2    Incrementa antes de mostrar variable
+    console.log("NÚMERO DE ME GUSTA:", meGusta++);                  // 0    Muestra variable y luego incrementa
+    console.log("NÚMERO DE ME GUSTA TRAS INCREMENTO:", meGusta);    // 1
+    console.log("NÚMERO DE ME GUSTA:", ++meGusta);                  // 2    Incrementa antes de mostrar variable
     console.log("INCREMENTO EN 15:", meGusta+=15);
 
 
@@ -178,6 +180,10 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);               // 0
     console.log("OBJETO BOOLEANO4:", typeof boolean4);
 
 
+   
+
+
+
 
 /* 
 
@@ -186,7 +192,7 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);               // 0
         - string     ===    cadena de texto  --> Requiere "" ó ''
         - number     ===    numero  --> No hay que poner comillas. No discimina entre decimales, enteros...
         - booleano   ===    true / false
-        - 
+        - object     ===    contenedor de propiedades
         - 
         - 
 
@@ -297,18 +303,5 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);               // 0
     BOOLEANOS
 
         Solo tienen valor de true o false
-
-
-    OBJETOS
-
-        Agrupa muchas propiedades
-        Por ejemplo, todas las variables de un producto == Nombre, precio, color...
-
-
-
-
-
-
-
 
 */

@@ -1,3 +1,5 @@
+"use strict";                                                  // Correr JS en modo estricto
+
 
 // Palabra reservada "var" + nombre de la variable + ""="" + valor de la varible
 
