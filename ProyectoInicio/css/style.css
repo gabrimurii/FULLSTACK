@@ -24,10 +24,11 @@ body {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    margin: 0px;                                /* Quita la línea blanca que viene por defecto */
+    margin: 0px;
+    /* Quita la línea blanca que viene por defecto */
     /* transform: skew(20deg, 20deg); */
 
-                                    /* GRADIENTE */
+    /* GRADIENTE */
     /* background-image: linear-gradient(to top, green 40%, greenyellow 80%, yellow 100%); */
 }
 
@@ -37,9 +38,9 @@ body {
     content: "Hola Calera bon día";
 } */
 
-    /* ABSOLUTE Y RELATIVE */
+/* ABSOLUTE Y RELATIVE */
 
-        /* .EjPadre{
+/* .EjPadre{
             background-color: red;
             width: 500px;
             height: 200px;
@@ -64,7 +65,8 @@ a {
 
 
 .contenedor {
-    width: 90%;             /* 114rem */
+    width: 90%;
+    /* 114rem */
     margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
@@ -78,7 +80,8 @@ a {
     padding: 15px 0px 10px 0px;
 }
 
-.Login {                                /* colxl-12 */
+/* colxl-12 */
+.Login {
     display: flex;
     flex: 100%;
     max-width: 100%;
@@ -91,12 +94,13 @@ a {
 }
 
 .raya {
-    color: var(--rosatucarrera);  
+    color: var(--rosatucarrera);
     padding-left: 0.8rem;
     padding-right: 0.8rem;
 }
 
-.posicion-imagen {                      /* colxl-4 */
+.posicion-imagen {
+    /* colxl-4 */
     flex: 33.33%;
     max-width: 33.33%;
     padding: 17px 0px 0px 0px;
@@ -106,7 +110,8 @@ a {
     text-decoration: underline;
 }
 
-.navegacion {                           /* colxl-8 */
+.navegacion {
+    /* colxl-8 */
     flex: 66.66%;
     max-width: 66.66%;
     display: flex;
@@ -121,7 +126,7 @@ a {
     margin-right: 25px;
 }
 
-.navegacion a{
+.navegacion a {
     font-size: 1.5rem;
 }
 
@@ -147,8 +152,64 @@ a {
 @media (min-width: 992px) {
 
     .texto-ppal {
-        width: 65%;                                 /* Le da separación a la derecha a todo el contenedor */
-    }    
+        width: 65%;
+        /* Le da separación a la derecha a todo el contenedor */
+    }
+
+    .logos {
+        background-color: white;
+        margin-top: -100px;
+        display: grid;
+        grid: 1fr / 3.5fr 1.5fr;
+        align-items: center;
+        width: 90%;
+        border-radius: 12px;
+    }
+
+    .logos-oficiales {
+        padding: 30px 0px;
+        margin-right: 15px;
+        margin-left: 8.33%;
+    }
+
+    .logos-adecco {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-left: 8.33%;
+    }
+
+    .cursos-sitios {
+        display: flex;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+        justify-content: center;
+        margin-bottom: 65px;
+    }
+
+    .imagenes-cursos {
+        display: grid;
+        grid: 300px 300px / 1fr 1fr;
+        gap: 30px;
+        margin: 0px 15px;
+    }
+
+    .imagenes-cursos div:hover {
+        transform: scale(102%);
+        box-shadow: 19px 23px 20px -10px rgba(0, 0, 0, 1);
+    }
+
+    .imagenes-cursos div a:hover {
+        color: white;
+        background-color: var(--rosatucarrera);
+        border-color: white;
+        transform: scale(110%);
+        box-shadow: 19px 23px 20px -10px rgba(0, 0, 0, 1);
+    }
+
+    .video {
+        width: 1110px;
+        height: 624px;
+    }
 
     .seccionparaquien {
         display: grid;
@@ -157,10 +218,23 @@ a {
         padding-top: 70px;
     }
 
+    .paraquienimg {
+        max-width: 100%;
+        height: auto;
+    }
+
     .lugares {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-between;
+    }
+
+    .telefono-mail {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        width: 100%;
+        padding-bottom: 70px;
     }
 
     .sobre-nosotros {
@@ -172,27 +246,6 @@ a {
         margin-bottom: 30px;
     }
 
-    /* .footerfijo {
-        background-color: var(--rosatucarrera);
-        display: none;
-        display: flex;
-        flex: 100%;
-        width: 100%;
-        padding: 10px 0px;
-        position: fixed;
-        bottom: 0px;
-        left: 0px;
-    } */
-    
-    .fijoinforma {
-        display: none;
-        color: white;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-    
-
-    
     .cta-informate {
         width: 96px;
         height: 85px;
@@ -204,13 +257,13 @@ a {
         right: 0px;
     }
 
-    .ico-informate{
+    .ico-informate {
         display: none;
         bottom: 10px;
         right: 40px;
     }
 
-    
+
 }
 
 
@@ -219,31 +272,108 @@ a {
 
 
 @media (max-width: 992px) {
-    
-    .Login-movil {                          /* colsm-12 */
+
+    .Login-movil {
+        display: flex;
         flex: 100%;
         max-width: 100%;
-        display: flex;
-        justify-content: flex-end;
         background-color: transparent;
+        justify-content: flex-end;
         align-items: center;
     }
-    
-    
+
+    .menuRespon {
+        display: none;
+       
+        /* background-image: url(../img/menu-2925825_960_720.png); */
+
+        /* PONER MENU HAMBURGUESA */
+    }
+
+
     .texto-ppal {
-        width: 100%;                                 /* Le quita la separación a la derecha a todo el contenedor */
+        width: 100%;
+        /* Le quita la separación a la derecha a todo el contenedor */
+    }
+
+    .logos {
+        background-color: white;
+        margin-top: -100px;
+        display: grid;
+        grid: 1fr / 3.5fr 1.5fr;
+        align-items: center;
+        width: 90%;
+        border-radius: 12px;
+    }
+
+    .logos-oficiales {
+        padding: 30px 0px;
+        margin-right: 15px;
+        margin-left: 8.33%;
+    }
+
+    .logos-adecco {
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-left: 8.33%;
+    }
+
+    .cursos-sitios {
+        display: flex;
+        flex-wrap: wrap;
+        text-transform: uppercase;
+        justify-content: center;
+        margin-bottom: 65px;
+    }
+
+    .imagenes-cursos {
+        display: grid;
+        grid: 300px 300px / 1fr 1fr;
+        gap: 30px;
+        margin: 0px 15px;
+    }
+
+    .imagenes-cursos div:hover {
+        /* transform: scale(102%);
+        box-shadow: 19px 23px 20px -10px rgba(0,0,0,1); */
+    }
+
+    .imagenes-cursos div a:hover {
+        color: white;
+        background-color: var(--rosatucarrera);
+        border-color: white;
+        /* transform: scale(110%);
+        box-shadow: 19px 23px 20px -10px rgba(0,0,0,1); */
+    }
+
+    .video {
+        width: 1110px;
+        height: 624px;
     }
 
     .seccionparaquien {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
+        /* display: grid;
+        grid-template-rows: 1fr 1fr; */
         padding-top: 70px;
+    }
+
+    .paraquienimg {
+        max-width: 100%;
+        height: auto;
     }
 
     .lugares {
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         justify-content: space-between;
+    }
+
+    .telefono-mail {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        width: 100%;
+        padding-bottom: 70px;
     }
 
     .sobre-nosotros {
@@ -254,7 +384,7 @@ a {
         text-transform: uppercase;
         margin-bottom: 30px;
     }
-    
+
     .footerfijo {
         background-color: var(--rosatucarrera);
         display: flex;
@@ -265,9 +395,8 @@ a {
         bottom: 0px;
         left: 0px;
     }
-    
+
     .fijoinforma {
-        /* display: none; */
         color: white;
         text-transform: uppercase;
         font-weight: 700;
@@ -284,8 +413,8 @@ a {
         bottom: 30%;
         right: 0px;
     }
-    
-    .ico-informate{
+
+    .ico-informate {
         position: fixed;
         bottom: 10px;
         right: 40px;
@@ -298,9 +427,97 @@ a {
 
 @media(max-width: 768px) {
 
-    /* Cambiar las imágenes de los cursos, ponerlo en vertical */
+    .imagenes-cursos {
+        display: grid;
+        grid: 1fr 1fr 1fr / 80%;
+        justify-content: center;
+        min-height: 900px;
+        margin: 0px 15px;
+    }
 
+    .video {
+        width: 1110px;
+        height: 370px;
+    }
 }
+
+
+/* MEDIA QUERY PARA MOVIL */
+
+@media(max-width: 570px) {
+
+    .logos {
+        background-color: white;
+        margin-top: -100px;
+        display: grid;
+        grid-template-rows: 2fr 1.5fr;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        align-items: center;
+        width: 90%;
+        height: 90%;
+        border-radius: 12px;
+    }
+
+    .logos-oficiales {
+        padding: 0px 0px;
+        margin-right: 8.33%;
+        margin-left: 8.33%;
+    }
+
+    .logos-adecco {
+        padding-right: 25px;
+        padding-left: 0px;
+        justify-self: center;
+        margin-left: 8.33%;
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+
+    .cursos-sitios {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        justify-content: center;
+        margin-bottom: 65px;
+    }
+
+    .imagenes-cursos {
+        display: grid;
+        grid: 1fr 1fr 1fr / 100%;
+        justify-content: center;
+        min-height: 950px;
+        margin: 0px -10px;
+    }
+
+    .imagenes-cursos div h2 {
+        color: white;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .video {
+        width: auto;
+        height: 175px;
+    }
+
+    .paraquienimg img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .telefono-mail {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 30px;
+        width: 100%;
+        padding-bottom: 70px;
+    }
+}
+
+
 
 
 /* PRUEBAS */
@@ -323,8 +540,10 @@ a {
 
 .banner {
     background-image: url(../img/banner.png);
-    background-size: cover;                     /* Contiene la imagen de fondo en mi contenedor */
-    background-repeat: no-repeat;               /* Para que la imagen no se repita si es más pequeño el contenedor */
+    background-size: cover;
+    /* Contiene la imagen de fondo en mi contenedor */
+    background-repeat: no-repeat;
+    /* Para que la imagen no se repita si es más pequeño el contenedor */
     padding-top: 80px;
     padding-bottom: 250px;
 }
@@ -334,7 +553,8 @@ a {
 
 
 
-.texto-ppal h1 {                                /* class="TextosZonaCentro" */
+.texto-ppal h1 {
+    /* class="TextosZonaCentro" */
     color: white;
     background-color: rgba(248, 102, 102, 0.65);
     font-weight: 800;
@@ -345,9 +565,9 @@ a {
     text-align: left;
 
     /* SOMBRA */
-    -webkit-box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
-    -moz-box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
-    box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
+    -webkit-box-shadow: 19px 23px 20px -10px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 19px 23px 20px -10px rgba(0, 0, 0, 1);
+    box-shadow: 19px 23px 20px -10px rgba(0, 0, 0, 1);
 }
 
 .texto-ppal h1:hover {
@@ -359,7 +579,8 @@ a {
     float: left;
 }
 
-.boton-cursos {                               /* class="cta" */
+.boton-cursos {
+    /* class="cta" */
     color: white;
     background: #000 url(../img/ico-flecha-derecha-white.png) no-repeat right 20px center;
     text-decoration: none;
@@ -367,7 +588,7 @@ a {
     text-transform: uppercase;
     float: right;
     border: 2px solid black;
-    padding: 24px 94px;  
+    padding: 24px 94px;
     transition: all 0.5s;
     /* transform: skew(30deg, 20deg); */
 }
@@ -379,7 +600,9 @@ a {
     /* transform: rotate(0.5turn); */
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -387,27 +610,11 @@ a {
 
 /* LOGOS */
 
-.logos{
-    background-color: white;
-    margin-top: -100px;
-    display: grid;
-    grid: 1fr / 3.5fr 1.5fr;
-    align-items: center;
-    width: 90%;
-    border-radius: 12px;    
-}
+/* .logos  */
 
-.logos-oficiales{
-   padding: 30px 0px;
-   margin-right: 15px;
-   margin-left: 8.33%;
-}
+/* .logos-oficiales */
 
-.logos-adecco {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-left: 8.33%;
-}
+/* .logos-adecco */
 
 .imgfluid {
     max-width: 100%;
@@ -442,13 +649,7 @@ a {
     padding-bottom: 10px;
 }
 
-.cursos-sitios {
-    display: flex;
-    flex-wrap: wrap;
-    text-transform: uppercase;
-    justify-content: center;
-    margin-bottom: 65px;
-}
+/* .cursos-sitios */
 
 .cursos-sitios a {
     color: var(--negrotucarrera);
@@ -464,29 +665,16 @@ a {
 
 /* OTROS CURSOS */
 
-.imagenes-cursos {
-    display: grid;
-    /* grid-template-rows: 300px 300px; */           /* Valor de las dos filas. Si pongo más valores, hay más filas */
-    /* grid-template-columns: 50% 50%; */            /* Valor de las dos columnas que vamos a hacer */
-    /* grid: 50% 50% / 300px 300px; */               /* Para abreviar. 1º columnas, 2º filas */
-    grid: 300px 300px / 1fr 1fr;                     /* Fracciones, divide el espacio */
-    row-gap: 30px;                                   /* Espacio entre filas */
-    column-gap: 30px;                                /* Espacio entre columnas */
-    gap: 30px 30px;                                  /* Espacio filas y columnas */
-    margin: 0px 15px;
-}
+/* .imagenes-cursos */
 
 .imagenes-cursos div {
     padding: 30px 50px;
     position: relative;
     transition: 0.5s;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
-.imagenes-cursos div:hover {
-    transform: scale(102%);
-    box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
-}
+/* .imagenes-cursos div:hover */
 
 .imagenes-cursos div h2 {
     color: white;
@@ -506,32 +694,26 @@ a {
     bottom: 50px;
     transition: 0.5s;
     box-sizing: border-box;
-   
+
 }
 
-.imagenes-cursos div a:hover {
-    color: white;
-    background-color: var(--rosatucarrera);
-    border-color: white;
-    transform: scale(110%);
-    box-shadow: 19px 23px 20px -10px rgba(0,0,0,1);
-}
+/* .imagenes-cursos div a:hover */
 
 .marketing-digital {
     background-image: url(../img/Curso-marketing-digital-centro.png);
-    background-size: cover; 
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .videojuegos {
     background-image: url(../img/Curso-programacion-videojuegos-centro.png);
-    background-size: cover; 
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 .programacion-web {
     background-image: url(../img/Curso-programacion-web-full-stack-centro.png);
-    background-size: cover; 
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -608,10 +790,7 @@ a {
     justify-content: center;
 }
 
-.video {
-    width: 1110px;
-    height: 624px;
-}
+/* .video  */
 
 
 
@@ -619,9 +798,9 @@ a {
 
 /* .seccionparaquien */
 
-.paraquien{
+.paraquien {
     padding-bottom: 100px;
-} 
+}
 
 .paraquien h3 {
     color: var(--rosatucarrera);
@@ -655,7 +834,7 @@ a {
     font-weight: 800;
     width: 85%;
     line-height: 1.2;
-    
+
 }
 
 .webgarantia {
@@ -697,10 +876,7 @@ a {
     border-color: var(--rosatucarrera);
 }
 
-.paraquienimg {
-    max-width: 100%;
-    height: auto;
-}
+/* .paraquienimg */
 
 
 /* LOCALIZACIONES */
@@ -729,6 +905,7 @@ a {
     text-transform: uppercase;
     padding-bottom: 24px;
 }
+
 .lugares h3 {
     margin-bottom: 0px;
 }
@@ -768,12 +945,7 @@ a {
     margin-bottom: 22px;
 }
 
-.telefono-mail {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    padding-bottom: 70px;
-}
+/* .telefono-mail */
 
 .telefono-mail img {
     max-height: 60px;
@@ -785,6 +957,7 @@ a {
     background-color: var(--blancoinfo);
     display: grid;
     grid-template-columns: 1fr 5fr;
+    width: 100%;
     align-items: center;
     padding: 30px 0px;
     border-radius: 4px;
@@ -993,10 +1166,10 @@ a {
 } */
 
 /* .descendentes p,h2 { */
-    /* Se puede poner con > p o sin. 
+/* Se puede poner con > p o sin. 
                                           El > selecciona todos
                                           Con la , podemos añadir más elementos */
-    /* text-transform: uppercase; */
+/* text-transform: uppercase; */
 /* } */
 
 
@@ -1049,23 +1222,24 @@ a {
 /* CONTENEDOR */
 
 /* .contenedor { */
-                                        /* Está en el body, le da estructura a toda la página */
-    /* width: 114rem; */                      /* 1140 px */
+/* Está en el body, le da estructura a toda la página */
+/* width: 114rem; */
+/* 1140 px */
 
-    /* Objetivo, centrar el contenido */
-    /* margin-top: 0;
+/* Objetivo, centrar el contenido */
+/* margin-top: 0;
     margin-right: auto; */
-    /* Hace que el contenido quede centrado en caso de que la pantalla sea más grande */
-    /* margin-bottom: 0;
+/* Hace que el contenido quede centrado en caso de que la pantalla sea más grande */
+/* margin-bottom: 0;
     margin-left: auto; */
-    /* Si es más pequeño entra los query */
-    /* 
+/* Si es más pequeño entra los query */
+/* 
     margin: 0 auto 0 auto;             Es exactamente igual  
     margin: 0 auto;                    Es exactamente igual */
 
-    /* Que la clase contenedor no se aplique a la sección de imagen */
-    /* Ir sección a sección seleccionando si me interesa */
-    /* En vez de aplicarlo al body, lo aplicamos a cada sección */
+/* Que la clase contenedor no se aplique a la sección de imagen */
+/* Ir sección a sección seleccionando si me interesa */
+/* En vez de aplicarlo al body, lo aplicamos a cada sección */
 
 /* } */
 
@@ -1086,30 +1260,34 @@ a {
 
 /* .nav-principal {
     display: flex;
-    flex-wrap: wrap;  */                   /* Cuando un elemento ocupa más que en ancho, pasa a la siguiente fila */
-   /*  padding: 15px 0px 10px 0px; */         /* Si no se pone nada al final, se entiende que es 0 */
+    flex-wrap: wrap;  */
+/* Cuando un elemento ocupa más que en ancho, pasa a la siguiente fila */
+/*  padding: 15px 0px 10px 0px; */
+/* Si no se pone nada al final, se entiende que es 0 */
 
 /* } */
 
 /* a{
     text-decoration: none; */
-    /* transition: background-color 3s ;    Fusión con hover para cambiarle el color de fondo */
+/* transition: background-color 3s ;    Fusión con hover para cambiarle el color de fondo */
 /* } */
 
-/* .Login {  */                               /* colxl-12 */
-    /* flex: 100%;
+/* .Login {  */
+/* colxl-12 */
+/* flex: 100%;
     max-width: 100%;
     display: flex;
-    justify-content: flex-end;  */         /* Me pone el texto al final del todo */
-    /* background-color: transparent; */
-    /* text-align: right; */
-    /* margin-left: 500px; */ 
+    justify-content: flex-end;  */
+/* Me pone el texto al final del todo */
+/* background-color: transparent; */
+/* text-align: right; */
+/* margin-left: 500px; */
 /* } */
 
 /* .Login a {
-    color: var(--rosatucarrera);  */ 
-    /* font-family: var(--fuentetucarrera); */
-    /* float: right; */
+    color: var(--rosatucarrera);  */
+/* font-family: var(--fuentetucarrera); */
+/* float: right; */
 /* } */
 
 /* .raya {
@@ -1118,14 +1296,16 @@ a {
     padding-right: 0.8rem;
 } */
 
-/* .posicion-imagen { */                      /* colxl-4 */
-    /* flex: 33.33%;
+/* .posicion-imagen { */
+/* colxl-4 */
+/* flex: 33.33%;
     max-width: 33.33%;
     padding: 17px 0px 0px 0px;
 } */
 
-/* .navegacion {   */                         /* colxl-8 */
-   /*  flex: 66.66%;
+/* .navegacion {   */
+/* colxl-8 */
+/*  flex: 66.66%;
     max-width: 66.66%;
     display: flex;
     justify-content: end;
@@ -1137,9 +1317,10 @@ a {
     font-size: 1.5rem;
 } */
 
-/* .subrayado a:hover { */                /* Usar hover para que al poner el ratón encima se aplique */
-    /* text-decoration: underline; */
-    /* background-color: aqua;         Hace que el color cambie al ponerme encima. Necesito transition en el a */
+/* .subrayado a:hover { */
+/* Usar hover para que al poner el ratón encima se aplique */
+/* text-decoration: underline; */
+/* background-color: aqua;         Hace que el color cambie al ponerme encima. Necesito transition en el a */
 /* } */
 
 /* .navcolor {
