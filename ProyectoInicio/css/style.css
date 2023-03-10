@@ -686,7 +686,6 @@ a {
 .sobre-nosotros {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid: 55%;
     width: 55%;
     text-transform: uppercase;
     margin-bottom: 30px;
