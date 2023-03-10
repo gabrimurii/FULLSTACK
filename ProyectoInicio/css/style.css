@@ -106,6 +106,10 @@ a {
     padding: 17px 0px 0px 0px;
 }
 
+.menuResponsive {
+    display: none;
+}
+
 .subrayado a:hover {
     text-decoration: underline;
 }
@@ -146,381 +150,6 @@ a {
 }
 
 
-
-/* MEDIA QUERIES PARA ORDENADORES */
-
-@media (min-width: 992px) {
-
-    .texto-ppal {
-        width: 65%;
-        /* Le da separación a la derecha a todo el contenedor */
-    }
-
-    .logos {
-        background-color: white;
-        margin-top: -100px;
-        display: grid;
-        grid: 1fr / 3.5fr 1.5fr;
-        align-items: center;
-        width: 90%;
-        border-radius: 12px;
-    }
-
-    .logos-oficiales {
-        padding: 30px 0px;
-        margin-right: 15px;
-        margin-left: 8.33%;
-    }
-
-    .logos-adecco {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-left: 8.33%;
-    }
-
-    .cursos-sitios {
-        display: flex;
-        flex-wrap: wrap;
-        text-transform: uppercase;
-        justify-content: center;
-        margin-bottom: 65px;
-    }
-
-    .imagenes-cursos {
-        display: grid;
-        grid: 300px 300px / 1fr 1fr;
-        gap: 30px;
-        margin: 0px 15px;
-    }
-
-    .imagenes-cursos div:hover {
-        transform: scale(102%);
-        box-shadow: 19px 23px 20px -10px rgba(0, 0, 0, 1);
-    }
-
-    .imagenes-cursos div a:hover {
-        color: white;
-        background-color: var(--rosatucarrera);
-        border-color: white;
-        transform: scale(110%);
-        box-shadow: 19px 23px 20px -10px rgba(0, 0, 0, 1);
-    }
-
-    .video {
-        width: 1110px;
-        height: 624px;
-    }
-
-    .seccionparaquien {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        padding-top: 70px;
-    }
-
-    .paraquienimg {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .lugares {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        justify-content: space-between;
-    }
-
-    .telefono-mail {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        width: 100%;
-        padding-bottom: 70px;
-    }
-
-    .sobre-nosotros {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid: 55%;
-        width: 55%;
-        text-transform: uppercase;
-        margin-bottom: 30px;
-    }
-
-    .cta-informate {
-        width: 96px;
-        height: 85px;
-        text-align: center;
-        background-position: center center;
-        background-size: cover;
-        position: fixed;
-        bottom: 30%;
-        right: 0px;
-    }
-
-    .ico-informate {
-        display: none;
-        bottom: 10px;
-        right: 40px;
-    }
-
-
-}
-
-
-
-/* MEDIA QUERIES PARA TABLET */
-
-
-@media (max-width: 992px) {
-
-    .Login-movil {
-        display: flex;
-        flex: 100%;
-        max-width: 100%;
-        background-color: transparent;
-        justify-content: flex-end;
-        align-items: center;
-    }
-
-    .menuRespon {
-        display: none;
-       
-        /* background-image: url(../img/menu-2925825_960_720.png); */
-
-        /* PONER MENU HAMBURGUESA */
-    }
-
-
-    .texto-ppal {
-        width: 100%;
-        /* Le quita la separación a la derecha a todo el contenedor */
-    }
-
-    .logos {
-        background-color: white;
-        margin-top: -100px;
-        display: grid;
-        grid: 1fr / 3.5fr 1.5fr;
-        align-items: center;
-        width: 90%;
-        border-radius: 12px;
-    }
-
-    .logos-oficiales {
-        padding: 30px 0px;
-        margin-right: 15px;
-        margin-left: 8.33%;
-    }
-
-    .logos-adecco {
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-left: 8.33%;
-    }
-
-    .cursos-sitios {
-        display: flex;
-        flex-wrap: wrap;
-        text-transform: uppercase;
-        justify-content: center;
-        margin-bottom: 65px;
-    }
-
-    .imagenes-cursos {
-        display: grid;
-        grid: 300px 300px / 1fr 1fr;
-        gap: 30px;
-        margin: 0px 15px;
-    }
-
-    .imagenes-cursos div:hover {
-        /* transform: scale(102%);
-        box-shadow: 19px 23px 20px -10px rgba(0,0,0,1); */
-    }
-
-    .imagenes-cursos div a:hover {
-        color: white;
-        background-color: var(--rosatucarrera);
-        border-color: white;
-        /* transform: scale(110%);
-        box-shadow: 19px 23px 20px -10px rgba(0,0,0,1); */
-    }
-
-    .video {
-        width: 1110px;
-        height: 624px;
-    }
-
-    .seccionparaquien {
-        /* display: grid;
-        grid-template-rows: 1fr 1fr; */
-        padding-top: 70px;
-    }
-
-    .paraquienimg {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .lugares {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        justify-content: space-between;
-    }
-
-    .telefono-mail {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-        width: 100%;
-        padding-bottom: 70px;
-    }
-
-    .sobre-nosotros {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid: 50%;
-        width: 50%;
-        text-transform: uppercase;
-        margin-bottom: 30px;
-    }
-
-    .footerfijo {
-        background-color: var(--rosatucarrera);
-        display: flex;
-        flex: 100%;
-        width: 100%;
-        padding: 10px 0px;
-        position: fixed;
-        bottom: 0px;
-        left: 0px;
-    }
-
-    .fijoinforma {
-        color: white;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
-
-    .cta-informate {
-        display: none;
-        width: 96px;
-        height: 85px;
-        text-align: center;
-        background-position: center center;
-        background-size: cover;
-        position: fixed;
-        bottom: 30%;
-        right: 0px;
-    }
-
-    .ico-informate {
-        position: fixed;
-        bottom: 10px;
-        right: 40px;
-    }
-
-}
-
-
-/* MEDIA QUERY PARA INTERMEDIO */
-
-@media(max-width: 768px) {
-
-    .imagenes-cursos {
-        display: grid;
-        grid: 1fr 1fr 1fr / 80%;
-        justify-content: center;
-        min-height: 900px;
-        margin: 0px 15px;
-    }
-
-    .video {
-        width: 1110px;
-        height: 370px;
-    }
-}
-
-
-/* MEDIA QUERY PARA MOVIL */
-
-@media(max-width: 570px) {
-
-    .logos {
-        background-color: white;
-        margin-top: -100px;
-        display: grid;
-        grid-template-rows: 2fr 1.5fr;
-        grid-template-columns: 1fr;
-        gap: 30px;
-        align-items: center;
-        width: 90%;
-        height: 90%;
-        border-radius: 12px;
-    }
-
-    .logos-oficiales {
-        padding: 0px 0px;
-        margin-right: 8.33%;
-        margin-left: 8.33%;
-    }
-
-    .logos-adecco {
-        padding-right: 25px;
-        padding-left: 0px;
-        justify-self: center;
-        margin-left: 8.33%;
-        margin-right: 0px;
-        margin-bottom: 50px;
-    }
-
-    .cursos-sitios {
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 5px;
-        text-align: center;
-        text-transform: uppercase;
-        justify-content: center;
-        margin-bottom: 65px;
-    }
-
-    .imagenes-cursos {
-        display: grid;
-        grid: 1fr 1fr 1fr / 100%;
-        justify-content: center;
-        min-height: 950px;
-        margin: 0px -10px;
-    }
-
-    .imagenes-cursos div h2 {
-        color: white;
-        text-transform: uppercase;
-        font-size: 20px;
-    }
-
-    .video {
-        width: auto;
-        height: 175px;
-    }
-
-    .paraquienimg img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .telefono-mail {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr;
-        gap: 30px;
-        width: 100%;
-        padding-bottom: 70px;
-    }
-}
-
-
-
-
 /* PRUEBAS */
 
 /* @media (max-width: 480px) {
@@ -537,7 +166,7 @@ a {
 
 
 
-/* SECCIÓN 1 == BANNER */
+/* BANNER */
 
 .banner {
     background-image: url(../img/banner.png);
@@ -549,10 +178,10 @@ a {
     padding-bottom: 250px;
 }
 
-
-/* .texto-ppal */
-
-
+.texto-ppal {
+    width: 65%;
+    /* Le da separación a la derecha a todo el contenedor */
+}
 
 .texto-ppal h1 {
     /* class="TextosZonaCentro" */
@@ -580,8 +209,7 @@ a {
     float: left;
 }
 
-.boton-cursos {
-    /* class="cta" */
+.boton-cursos {     /* class="cta" */
     color: white;
     background: #000 url(../img/ico-flecha-derecha-white.png) no-repeat right 20px center;
     text-decoration: none;
@@ -611,11 +239,27 @@ a {
 
 /* LOGOS */
 
-/* .logos  */
+.logos {
+    background-color: white;
+    margin-top: -100px;
+    display: grid;
+    grid: 1fr / 3.5fr 1.5fr;
+    align-items: center;
+    width: 90%;
+    border-radius: 12px;
+}
 
-/* .logos-oficiales */
+.logos-oficiales {
+    padding: 30px 0px;
+    margin-right: 15px;
+    margin-left: 8.33%;
+}
 
-/* .logos-adecco */
+.logos-adecco {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 8.33%;
+}
 
 .imgfluid {
     max-width: 100%;
@@ -650,7 +294,13 @@ a {
     padding-bottom: 10px;
 }
 
-/* .cursos-sitios */
+.cursos-sitios {
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    justify-content: center;
+    margin-bottom: 65px;
+}
 
 .cursos-sitios a {
     color: var(--negrotucarrera);
@@ -666,16 +316,25 @@ a {
 
 /* OTROS CURSOS */
 
-/* .imagenes-cursos */
+.imagenes-cursos {
+    display: grid;
+    grid: 300px 300px / 1fr 1fr;
+    gap: 30px;
+    margin: 0px 15px;
+}
 
 .imagenes-cursos div {
     padding: 30px 50px;
     position: relative;
     transition: 0.5s;
+    background-position: right;
     /* overflow: hidden; */
 }
 
-/* .imagenes-cursos div:hover */
+.imagenes-cursos div:hover {
+    transform: scale(102%);
+    box-shadow: 19px 23px 20px -10px rgba(0, 0, 0, 1);
+}
 
 .imagenes-cursos div h2 {
     color: white;
@@ -698,7 +357,13 @@ a {
 
 }
 
-/* .imagenes-cursos div a:hover */
+.imagenes-cursos div a:hover {
+    color: white;
+    background-color: var(--rosatucarrera);
+    border-color: white;
+    transform: scale(110%);
+    box-shadow: 19px 23px 20px -10px rgba(0, 0, 0, 1);
+}
 
 .marketing-digital {
     background-image: url(../img/Curso-marketing-digital-centro.png);
@@ -783,6 +448,7 @@ a {
 }
 
 
+
 /* VIDEO */
 
 .seccionvideo {
@@ -791,13 +457,21 @@ a {
     justify-content: center;
 }
 
-/* .video  */
+.video {
+    width: 1110px;
+    height: 624px;
+}
 
 
 
 /* PARA QUIÉN SON ESTOS CURSOS */
 
-/* .seccionparaquien */
+.seccionparaquien {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
 
 .paraquien {
     padding-bottom: 100px;
@@ -835,7 +509,6 @@ a {
     font-weight: 800;
     width: 85%;
     line-height: 1.2;
-
 }
 
 .webgarantia {
@@ -877,7 +550,12 @@ a {
     border-color: var(--rosatucarrera);
 }
 
-/* .paraquienimg */
+.paraquienimg img {
+    max-width: 100%;
+    height: auto;
+    padding-left: 10%;
+}
+
 
 
 /* LOCALIZACIONES */
@@ -900,7 +578,11 @@ a {
     margin-bottom: 50px;
 }
 
-/* .lugares */
+.lugares {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+}
 
 .lugares {
     text-transform: uppercase;
@@ -946,7 +628,13 @@ a {
     margin-bottom: 22px;
 }
 
-/* .telefono-mail */
+.telefono-mail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 100%;
+    padding-bottom: 70px;
+}
 
 .telefono-mail img {
     max-height: 60px;
@@ -985,6 +673,7 @@ a {
 }
 
 
+
 /* FOOTER */
 
 .footer {
@@ -994,7 +683,14 @@ a {
     margin-bottom: 50px;
 }
 
-/* .sobre-nosotros */
+.sobre-nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid: 55%;
+    width: 55%;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
 
 .sobre-nosotros h3 {
     color: var(--negrotucarrera);
@@ -1034,13 +730,16 @@ a {
 
 /* IMAGENES FIJAS */
 
-/* .cta-informate */
-
-/* .footerfijo */
-
-/* .fijoinforma */
-
-
+.cta-informate {
+    width: 96px;
+    height: 85px;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    position: fixed;
+    bottom: 30%;
+    right: 0px;
+}
 
 .scroll {
     width: 60px;
@@ -1052,6 +751,242 @@ a {
     bottom: 75px;
     right: 40px;
 }
+
+
+
+
+
+
+/* MEDIA QUERIES PARA ORDENADORES */
+
+@media (min-width: 992px) {
+    
+    .ico-informate {
+        display: none;
+        bottom: 10px;
+        right: 40px;
+    }
+}
+
+
+
+/* MEDIA QUERIES PARA TABLET */
+
+
+@media (max-width: 992px) {
+
+    .texto-ppal {
+        width: 100%;
+    }
+
+    .imagenes-cursos div:hover {
+        transform: scale(100%);
+    }
+
+    .imagenes-cursos div a:hover {
+        transform: scale(100%);
+    }
+
+    .seccionparaquien {
+        display: grid;
+        grid-template-rows: 1fr 0.3fr;
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+    }
+
+    .lugares {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        justify-content: space-between;
+    }
+
+    .sobre-nosotros {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid: 100%;
+        width: 100%;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
+
+    .cta-informate {
+        display: none;
+    }
+
+    .ico-informate {
+        position: fixed;
+        bottom: 10px;
+        right: 40px;
+    }
+
+    .footerfijo {
+        background-color: var(--rosatucarrera);
+        display: flex;
+        flex: 100%;
+        width: 100%;
+        padding: 10px 0px;
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .fijoinforma {
+        color: white;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+
+
+/* MEDIA QUERY INTERMEDIO */
+
+@media(max-width: 768px) {
+
+    .menuOrdenador {
+        display: none;
+    }
+
+    .menuResponsive {
+        flex: 33.33%;
+        max-width: 33.33%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .menuResponsive img {
+        max-width: 40px;
+        max-height: 40px;
+    } 
+    
+    .posicion-imagen {
+        /* colxl-4 */
+        flex: 66.66%;
+        max-width: 66.66%;
+        padding: 17px 0px 0px 0px;
+        max-width: 100%;
+}
+    
+    .posicion-imagen img {
+        max-width: 100%;
+}
+    
+    .imagenes-cursos {
+        display: grid;
+        grid: 1fr 1fr 1fr / 80%;
+        justify-content: center;
+        min-height: 900px;
+        margin: 0px 15px;
+    }
+
+    .video {
+        width: 1110px;
+        height: 370px;
+    }
+
+    .telefono-mail {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        width: 100%;
+        padding-bottom: 70px;
+    }
+
+    .faq {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 15px;
+        text-align: center;
+        padding: 20px 15px;
+    }
+}
+
+
+
+/* MEDIA QUERY PARA MOVIL */
+
+@media(max-width: 570px) {
+
+    .logos {
+        background-color: white;
+        margin-top: -100px;
+        display: grid;
+        grid-template-rows: 2fr 1.5fr;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        align-items: center;
+        width: 90%;
+        height: 90%;
+        border-radius: 12px;
+    }
+
+    .logos-oficiales {
+        padding: 0px 0px;
+        margin-right: 8.33%;
+        margin-left: 8.33%;
+    }
+
+    .logos-adecco {
+        padding-right: 25px;
+        padding-left: 0px;
+        justify-self: center;
+        margin-left: 8.33%;
+        margin-right: 0px;
+        margin-bottom: 50px;
+    }
+
+    .cursos-sitios {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        justify-content: center;
+        margin-bottom: 65px;
+    }
+
+    .imagenes-cursos {
+        display: grid;
+        grid: 1fr 1fr 1fr / 95%;
+        justify-content: center;
+        min-height: 950px;
+        margin: 0px -10px;
+    }
+
+
+    .imagenes-cursos div h2 {
+        font-size: 25px;
+    }
+
+    .video {
+        width: auto;
+        height: 175px;
+    }
+
+    .paraquienimg img {
+        max-width: 100%;
+        height: auto;
+        padding-left: 0px;
+    }
+}
+
+
+@media(max-width: 410px) {
+    .boton-cursos {     /* class="cta" */
+        padding: 24px 70px;
+    }
+}
+
+
+
+
+
 
 
 
@@ -1241,110 +1176,6 @@ a {
 /* Que la clase contenedor no se aplique a la sección de imagen */
 /* Ir sección a sección seleccionando si me interesa */
 /* En vez de aplicarlo al body, lo aplicamos a cada sección */
-
-/* } */
-
-
-/* MENÚ DE NAVEGACIÓN */
-
-/* .nav-margin {
-    background-color: var(--rosatucarrera);
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-.nav-padding {
-    background-color: var(--rosatucarrera);
-    padding-top: 30px;
-    padding-bottom: 30px;
-} */
-
-/* .nav-principal {
-    display: flex;
-    flex-wrap: wrap;  */
-/* Cuando un elemento ocupa más que en ancho, pasa a la siguiente fila */
-/*  padding: 15px 0px 10px 0px; */
-/* Si no se pone nada al final, se entiende que es 0 */
-
-/* } */
-
-/* a{
-    text-decoration: none; */
-/* transition: background-color 3s ;    Fusión con hover para cambiarle el color de fondo */
-/* } */
-
-/* .Login {  */
-/* colxl-12 */
-/* flex: 100%;
-    max-width: 100%;
-    display: flex;
-    justify-content: flex-end;  */
-/* Me pone el texto al final del todo */
-/* background-color: transparent; */
-/* text-align: right; */
-/* margin-left: 500px; */
-/* } */
-
-/* .Login a {
-    color: var(--rosatucarrera);  */
-/* font-family: var(--fuentetucarrera); */
-/* float: right; */
-/* } */
-
-/* .raya {
-    color: var(--rosatucarrera);  
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-} */
-
-/* .posicion-imagen { */
-/* colxl-4 */
-/* flex: 33.33%;
-    max-width: 33.33%;
-    padding: 17px 0px 0px 0px;
-} */
-
-/* .navegacion {   */
-/* colxl-8 */
-/*  flex: 66.66%;
-    max-width: 66.66%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    margin-top: 2.4rem;
-} */
-
-/* .navegacion a{
-    font-size: 1.5rem;
-} */
-
-/* .subrayado a:hover { */
-/* Usar hover para que al poner el ratón encima se aplique */
-/* text-decoration: underline; */
-/* background-color: aqua;         Hace que el color cambie al ponerme encima. Necesito transition en el a */
-/* } */
-
-/* .navcolor {
-    color: var(--negrotucarrera);
-    font-weight: 700;
-    margin-right: 25px;
-} */
-
-
-/* .informate {
-    color: white;
-    font-weight: 700;
-    text-decoration: none !important;
-    background-color: var(--rosatucarrera);
-    margin-right: 0px;
-    border-radius: 20px;
-    padding: 8px 12px;
-}
-
-.informate:hover {
-    background-color: var(--colorinfo);
-    transition: background-color 1s;
-} */
 
 
 
@@ -1663,35 +1494,5 @@ PATRONES PARA RESPONSIVE DESIGN WEB
         Si inspeccionamos y en el código y le damos a GRID, aparecen unos números, esa es la posición de la columna
 
         grid-column: posicioninicio/posicionfinal
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 */
