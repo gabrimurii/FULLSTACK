@@ -143,9 +143,9 @@ OBJETOS
     Es un tipo de variable
 
         let nombreObjeto = { 
-            propiedad1: valor1,                             // Se usa ":" en vez de "="
-            propiedad2: valor2,                             // Se separa
-            propiedad3: valor3                              // No se le pone ni "," ni ";"
+            propiedad1 : valor1,                             // Se usa ":" en vez de "="
+            propiedad2 : valor2,                             // Se separa
+            propiedad3 : valor3                              // No se le pone ni "," ni ";"
         }
 
         
@@ -196,11 +196,11 @@ OBJETOS
 
         Optimiza el proceso anterior
 
-            const {categoria} = producto;
+            const {categoria} = producto;       Se crea una variable llamada "categoria"
 
                     {propiedad} = objeto;
-                
-            Se crea una variable llamada "categoria"
+                    {propiedad1, propiedad2, propiedad3,...} = objeto;
+            
 
             
     METODOS PARA LOS OBJETOS
