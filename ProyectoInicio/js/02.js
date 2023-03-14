@@ -193,8 +193,6 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);           // 0
         - number     ===    numero  --> No hay que poner comillas. No discimina entre decimales, enteros...
         - booleano   ===    true / false
         - object     ===    contenedor de propiedades
-        - 
-        - 
 
 
     TYPEOF 
@@ -242,6 +240,7 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);           // 0
 
             console.log(numero1 + numero2);
     
+
     MÉTODOS PARA LOS NÚMEROS
 
         MATH
@@ -298,7 +297,6 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);           // 0
 
             console.log(`NOMBRE CLIENTE: ${nombre} EMAIL: ${email}`);
 
-    
 
     BOOLEANOS
 
