@@ -193,6 +193,7 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);           // 0
         - number     ===    numero  --> No hay que poner comillas. No discimina entre decimales, enteros...
         - booleano   ===    true / false
         - object     ===    contenedor de propiedades
+        - function   ===    contiene una función
 
 
     TYPEOF 

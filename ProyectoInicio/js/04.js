@@ -341,18 +341,4 @@ ARRAYS / ARREGLOS
 
             array.forEach(función (argumentos){cuerpo de la función});
 
-        
-        INCLUDE PARA ARREGLO PLANO
-
-            Un array es plano si no tiene subvalores [1, 2, 3, 4, 5, "Patata"];
-
-            Uno que no es plano es un array con objetos dentro, tiene valores y estos tienen subvalores
-
-        
-        METODO SOME
-
-
-
-
-
 */

@@ -1,5 +1,6 @@
 "use strict";                                                   // Correr JS en modo estricto
 
+
 /* FUNCIONES */
 
     /* DECLARACIÓN DE LA FUNCIÓN */
@@ -202,6 +203,133 @@
     nombreCompleto("Gabriel", "Murillo", "Peña");
 
 
+    /* FUNCION DE FLECHA */
+
+    // Partimos de la expresión de la función
+
+    let triplicar = function(numero=1){
+        console.log("VALOR DE TRIPLICAR CON EXPRESIÓN DE LA FUNCION:", numero * 3)
+    };
+
+    triplicar(13);
+
+    // Hacemos el arrow function
+    // Eliminamos function y añadimos una flecha después de los atributos y antes de las {}
+    // El paréntesis de los parámetros lo podemos eliminar sólo si tenemos un atributo y está sin inicializar
+    // Se pueden eliminar las {} si el cuerpo de la función solo tiene una línea
+    // {return(numero * 3)} === (numero * 3) => Si solo hay una linea y esta es return, se obvia
+
+    let triplicar2 = (numero=1) => {
+        console.log("VALOR DE TRIPLICAR2 CON EXPRESIÓN DE LA FUNCION:", numero * 3)
+    };
+
+    triplicar2(13);
+
+    // Muy simplificado
+
+    let triplicar3 = numero => (numero * 3);
+
+    let resultadoTriplicar3 = triplicar3(13);
+
+    console.log("Resultado triplicado", resultadoTriplicar3);
+
+
+    /* EJERCICIO */
+
+    // Crear una función de flecha que se llame 'aprendiendo'
+    // Recibe un argumento de entrada sin inicializar
+    // Me tiene que devolver el valor +7
+    // Almacenarlo en una variable 'resultadoAprendiendo'
+
+    let aprendiendo = numero => numero + 7;
+
+    let resultadoAprendiendo = aprendiendo(10);
+
+    console.log("El resultado de 'aprendiendo' es:", resultadoAprendiendo);
+
+
+    /* EJERCICIO */
+
+    // Crear una función de flecha que se llame 'matricula'
+    // Me muestra directamente por pantalla la matricula
+
+
+    let matricula = valor => console.log("Tu matricula es:", valor);
+
+    matricula("1234-ZZZ");
+
+
+    /* METODO SOME */
+
+    // Crear un array que se llame "carrito"
+    // Dentro del array introducimos 4 objetos con propiedades "nombre" y "precio"
+
+    const carrito = [
+        {
+            nombre : "TV",
+            precio : 750,
+        },
+
+        {
+            nombre : "Tablet",
+            precio : 350,
+        },
+
+        {
+            nombre : "Movil",
+            precio : 550,
+        },
+
+        {   nombre : "PC",
+            precio : 1750,
+        },
+    ];
+
+
+    let resultado = 0;
+
+    resultado = carrito.some(function(producto) {                               // 'producto' es un atributo
+        return producto.nombre === "Tablet"                                     // = asignar valores
+    })                                                                          // == iguala sin tener en cuenta el tipo de dato
+                                                                                // === iguala teniendo en cuenta el tipo de dato
+    console.log("RESULTADO DEL METODO SOME:", resultado);
+    
+    // Hacerlo con función de flecha
+    
+    resultado = carrito.some(producto => producto.nombre === "PC");
+    
+    console.log("RESULTADO2 DEL METODO SOME Y FUNCION DE FLECHA:", resultado);
+
+
+    /* METODO REDUCE */
+
+    resultado = carrito.reduce(function (total, producto){
+        return total + producto.precio
+    }, 0)                                                                                       // Se inicializa en 0. Es como un acumulador
+
+    console.log("USO DE REDUCE:", resultado);
+
+    // Hacemos arrow function
+
+    resultado = carrito.reduce((total, producto) => total + producto.precio, 0);                                                                                         
+
+    console.log("USO DE REDUCE:", resultado);
+
+
+    /* METODO FILTER */
+
+    resultado = carrito.filter(function (producto){
+        return producto.precio > 400
+    });      
+    
+    console.log("USO DE FILTER", resultado);
+
+    // Hacemos arrow function
+
+    resultado = carrito.filter(producto => producto.precio > 400);
+
+    console.log("USO DE FILTER", resultado);
+
 
 
 
@@ -298,7 +426,7 @@ FUNCIONES
     
     METODOS DE PROPIEDAD
 
-        Son funcioones con la sintaxis de método
+        Son funciones con la sintaxis de método
 
             const reproductor = {
                 reproducir : function(id){
@@ -319,8 +447,121 @@ FUNCIONES
             reproductor.crearPlaylist("Metal");
                 
     
+    FUNCIONES DE FLECHA
+
+        Simplifican mucho la sintaxis
+
+        Partimos de la expresión de la función
+
+            let triplicar = function(numero=1){
+                console.log("VALOR DE TRIPLICAR CON EXPRESIÓN DE LA FUNCION", numero)
+            };
+
+            triplicar(13);
+
+        Hacemos el arrow function
+        
+        Eliminamos function y añadimos una flecha después de los atributos y antes de las {}
+        
+        El paréntesis de los parámetros lo podemos eliminar sólo si tenemos un atributo y está sin inicializar
+        
+        Se pueden eliminar las {} si el cuerpo de la función solo tiene una línea
+        
+        {return(numero * 3)} === (numero * 3) => Si solo hay una linea y esta es return, se obvia
+
+            let triplicar2 = (numero=1) => {
+                console.log("VALOR DE TRIPLICAR2 CON EXPRESIÓN DE LA FUNCION:", numero * 3)
+            };
+
+            triplicar2(13);
+
+        Muy simplificado
+
+            let triplicar3 = numero => (numero * 3);
+
+            let resultadoTriplicar3 = triplicar3(13);
+
+            console.log("Resultado triplicado", resultadoTriplicar3);
+
+    
+    INCLUDE PARA ARRAYS PLANOS
+
+        Un array es plano si no tiene subvalores [1, 2, 3, 4, 5, "Patata"];
+
+        Uno que no es plano es un array con objetos dentro, tiene valores y estos tienen subvalores
+
+        
+    METODO SOME
+
+        Como el método de includes pero para arrays no planos, es decir, para arrays de objetos
+        
+        Busca en todo mi array si existe un valor determinado
+            
+            let resultado = 0;
+
+            resultado = carrito.some(function(producto) {
+                return producto.nombre === "Tablet"
+            })
+
+        Crear un array que se llame "carrito"
+        Dentro del array introducimos 4 objetos con propiedades "nombre" y "precio"
+
+            const carrito = [
+                {
+                    nombre : "manzana",
+                    precio : 1,
+                },
+                
+                {
+                    nombre : "coliflor",
+                    precio : 5
+                },
+
+                {
+                    nombre : "chedar",
+                    precio : 10,
+                },
+
+                {   nombre : "Fanta",
+                    precio : 20,
+                },
+            ];
+
+    
+    METODO REDUCES
+        
+        Itera por todas las propiedades del array
+
+            resultado = carrito.reduce(fuction (total, producto){
+                return total + producto.precio
+            }, 0)
+
+            console.log("USO DE REDUCE", resultado);
+        
+        Siempre hay que inicializarlo con el valor del índice donde se inicializa
 
 
+    METODO FILTER
+
+            resultado = carrito.filter(function (producto){
+                return producto.precio > 400
+            });      
+    
+            console.log("USO DE FILTER", resultado);
+
+        // Hacemos arrow function
+
+            resultado = carrito.filter(producto => producto.precio > 400);
+
+            console.log("USO DE FILTER", resultado);
+    
+
+    IGUALES
+
+        =       Da valor
+        ==      Iguala sin tener en cuenta el tipo de dato
+        ===     Iguala teniendo en cuenta el tipo de dato
+        
 
 
 
