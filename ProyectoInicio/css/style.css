@@ -318,7 +318,7 @@ a {
 
 .imagenes-cursos {
     display: grid;
-    grid: 300px 300px / 1fr 1fr;
+    grid: 300px 300px / 1fr 1fr;  
     gap: 30px;
     margin: 0px 15px;
 }
@@ -985,7 +985,6 @@ a {
         padding: 24px 70px;
     }
 }
-
 
 
 
