@@ -532,14 +532,12 @@ FUNCIONES
         
         Itera por todas las propiedades del array
 
-            resultado = carrito.reduce(fuction (total, producto){
+            resultado = carrito.reduce(function (total, producto){
                 return total + producto.precio
             }, 0)
 
             console.log("USO DE REDUCE", resultado);
         
-        Siempre hay que inicializarlo con el valor del índice donde se inicializa
-
 
     METODO FILTER
 
