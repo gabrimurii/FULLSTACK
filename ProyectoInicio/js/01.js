@@ -57,7 +57,7 @@ DECLARACIÓN DE VARIABLES EN JS
     Las variables se declaran (Nombre de la variable) y se inicializan (valor de la variable)
 
     No hace falta decirle qué tipo de variable le estamos asignando. 
-    Es el propio valor el que le dice el tipo de valor que le estamos asignando.
+    Es el propio valor el que le dice el tipo de dato que le estamos asignando.
 
     El nombre de las variables no pueden inicializar con números ni con muchos caracteres especiales '&hola'
     

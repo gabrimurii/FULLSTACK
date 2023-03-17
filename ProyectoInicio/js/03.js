@@ -46,7 +46,7 @@
 
     delete producto.borrar;                                     // Elimina la propiedad del producto "borrar"
 
-    console.log("PRODUCTO SIN PROPIEDAD BORRAR:", producto);    // Nos aparece en el desplegable
+    console.log("PRODUCTO SIN PROPIEDAD BORRAR:", producto);    // No aparece en el desplegable
 
 
 /* MODIFICAR OBJETOS */
@@ -134,7 +134,7 @@
 
 
 
- /* 
+/* 
  
 OBJETOS
 

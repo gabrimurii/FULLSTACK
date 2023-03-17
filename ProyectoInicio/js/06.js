@@ -256,6 +256,148 @@
     } while (j<10);
 
     
+    /* EJERCICIO */
+
+    // Mostrar números pares pero con while
+
+    let k = 1;
+    
+    while (k <= 20) {
+        if(k % 2 === 0) {
+            console.log("Números pares del 1 al 20 con WHILE:", k);
+        }
+        k++;
+    };
+
+
+    /* EJERCICIO */
+
+    // Crear una función que dado un argumento me diga si
+    // Es positivo
+    // Es negativo
+    // Es = 0
+
+    function posneg0 (queEs) {
+        if (queEs < 0){
+            console.log("El número es negativo:", queEs)
+        } else if (queEs === 0){
+            console.log("El número es 0:", queEs)
+        } else {
+            console.log("El número es positivo:", queEs)
+        }
+    };
+
+    posneg0(-1);
+    posneg0(0);
+    posneg0(1);
+
+
+    /* EJERCICIO */
+
+    // Crear una función que dado un argumento (nº entero), haga la regresión hasta 0
+
+    function regresion (n1) {
+        for (n1 = n1; n1 >= 0; n1--){
+            console.log("Bajando de n1 a 0:", n1)
+        };
+    };
+
+    regresion(10);
+
+    function ej10 (n1) {
+        while(n1 >= 0){
+            console.log("Cuenta regresiva", n1);
+            n1--
+        }
+    };
+
+    ej10(10);
+
+
+    /* EJERCICIO */
+
+    // Crear una función que dado un argumento de entrada n me de la suma de todos los números entre 0 y n
+
+    let resultadoEj11 = 0;
+    
+    function sumando (n) {
+        for (n = n; n >= 0; n--) {
+            // resultadoEj11 = n + resultadoEj11;                          
+            resultadoEj11 += n
+        }
+
+        console.log("SUMA DE N's HASTA 0:", resultadoEj11)        
+    };
+
+    sumando (4)
+
+    
+    let resultadoEj11V2 = 0;
+
+    function ejercicio11 (n1) {
+        for (i = 0; i <= n1; i++){
+            resultadoEj11V2 += i;
+        }
+
+        console.log("SUMA DE N's DESDE 0:", resultadoEj11V2);
+    };
+
+    ejercicio11(45);
+
+
+    /* EJERCICIO */
+
+    // Usar while para crear una función que dado un argumento muestre de manera regresiva el número/10
+    
+    function division (n1) {
+        while (n1 >= 0){
+            console.log("Número / 10:", n1 / 10)
+            n1--;
+        }
+    }
+
+    division(10);
+
+
+    /* EJERCICIO */
+
+    // Crear una función que dado un argumento calcule la media de la suma de todos los valores usando while
+
+    let sumaMedia = 0;
+    
+    let contador = 0;
+
+    function media (n1) {
+        while (n1 > 0) {
+            sumaMedia += n1;
+            n1--;
+            contador++;                                             // Hacemos que el contador vaya sumando 1
+        }
+        console.log("MEDIA DE LA SUMA:", sumaMedia / contador);
+    }
+
+    media(45);
+
+
+    /* EJERCICIO */
+
+    // Crear una función que dados dos argumentos solo me muestre los impares entre ellos y la suma de todos ellos
+
+    let sumaImpares = 0;
+
+    function impar (n1, n2) {
+        for (let i = n1; i <= n2; i++){
+            if (i % 2 !== 0) {
+                console.log("Números impares", i)
+                sumaImpares += i;   
+                // console.log ("Suma de los impares:", sumaImpares)  // Saca cada suma
+            }
+        }
+        console.log ("Suma de los impares:", sumaImpares)
+    }
+
+    impar(5, 14);
+
 
 
 

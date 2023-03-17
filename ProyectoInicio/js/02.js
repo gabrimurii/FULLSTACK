@@ -7,9 +7,9 @@ const producto = "Juego de mesa EL PUEBLO DUERME";              // La más utili
 const producto1 = String("DOOBLE");                             // La primera letra de String va SIEMPRE con Mayúscula
 const producto2 = new String("UNO");                            // Un string que está dentro de un objeto
 
-console.log("PRODUCTO:",producto);
-console.log("PRODUCTO1 con String:",producto1);
-console.log("PRODUCTO2 con new String:",producto2);
+console.log("PRODUCTO:", producto);
+console.log("PRODUCTO1 con String:", producto1);
+console.log("PRODUCTO2 con new String:", producto2);
 
 // TYPEOF
 
@@ -18,7 +18,7 @@ console.log("TYPEOF PRODUCTO1 con String es de tipo:", typeof producto1);       
 console.log("TYPEOF PRODUCTO2 con new String es de tipo:", typeof producto2);      // Tipo object
 
 
-// Ejercicio: Crear dos variables. Una se va a llamar numero100 y la otra numero 200
+// Ejercicio: Crear dos variables. Una se va a llamar numero100 y la otra numero200
 
 let numero100 = 100;
     numero200 = "200";
@@ -266,13 +266,13 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);           // 0
         
         Orden de las operaciones
 
-            ()              Paréntesis
-            *, /            Multiplicaciones y divisiones
-            +, -            Sumas 
+            ()               Paréntesis
+            * , /            Multiplicaciones y divisiones
+            + , -            Sumas 
 
         Incrementos y decrementos
 
-        Suma de manera correlativa un valor
+        Suma o resta de manera correlativa un valor
         Por ejemplo, números de me gusta en Instagram
         ++
         --

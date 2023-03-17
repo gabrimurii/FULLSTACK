@@ -327,12 +327,12 @@ ARRAYS / ARREGLOS
 
             Creo una copia del array "numeros" sin añadir nada
 
-                onst nuevoArreglo = [...numeros];
+                const nuevoArreglo = [...numeros];
 
 
         METODO FOREACH
 
-            Te hace una función por cada valor del array.
+            Hace una función por cada valor del array.
             Imprimimos por pantalla por separado cada índice del array
             
             meses.forEach(function (mes){
