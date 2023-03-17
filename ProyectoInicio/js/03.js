@@ -144,9 +144,9 @@ OBJETOS
 
         let nombreObjeto = { 
             propiedad1 : valor1,                             // Se usa ":" en vez de "="
-            propiedad2 : valor2,                             // Se separa
-            propiedad3 : valor3                              // No se le pone ni "," ni ";"
-        }
+            propiedad2 : valor2,                             // Se separa por ','
+            propiedad3 : valor3,                              
+        };
 
         
     SINTAXIS DE PUNTO
