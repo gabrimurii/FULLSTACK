@@ -386,11 +386,11 @@
     let sumaImpares = 0;
 
     function impar (n1, n2) {
-        for (let i = n1; i <= n2; i++){
-            if (i % 2 !== 0) {
+        for (i = n1; i <= n2; i++){                                 // Suponemos que a < b
+            if (i % 2 !== 0) {                                          // i % 2 === 1
                 console.log("Números impares", i)
                 sumaImpares += i;   
-                // console.log ("Suma de los impares:", sumaImpares)  // Saca cada suma
+                // console.log ("Suma de los impares:", sumaImpares)    // Saca cada suma
             }
         }
         console.log ("Suma de los impares:", sumaImpares)
@@ -399,10 +399,81 @@
     impar(5, 14);
 
 
+    /* EJERCICIO */
+
+    // Crear una función que dados 3 notas de exámenes me diga si el alumno es apto o no apto
     
-   
+    function suspenso (n1, n2, n3) {  
+        let saberApto = (n1+n2+n3)/3;
+        if (saberApto >= 4.1 && saberApto < 10){
+            console.log("ALUMNO APTO:", saberApto);
+        } else if (saberApto >= 4.1 && saberApto > 10){
+            console.log("NOTAS MAL PUESTAS", saberApto);
+        } else {
+            console.log("ALUMNO NO APTO", saberApto);
+        }
+    };
+
+    suspenso (5, 6, 7);
+    suspenso (11, 11, 11);
+    suspenso (2, 1, 3);
+
+
+    /* EJERCICIO */ 
+
+    // Crear una función que introducido un mes me diga si tiene 28, 30 o 31 días
+
+    
+    let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+    
+    let diasMeses = function(mes) {
+        if(mes == meses[0] || mes == meses[2] || mes == meses[4] || mes == meses[6] || mes == meses[7] || mes == meses[9] || mes == meses[11]) {
+            console.log(mes, "tiene 31 días")
+        } else if (mes == meses[1]) {
+            console.log(mes, "tiene 28 días")
+        } else {
+            console.log(mes, "tiene 30 días")
+        }
+    }
+
+    diasMeses(meses[0]);
+    diasMeses(meses[1]);
+    diasMeses(meses[10]);
+
+
+    // let ejercicio17 = function(nombre) {
+    //     if (nombre == "Enero" ||nombre == "Febrero" || nombre == "Marzo" || nombre == "Abril") {
+    //         console.log(nombre, "Tiene 31 días")
+    //     } else if (nombre == "Febrero") { 
+    //         console.log(nombre, "tiene 28 días")
+    //     } else {
+    //         console.log(nombre, "tiene 30 días")
+    //     }
+    // }
+
+    // ejercicio17("Enero")
+    // ejercicio17("Febrero")
+    // ejercicio17("Marzo")
     
 
+    /* FOR EACH */
+
+    // Mostrar cada objeto de 'carrito' y todos los nombres del objeto
+
+    carrito.forEach (function (producto) {
+        console.log(producto, producto.nombre)
+    });
+
+    // Lo pasamos a función de flecha
+
+    carrito.forEach (producto => console.log(producto, producto.nombre));
+    
+
+   /* MAP */
+    
+    const arrayMap = carrito.map (producto => producto.nombre);                     // Por defecto hay un return
+
+    console.log ("Array Map:", arrayMap);
 
 
 
@@ -538,6 +609,29 @@ ESTRUCTURAS DE CONTROL
                 cuerpo;
                 iterador / actualizador;
             } while (condicion);
+
+    
+    FOR EACH
+
+        Hace una función por cada valor del array.
+        
+        Imprimimos por pantalla por separado cada índice del array
+
+
+    MAP
+
+        Hace lo mismo que forEach
+
+        La diferencia es que 'map' se usa para crear nuevos arrays
+        
+        El forEach está enfocado en mostrar información
+
+        Creo un nuevo array a partir del array 'carrito'
+        
+            const arrayMap = carrito.map (producto => producto.nombre);          
+
+            console.log ("Array Map:", arrayMap);
+
 
 
 */
