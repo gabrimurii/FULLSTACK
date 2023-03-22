@@ -92,6 +92,82 @@
     console.log(producto5.formatearProducto2())
 
 
+    /* EJERCICIO */
+ 
+    // Crear un object constructor llamado 'Libro' con propiedades 'nombre' 'precio' 'isbn'
+    // Instanciarlo
+
+    class Libro {
+        constructor (nombre, precio, isbn) {
+            this.nombreLibro = nombre;
+            this.precioLibro = precio;
+            this.isbnLibro = isbn;
+        }
+    }
+    
+    let libritos = new Libro ("Golybhe", 15, 987654321);
+    console.log(libritos);
+    
+    /* function Libro (nombre, precio, isbn) {
+        this.nombreLibro = nombre;
+        this.precioLibro = precio;
+        this.isbnLibro = isbn;
+    };
+
+    let libritos = new Libro ("Golybhe", 15, 987654321);
+    console.log(libritos); */
+
+
+    /* HERENCIA */
+
+    // Creo una nueva clase
+
+    class Categoria extends Libro {
+        constructor (nombre, precio, isbn, categoria) {       // Pongo todas los argumentos, ya sean hereadados o no
+            super (nombre, precio, isbn);                     // Copio las propiedades mediante 'super'
+            this.categoria = categoria;                       // Creo una nueva propiedad
+        }
+
+        formatearProducto3(){
+            console.log(`El producto ${this.nombreLibro} pertenece a la categoria ${this.categoria}`)
+        }
+    }
+
+    // Instanciamos
+
+    let producto6 = new Categoria ("Röghan", 15, 987654321, "Fantasía de ficción")
+    console.log(producto6)
+
+    console.log(producto6.formatearProducto3())
+
+
+    /* EJERCICIO */
+
+    // Crear un object constructor con una clase llamada 'coche' y cuyas propiedades sean 'marca' 'año'(compra) 'motor' 'matricula'
+    // Y una función que me diga el número de años que tiene el coche
+
+    class Coche {
+        constructor(marca, ano, motor, matricula) {
+            this.marca = marca;
+            this.ano = ano;
+            this.motor = motor;
+            this.matricula = matricula;
+        }
+
+        calculaEdad() {
+            console.log(`El coche se compró en el año ${this.ano} por lo que tiene ${2023-this.ano} años`);
+        }
+    }
+
+    let coche1 = new Coche ("Seat", 2014, "39 cv", "1234-ABC");
+    console.log(coche1);
+    console.log(coche1.calculaEdad());
+
+    const cochePapa = new Coche("Mini morris", 1200, "89cv", "1234-PAPA");
+    console.log(cochePapa);
+    console.log(cochePapa.calculaEdad());
+
+    
 
 
 
@@ -103,14 +179,13 @@
 
 /* 
 
-PROGRAMACIÓN ORIENTADA A OBJETOS
+PROGRAMACIÓN ORIENTADA A OBJETOS (POO)
 
     OBJETOS
         
         Object literal == Como lo hemos estado haciendo, definimos las propiedades y le damos valores
         
-        Object constructor == Crea lo
-
+        Object constructor == Es como una plantilla para evitar copiar mucho código
 
 
     OBJECT CONSTRUCTOR
@@ -166,9 +241,38 @@ PROGRAMACIÓN ORIENTADA A OBJETOS
                 }
 
                 formatearProducto2() {                              // Añado una función
-                    
+                    console.log(`El producto2 ${this.nombreObjeto2} tiene un precio de ${this.precioObjeto2}€`)
                 }
             }
+
+    
+    HERENCIA
+
+        La herencia nos permite crear clases partiendo de clases ya creadas
+
+        Copia propiedades de una clase a otra
+
+            class Categoria extends Libro {                  // Palabra reservada 'extends'
+                constructor (nombre, precio, isbn, categoria){ // Pongo todas los argumentos, ya sean hereadados o no
+                    super(nombre, precio, isbn)
+                }
+                formatearProducto3(){
+                console.log(`El producto ${this.nombreLibro} pertenece a la categoria ${this.categoria}`)
+                // Ponemos super.propiedad para aquellas que no las hayamos definido directamente en la clase
+                }
+            }
+
+            // Instanciamos
+
+            let producto6 = new Categoria ("Röghan", 15, 987654321, "Fantasía de ficción")
+            console.log(producto6)
+
+            console.log(producto6.formatearProducto3())
+        
+        'extends' me dice que las propiedades que voy a heredar están dentro de la clase 'Libro'
+        
+        'super' nos dice qué propiedades van a ser copiadas de la clase 'Libro'
+
 
 
 
