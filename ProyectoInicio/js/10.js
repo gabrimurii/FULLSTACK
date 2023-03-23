@@ -3,17 +3,17 @@
     /* CONSULTA A BASE DE DATOS */
 
     function obtenerEmpleados (){
-        fetch("empleados.json")                                         // Conectamos con la BdD o archivo local
+        fetch("empleados.json")                                     // Conectamos con la BdD o archivo local
             .then(resultado => {
                 return resultado.json()
             })
 
-            .then(datos => {                                            // Si se cumple el anterior, ejecuta este
+            .then(datos => {                                        // Si se cumple el anterior, ejecuta este
                 console.log(datos)
 
-                const {patata} = datos;                              // Destructuring de toda la información de datos en empleados
+                const {patata} = datos;                             // Destructuring de toda la información de datos en empleados
                 
-                patata.forEach(empleado => {                         // forEach para recorrer el array
+                patata.forEach(empleado => {                        // forEach para recorrer el array
                     console.log(empleado.nombre)
                     console.log(empleado.id)
                 });
@@ -28,8 +28,8 @@
 
     // Async / Await
 
-    async function obtenerEmpleados2 (){                                // Creamos función asíncrona
-        const resultado = await fetch("empleados.json");                 // Conectamos con BdD
+    async function obtenerEmpleados2 (){                            // Creamos función asíncrona
+        const resultado = await fetch("empleados.json");            // Conectamos con BdD
 
         console.log(resultado)
         
