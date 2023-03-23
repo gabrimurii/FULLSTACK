@@ -1,7 +1,7 @@
  "use strict";                                                  // Correr JS en modo estricto
  
  
- /* OBJETOS */
+/* OBJETOS */
 
     // let nombreProducto = "Pingu",
     //     precio = 100,
@@ -21,7 +21,7 @@
     console.log(`ESTE ES MI PRIMER OBJETO ${producto}`);        // Saca {object Object}, no el desplegable
     console.log("ESTE ES MI PRIMER OBJETO", producto);          // Saca el desplegable con las propiedades
 
-/* SINTAXIS DE PUNTO */
+    /* SINTAXIS DE PUNTO */
 
     console.log ("USO DE SINTAXIS DE PUNTO, producto.precio: ", producto.precio);
     console.log (`USO DE SINTAXIS DE PUNTO, producto.precio: ${producto.precio}`);  // Aparece el desplegable
@@ -29,14 +29,14 @@
     console.log("USO DE CORCHETES",producto["precio"]);         // No se utiliza
 
 
-/* CREAR */
+    /* CREAR */
 
     producto.imagen="imagen";                                   // Creo una nueva propiedad dentro de producto
 
     console.log("AÑADIR PROPIEDAD:", producto.imagen);          // Nos da el valor
 
 
-/* BORRAR OBJETOS */
+    /* BORRAR OBJETOS */
     
     producto.borrar = true;                                     // Creo una nueva propiedad dentro de producto
 
@@ -49,14 +49,14 @@
     console.log("PRODUCTO SIN PROPIEDAD BORRAR:", producto);    // No aparece en el desplegable
 
 
-/* MODIFICAR OBJETOS */
+    /* MODIFICAR OBJETOS */
 
     producto.precio = producto.precio * 2;                      // Modifico el valor de "precio"
 
     console.log("MODIFICAR PROPIEDAD:", producto.precio);       // Nos da el valor modificado
 
 
-/* VARIABLES A PARTIR DE PROPIEDADES DE UN OBJETO */
+    /* VARIABLES A PARTIR DE PROPIEDADES DE UN OBJETO */
 
     let disponible = producto.disponible;                       // Crea variable disponible a partir de la propiedad
 
@@ -65,7 +65,7 @@
     console.log(`VARIABLE NOMBRE: ${nombre}`);
 
 
-/* DESTRUCTURING */
+    /* DESTRUCTURING */
 
     producto.categoria = "Animales";                            // Propiedad nueva dentro de producto
 
@@ -83,7 +83,7 @@
     console.log(`ESTA ES LA VARIABLE CREADA CON EL DESTRUCTURING: ${categoria}`);
 
 
-/* OBJECT.FREEZE */
+    /* OBJECT.FREEZE */
 
     Object.freeze(producto);                                    // Congelo el objeto "producto"
 
@@ -92,7 +92,7 @@
     // console.log("OBJETO CONGELADO:", producto);              // No se ha añadido al desplegable
 
 
-/* OBJECT.ISFROZEN */
+    /* OBJECT.ISFROZEN */
 
     console.log("¿ESTÁ CONGELADO EL OBJETO?:", Object.isFrozen(producto));  // True si está congelado
 
@@ -102,7 +102,7 @@
     // console.log("INTENTO MODIFICAR EL VALOR DE DISPONIBLE", producto);  // Da error
 
 
-/* OBJECT.SEAL */
+    /* OBJECT.SEAL */
 
     let medidas = {                                             // Creo un nuevo objeto llamado "medidas"
         peso : 100,                 
@@ -126,7 +126,7 @@
     // console.log("INTENTO AÑADIR UNA PROPIEDAD CON OBJECT.SEAL:", medidas);  // No se puede, da error
 
 
-/* SPREAD / REST OPERATOR == UNIR DOS OBJETOS */
+    /* SPREAD / REST OPERATOR == UNIR DOS OBJETOS */
 
     let nuevoProducto = {...producto, ...medidas}
 

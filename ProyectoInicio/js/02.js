@@ -1,7 +1,7 @@
 "use strict";                                                   // Correr JS en modo estricto
 
 
-// STRING 
+/* STRING */ 
 
 const producto = "Juego de mesa EL PUEBLO DUERME";              // La más utilizada
 const producto1 = String("DOOBLE");                             // La primera letra de String va SIEMPRE con Mayúscula
@@ -11,14 +11,17 @@ console.log("PRODUCTO:", producto);
 console.log("PRODUCTO1 con String:", producto1);
 console.log("PRODUCTO2 con new String:", producto2);
 
-// TYPEOF
+
+/* TYPEOF */
 
 console.log("TYPEOF PRODUCTO es de tipo:",typeof producto);                        // Tipo string
 console.log("TYPEOF PRODUCTO1 con String es de tipo:", typeof producto1);          // Tipo string
 console.log("TYPEOF PRODUCTO2 con new String es de tipo:", typeof producto2);      // Tipo object
 
 
-// Ejercicio: Crear dos variables. Una se va a llamar numero100 y la otra numero200
+/* EJERCICIO */
+
+// Crear dos variables. Una se va a llamar numero100 y la otra numero200
 
 let numero100 = 100;
     numero200 = "200";
@@ -30,7 +33,7 @@ console.log("TYPEOF NUMERO100:", typeof numero100);             // Tipo number
 console.log("TYPEOF NUMERO200:", typeof numero200);             // Tipo string
 
 
-// MÉTODOS
+/* MÉTODOS */
 
 console.log("MÉTODO LENGTH:", producto.length);
 
@@ -39,7 +42,7 @@ console.log("MÉTODO INDEXOF:", producto.indexOf("DUERME"));
 console.log("MÉTODo INCLUDES:", producto.includes("DUERME"));
 
 
-// NUMEROS
+/* NUMEROS */
 
 let numero1 = 8,
     numero2 = 5,
@@ -64,7 +67,7 @@ console.log("NUMERO3 Y TYPEOF NUMERO3:", numero3, typeof numero3, numero3.length
 console.log("NUMERO4 Y TYPEOF NUMERO4:", numero4, typeof numero4, numero4.length);
 
 
-// OPERACIONES
+/* OPERACIONES */
 
 console.log("SUMA DE NUMEROS:", numero1 + numero2);             // 3
 console.log("SUMA DE NUMERO + STRING:", numero1 + numero3);     // 2200 porque 200 es un string
@@ -72,7 +75,7 @@ console.log("SUMA DE NUMERO + STRING:", numero1 + numero3);     // 2200 porque 2
 console.log("MODULO DE NUMEROS:", numero1 % numero2);           // 0
 
 
-// METODO MATH
+/* METODO MATH */
 
     // Generar un número aleatorio entre 0 y 1
 
@@ -136,7 +139,7 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);           // 0
     console.log("AHORRO:", ahorro);
     console.log("FACTURA:", factura);
 
-    // Incrementos y decremento
+    /* INCREMENTOS Y DECREMENTOS */
 
     let meGusta = 0;
     // meGusta ++;                                                  // Incrementa en 1 el valor de meGusta
@@ -147,7 +150,7 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);           // 0
     console.log("INCREMENTO EN 15:", meGusta+=15);
 
 
-    // CONCATENACIÓN
+    /* CONCATENACIÓN */
 
     let nombre = "Gabriel Murillo";
     let email = "gabrimurii@gmail.com";
@@ -160,12 +163,12 @@ console.log("MODULO DE NUMEROS:", numero1 % numero2);           // 0
     console.log("NOMBRE + EMAIL CONCATENADO:", nombre, email);
 
 
-    // TEMPLATE STRING
+    /* TEMPLATE STRING */
 
     console.log(`NOMBRE CLIENTE: ${nombre} EMAIL: ${email}`);
 
 
-    // BOOLEANO
+    /* BOOLEANO */
 
     let boolean1 = true,
         boolean2 = false,

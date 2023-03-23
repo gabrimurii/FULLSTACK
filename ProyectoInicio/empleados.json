@@ -1,0 +1,48 @@
+
+{
+    "empleados" :[
+        {
+            "id" : 1,
+            "nombre" : "Gabriel Murillo",
+            "puesto" : "programador"
+        },
+        {
+            "id" : 2,
+            "nombre" : "Raquel Riesco",
+            "puesto" : "programadora" 
+        },
+        {
+            "id" : 3,
+            "nombre" : "Jose Manuel",
+            "puesto" : "profesor" 
+        },
+        {
+            "id" : 4,
+            "nombre" : "Harry Potter",
+            "puesto" : "mago" 
+        }
+    ],
+
+    "patata" :[
+        {
+            "id" : 1,
+            "nombre" : " Murillo",
+            "puesto" : "programador"
+        },
+        {
+            "id" : 2,
+            "nombre" : " Riesco",
+            "puesto" : "programadora" 
+        },
+        {
+            "id" : 3,
+            "nombre" : " Manuel",
+            "puesto" : "profesor" 
+        },
+        {
+            "id" : 4,
+            "nombre" : " Potter",
+            "puesto" : "mago" 
+        }
+    ]
+}

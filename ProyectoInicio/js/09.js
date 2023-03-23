@@ -72,9 +72,60 @@
     }
 
 
+    /* ASYNC / AWAIT */
+
+    // Simulamos una base de datos
+    
+    setTimeout(function(){                              // Función que espera X ms para ejecutarse
+        console.log("Set time out actuando")
+    }, 3000)                                            // Son milisegundos
+
+   /*  setInterval(function(){                             // Función que hace intervalos de tiempo y se va ejecutando
+        console.log("Set Interval actuando")
+    }, 4000)   */ 
+    
+    // Creamos la primera función asíncrona (solo en caso de que sea exitosa,'resolve')
+
+    function descargarNuevosClientes(){                             // Creamos función
+        return new Promise(resolve => {                             // Creamos la promesa
+            console.log("Descargando clientes... espere...")        // Saca por pantalla el string
+
+            setTimeout(() => {                              
+                resolve("Los clientes fueron descargados")          // Tenemos en cuenta que solo es exitosa
+            },5000)                                                 // Espera 5 segundos para darme la respuesta
+        });
+    }
+
+    // Aquí hemos creado un promise, ahora vamos a hacer uso del ASYN / AWAIT
+
+    // La función 'app' no se va a poder ejecutar hasta que la función 'descargarNuevosClientes' termine
+
+    async function app(){
+        const resultadoAsync = await descargarNuevosClientes();     // Esperamos a que se termine de ejecutar
+        console.log(resultadoAsync)
+    }
+
+    // Este código se ejecuta en segundo plano y no paraliza al resto
+
+    app()
 
 
+    /* EJERCICIO */
 
+    // Hacer una función que me descargue los pedidos, y me de una respuesta a los 3 segundos de que los pedidos
+    // han sido descargados
+
+    function descargaPedidos(){
+        return new Promise(() => {
+            console.log("Descargando pedidos...")
+
+            setTimeout(() => {
+                console.log("Los pedidos han sido descargado")
+            }, 3000)
+        });
+    };
+
+    descargaPedidos();
 
 
 
@@ -88,7 +139,7 @@
 
         Verificar credenciales
         
-        Se usa para cosas MUY CRÍTICAS
+        Se usa para situaciones MUY CRÍTICAS
 
     
     PROMISES
@@ -123,14 +174,35 @@
 
             .catch coge por defecto el REJECT
 
+            FULLFILLER          El promise se ha cumplido
+            REJECTED            El promise no se ha cumplido
+            PENDING             El promise está pendiente
+
 
     NOTIFICACIONES API
 
+        En el HTML creamos un botón y le otorgamos un ID
+
+        Le llamamos con .querySelector
+
+            const boton = document.querySelector("#boton");
 
 
+    EVENTOS EN JAVASCRIPT 
+
+        Agrega un evento
+
+            boton.addEventListener("click", function(){
+                console.log("Diste click");
+                Notification.requestPermission()                  // Ya es una promesa
+                .then(resultado => console.log(`El resultado es ${resultado}`))
+            });
 
 
+    ASYNC / AWAIT
 
+        Las funciones asíncronas tienen que esperar a que se ejecute un código para empezar a funcionar
+    
 
 
 
