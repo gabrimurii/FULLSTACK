@@ -434,9 +434,9 @@
         </div>
     </footer>
 
-    <form class="contenedor"> <!-- Crea un formulario -->
-        <fieldset> <!-- Agrupa los campo del formulario -->
-            <legend> <!-- Describe el formularuio -->
+    <!-- <form class="contenedor"> Crea un formulario
+        <fieldset> Agrupa los campo del formulario
+            <legend> Describe el formularuio
                 Formulario para acceder a Tu carrera digital
             </legend>
             <br>
@@ -445,30 +445,30 @@
             </legend>
             <br>
 
-            <label>Nombre* <!-- Etiqueta del formulario, como el campo -->
-                <input type="text" placeholder="Tu nombre"> <!-- input es lo que espera recibir el formulario -->
+            <label>Nombre* Etiqueta del formulario, como el campo
+                <input type="text" placeholder="Tu nombre"> input es lo que espera recibir el formulario
             </label>
 
             <label>Apellidos
-                <input type="text" placeholder="Apellidos"> <!-- Hay distintos tipos -->
+                <input type="text" placeholder="Apellidos"> Hay distintos tipos
             </label>
             <br><br>
 
             <label>Email*
-                <input type="email" placeholder="ejemplo@gmail.com"> <!-- Placeholder ayuda al usuario sepa lo que tiene que escribir -->
+                <input type="email" placeholder="ejemplo@gmail.com"> Placeholder ayuda al usuario sepa lo que tiene que escribir
             </label>
             <br><br>
 
             <label>
                 Mensaje 
                 <textarea type="text" placeholder="Escríbenos lo que quieras"></textarea> 
-                <!-- textarea == Para poner campos más grandes donde escribir -->
+                textarea == Para poner campos más grandes donde escribir
             </label>
             <br><br>
 
             <input type="submit" value="Enviar">
         </fieldset>
-    </form>
+    </form> -->
 
 
 
@@ -491,6 +491,34 @@
 
         <img src="img/up-top.png" alt="Flecha hacia arriba" class="scroll">
     </section>
+
+
+
+    <form>
+        <fieldset>
+            <legend>Contáctanos rellenando todos los campos</legend>
+            <div>
+                <div>
+                    <label>Nombre</label>
+                    <input id="Nombre" type="text" placeholder="Tu Nombre"> 
+                </div>
+
+                <div>
+                    <label>Correo</label>
+                    <input type="email" placeholder="Tu email">
+                </div>
+
+                <div>
+                    <label>Mensaje</label>
+                    <textarea></textarea>
+                </div>
+            </div>
+
+            <div>
+                <input class="botonFormulario" type="submit" value="Enviar">
+            </div>
+        </fieldset>
+    </form>
 
 
 

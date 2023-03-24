@@ -210,12 +210,38 @@
     })
 
 
+    /* EVENTOS DE TECLADO */
+
+    const nombre = document.querySelector("#Nombre")
+
+    /* CHANGE */
+
+    nombre.addEventListener("change", function(){       // No me hace el cambio de manera automática
+        console.log("Escribiendo nombre...")            // Hasta que no salgo del cuadro no me lo saca por pantalla
+    })
+
+    /* INPUT */
+
+    nombre.addEventListener("input", function(evento){      // Se va refrescando de manera automática
+        console.log("Escribiendo nombre con input...");
+        console.log(evento);                                // Me da la información del evento
+        console.log(evento.target.value);                   // Saca por pantalla cada letra que pongo o quito
+        // target es una propiedad de evento y value a su vez de target (sintáxis de punto)
+        // value almacena el valor de lo que escribo por pantalla
+    });
 
 
+    /* EVENTOS DE SUBMIT */
 
+    // Eventos que están asociados a formularios
+    // Igual que los eventos de 'click' pero solo para formularios
 
+    const formulario = document.querySelector("form");
 
-
+    formulario.addEventListener("submit", function(evento){
+        evento.preventDefault();                            // Hace que no se me vaya para arriba al hacer 'submit'
+        console.log("Enviando formulario...");              // Por defecto se va hacia arriba
+    });
 
 
     /* TIPOS DE EVENTOS */
@@ -224,14 +250,11 @@
     // DOMContentLoaded         Espera que cargue únicamente el HTML
     // Scroll                   Se ejecuta al hacer 'scroll'
     // Click                    Se ejecuta al hacer 'click'
-    // Submit
     // Teclado 
+        // Change               Se ejecuta al cambiar de apartado de formulario
+        // Input                Se ejecuta al escribir
+    // Submit                   Igual que el input pero para formularios
     
-
-
-
-
-
 
 
 
@@ -271,6 +294,14 @@
 
 
 
+
+    COMO ORGANIZAR EL CÓDIGO EN JS
+
+        1   Variables
+
+        2   Eventos
+
+        3   Funcines
 
 
 */
