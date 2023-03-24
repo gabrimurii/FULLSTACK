@@ -302,12 +302,17 @@ a {
     margin-bottom: 65px;
 }
 
-.cursos-sitios a {
+.estiloCursos{
     color: var(--negrotucarrera);
     font-weight: bold;
     padding: 10px 24px;
     border: 1px solid var(--rosatucarrera);
     margin-right: 8px;
+}
+
+.estiloCursos:hover{
+    color: white;
+    background-color: var(--rosatucarrera);
 }
 
 

@@ -75,7 +75,7 @@
         
         Puede conectarse con un servidor o a un archivo local (json o texto)
 
-        JSON es JavaScript Object Notation == Lenguaje de transporte de datos
+        JSON es 'JavaScript Object Notation' == Lenguaje de transporte de datos
 
             Me permite obtener la infomación de la BdD / archivo local y lo lleva a mi archivo JS
 
@@ -87,23 +87,23 @@
 
             ARCHIVO JSON --> 'empleados.json'
 
-        {
-            "empleados" :[                  // BdD entre "" y [array]
-                {                           // Objeto
-                    "id" : 1,               // Propiedades entre ""
-                    "nombre" : "Gabriel Murillo",
-                    "puesto" : "programador"    // Última sin ','                            
-                },                          // Separado con ','
-
                 {
+                    "empleados" :[                          // BdD entre "" y [array]
+                        {                                   // Objeto
+                            "id" : 1,                       // Propiedades entre ""
+                            "nombre" : "Gabriel Murillo",
+                            "puesto" : "programador"        // Última sin ','                            
+                        },                                  // Separado con ','
 
-                },
+                        {
 
-                {
+                        },
 
-                }                           // La última sin ','
-            ]
-        }
+                        {
+
+                        }                                   // La última sin ','
+                    ]
+                }
 
         Tanto la última propiedad como el último objeto NO LLEVAN ','
         Es la forma que tiene la BdD para saber que es el último
