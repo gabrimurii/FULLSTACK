@@ -83,7 +83,7 @@
 
     // Actualizar la web de manera dinámica
 
-    const nuevoEnlace = document.createElement("A");        // Nos permite crear código HTML
+    const nuevoEnlace = document.createElement("A");                // Nos permite crear código HTML
 
     // Agregamos .href
 

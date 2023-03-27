@@ -1,0 +1,283 @@
+
+        - BASES DE DATOS -
+
+    Sirven para almacenar y ordenar grandes cantidades de datos
+
+    Almacena los datos ordenadamente
+
+    Nos permiten actualizar la información de forma segura y confiable
+
+    Ofrecen seguridad
+
+    Evitan datos duplicados --> Con los ID (claves primarias)
+
+        - SQL -
+
+    SQL = Structured Query Language = Lenguaje de consulta estructurada
+
+    Es el lenguaje más común para realizar consultas en una base de datos
+
+    Creado en 1974
+
+        - MySQL -
+
+    Es un programa que se conoce como DBMS (Database Management System) y que utiliza SQL para realizar consultas a una base de datos
+
+    Es un gestor de bases de datos
+
+    Tenemos que instalar MySQL para poder trabajar con bases de datos
+
+
+        - BBDD RELACIONALES -
+    
+    Con las que vamos a trabajar nosotros
+
+    Hay más tipos, funcionales, documentales, transaccionales
+
+    Cada registro o columna son datos relacionados
+
+    Una base de datos de este tipo utiliza TABLAS
+
+    Cada Tabla utiliza rows o filas que representan instancias de entidades y columnas que son atributos de estas entidades
+
+            ID          NOMBRE          PUESTO
+
+            1           JM              programador
+
+            2           Gabriel         estudiante
+
+            3           ...             ...
+
+            4           ...             ...
+
+    Tipos de relaciones 
+
+            Clave primaria (PK) --> Atributo que tengo en una tabla y que aparecerá en la otra tabla como clave foránea y que me permite relacionar las dos tablas. NO SE PUEDE REPETIR UNA CLAVE PRIMARIA 
+
+            Clave foránea (FK) --> Es un campo en una tabla que se corresponde con la clave primaria de otra tabla
+
+
+        UNO A MUCHOS 1 : N
+
+            Una instancia se refiere a los registros de muchas TABLAS
+
+            Tabla CLIENTES con ID y NOMBRE
+
+                ID (PK)      NOMBRE
+
+                1            Juan
+
+                2            Andrea
+
+            Tabla CITAS con ID, CLIENTELD y SERVICIOS
+
+                ID          CLIENTELD (FK)       SERVICIOS
+
+                1           1                    Corte Cabello
+                
+                2           2                    Tinte
+
+                3           1                    Corte Cabello
+
+                4           1                    Corte barba
+
+
+        MUCHOS A UNO 1 : 1
+
+            Sería mejor hacerlo todo en una tabla
+
+            USUARIO                             PERFIL
+
+            ID      NOMBRE                  ID      USUARIO_ID          IMAGEN          URL
+
+            1       Juan                    1           1               120013.jpg      codigojuan.com
+
+            2       Andrea                  2           2               131313.jpg      codigoandrea.com
+
+
+        MUCHOS A MUCHOS n : n
+
+                PROYECTOS                       PROYECTOSUSUARIOS                       USUARIOS
+
+            ID      PROYECTO                ID_USUARIO      ID_PROYECTO             ID      NOMBRE
+
+            1       Tienda Virtual          1               1                       1       Juan
+
+            2       Diseño Web              1               2                       2       Andrea
+
+                                            2               2
+
+    
+    DESCARGAMOS NODE.JS
+
+        Versión 18.15.0 LTS
+
+    DESCARGAMOS STACK AMP
+
+        Apache + MySQL + PHP
+
+        - Apache --> Servidor donde vamos a almacenar las BBDD
+
+        - MySQL --> Gestos de BBDD
+
+        - PHP --> Lenguaje de programación que me permite hacer uso y gestionar las BBDD
+
+        Laravel lo instala todo a la vez, pero suele dar errores
+
+        - APACHE -
+
+            - Apachelounge.com 
+            
+            - Download --> Be sure you installed latest 14.34.31938 Visual C++ Redistributable Visual Studio 2015-2022 : vc_redist_x64
+
+            - Apache 2.4.56 Win64 --> [Apache VS17 Win64 Binary] httpd-2.4.56-win64-VS17.zip  
+
+            - Cogemos la carpeta llamada 'Apache24' de su interior y la pegamos en disco local C
+
+            - Le cambiamos el nombre a 'Apache'
+
+            - Abrimos la carpeta y nos metemos en 'conf' --> httpd.conf (click derecho --> Abrir con code)
+
+            - Línea 37 cambiarle el nombre a 'Apache'
+
+            - Ctrl + F (servername)  (línea 227) --> Descomentamos y cambiamos 'example' por 'localhost'
+
+            - Vamos a la terminal de comandos
+
+                - Vamos a la ruta donde tengamos la carpeta de Apache
+
+                - cd Apache
+
+                - cd bin 
+
+                - .\httpd.exe 
+
+            - Apache --> htdocs --> index --> Con Chrome
+
+            - Para MAC --> HomeBrew, copiamos el link y lo pegamos en la terminal
+
+
+            - Creamos un servicio
+
+                - Abrimos la terminal de comandos y la ejecutamos como administrador
+
+                - Navegamos hasta la carpeta
+
+                - cd.. > cd.. > cd Apache/bin > .\httpd.exe -k install
+
+                - Buscamos 'Servicios' en el buscador
+
+                - Apache 2.4 --> Iniciar
+            
+
+        - PHP -
+
+            - php.net/downloads
+
+            - Old Stable PHP 8.1.17 > Windows downloads
+
+            - VS16 x64 Thread Safe (2023-Mar-14 23:52:36) > zip
+
+            - Descomprimimos en una carpeta llamada 'php' que creamos en el 'disco local C'
+
+            - Hay que decirle a Apache, dónde va a encontrar mi carpeta PHP
+
+            - Apache > conf > httpd.conf
+
+            - Al final del todo ponemos este código
+
+                LoadModule php_module "C:/php/php8apache2_4.dll"
+                AddHandler application/x.httpd-php .php
+                PHPIniDir "C:/php"
+
+            - Reiniciamos el servicio de Apache
+
+            - Servicios > Apache2.4 > Reiniciar servicio
+
+            - En la carpeta de PHP copiamos el archivo 'php.ini-production' y renombramos a la copia como 'php.ini'
+
+            - Lo abrimos con VSC
+
+            CAMBIOS 
+
+            - post_max_size = 8M > post_max_size = 20M
+
+            - upload_max_filesize = 2M > upload_max_filesize = 20M
+
+            - ;extension (descomentamos las siguientes)
+
+                - extension=fileinfo
+                - extension=gd
+                - extension=mysqli
+
+            - Reiniciamos Apache
+
+            AÑADIMOS VARIABLES DE ENTORNO
+
+            - Buscamos variables en el buscador
+            - 'Editar variables de entorno'
+            - Abajo pone "Variables de entorno"
+            - Variables del sistema > Path > Editar
+            - Nuevo > C:\php
+            - Aceptar > Aceptar > Aceptar
+
+        
+        - MySQL -
+
+            - https://dev.mysql.com/downloads/windows/installer/8.0.html
+            - Windows (x86, 32-bit), MSI Installer (437.3M)
+            - 'No thanks, just start my download.'
+            - Developer default > Next
+            - Next > Execute
+            - 'Type and Networking' > Next > Next
+            - Accounts and Roles
+            - 'Root password 'FullstackPozuelo'
+            - Next hasta Execute
+            - 'Connect to server' > Contraseña > Check y aparece en verde arriba
+            - Se abre MySQL Workbench > Vemos las tablas que creamos
+            - Otra forma > TablePlus > Todo palante
+            - Una vez dentro le damos al '+' y MySQL
+            - Rellenamos los datos, le damos a test y si la conexión está bien, le damos a conectar
+                - Nombre: MySQL localhost
+                - color: negro
+                - host: localhost
+                - port: 3306
+                - contraseña: FullstackPozuelo
+                - test ... Ok
+                - Connect
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
