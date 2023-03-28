@@ -467,7 +467,119 @@
                 SELECT * FROM tiempos;
 
 
-            
+    - EJERCICIO -
+
+    Crear una nueva BBDD 'aeropuerto'
+    5 tablas: 'vuelo' 'compañia' 'pasajero' 'origen' 'destino'
+
+    CREATE DATABASE aeropuerto;
+    SHOW DATABASES;
+
+    vuelo:
+        - idVuelo
+        - nº vuelo
+        - compañia = idCompañia     
+        - nº pasajeros  
+        - nº asientos
+        - origen = idOrigen
+        - destino = idDestino
+    
+    compañia:
+        - idCompañia
+        - nombre 
+        - idioma
+        - rating
+        - vuelos = idVuelo
+    
+    pasajero:
+        - idPasajero
+        - nombre
+        - apellidos
+        - dni
+        - nacionalidad
+        - telefono
+        - nº vuelo = idVuelo
+        - asiento
+
+    origen:
+        - idOrigen
+        - ciudad
+        - pais
+        - zona horaria
+        - idioma 
+        - hora salida
+    
+    destino:
+        - idDestino
+        - ciudad
+        - pais
+        - zona horaria
+        - idioma
+        - hora llegada
+
+
+CREATE TABLE origen (
+    idOrigen INT(11) NOT NULL AUTO_INCREMENT, 
+    ciudad VARCHAR(60),
+    pais VARCHAR(60),
+    zonaHoraria TIMESTAMP,
+    idioma CHAR(20),
+    horaSalida DATETIME,
+    PRIMARY KEY (idOrigen)
+    );
+
+CREATE TABLE destino (
+    idDestino INT(11) NOT NULL AUTO_INCREMENT, 
+    ciudad VARCHAR(60),
+    pais VARCHAR(60),
+    zonaHoraria TIMESTAMP,
+    idioma CHAR(20),
+    horaLlegada DATETIME,
+    PRIMARY KEY (idDestino)
+    );
+
+
+CREATE TABLE vuelo (
+    idVuelo INT(11) NOT NULL AUTO_INCREMENT,
+    numeroVuelo INT(20),
+    idCompania INT(11),
+    numeroPasajeros INT(3),
+    numeroAsientos INT(3),
+    idOrigen INT(11),
+    idDestino INT(11),
+    PRIMARY KEY (idVuelo),
+    FOREIGN KEY(idCompania) REFERENCES compania(idCompania), 
+    FOREIGN KEY(idOrigen) REFERENCES origen(idOrigen), 
+    FOREIGN KEY(idDestino) REFERENCES destino(idDestino) 
+);
+
+
+CREATE TABLE compania (
+    idCompania INT(11) NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(60),
+    idioma CHAR(20),
+    rating INT(1),
+    PRIMARY KEY (idCompania)
+);        
+
+
+CREATE TABLE pasajero (
+    idPasajero INT(11) NOT NULL AUTO_INCREMENT,
+    nombre VARCHAR(60),
+    apellidos VARCHAR(100),
+    dni VARCHAR(9),
+    nacionalidad VARCHAR(20),
+    telefono INT (9),
+    idVuelo INT(11),
+    asiento INT(2),
+    PRIMARY KEY (idPasajero),
+    FOREIGN KEY(idVuelo) REFERENCES vuelo(idVuelo)
+);
+
+
+
+
+
 
 
 
