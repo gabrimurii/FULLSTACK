@@ -38,7 +38,7 @@
 
     Una base de datos de este tipo utiliza TABLAS
 
-    Cada Tabla utiliza rows o filas que representan instancias de entidades y columnas que son atributos de estas entidades
+    Cada TABLA utiliza ROWS o FILAS que representan instancias de entidades y COLUMNAS que son atributos de estas entidades
 
             ID          NOMBRE          PUESTO
 
@@ -63,23 +63,23 @@
 
             Tabla CLIENTES con ID y NOMBRE
 
-                ID (PK)      NOMBRE
+                        ID (PK)      NOMBRE
 
-                1            Juan
+                        1            Juan
 
-                2            Andrea
+                        2            Andrea
 
             Tabla CITAS con ID, CLIENTELD y SERVICIOS
 
-                ID          CLIENTELD (FK)       SERVICIOS
+                        ID          CLIENTELD (FK)       SERVICIOS
 
-                1           1                    Corte Cabello
-                
-                2           2                    Tinte
+                        1           1                    Corte Cabello
+                        
+                        2           2                    Tinte
 
-                3           1                    Corte Cabello
+                        3           1                    Corte Cabello
 
-                4           1                    Corte barba
+                        4           1                    Corte barba
 
 
         MUCHOS A UNO 1 : 1
@@ -88,24 +88,24 @@
 
             USUARIO                             PERFIL
 
-            ID      NOMBRE                  ID      USUARIO_ID          IMAGEN          URL
+                    ID      NOMBRE                  ID      USUARIO_ID          IMAGEN          URL
 
-            1       Juan                    1           1               120013.jpg      codigojuan.com
+                    1       Juan                    1           1               120013.jpg      codigojuan.com
 
-            2       Andrea                  2           2               131313.jpg      codigoandrea.com
+                    2       Andrea                  2           2               131313.jpg      codigoandrea.com
 
 
         MUCHOS A MUCHOS n : n
 
-                PROYECTOS                       PROYECTOSUSUARIOS                       USUARIOS
+                        PROYECTOS                       PROYECTOSUSUARIOS                       USUARIOS
 
-            ID      PROYECTO                ID_USUARIO      ID_PROYECTO             ID      NOMBRE
+                    ID      PROYECTO                ID_USUARIO      ID_PROYECTO             ID      NOMBRE
 
-            1       Tienda Virtual          1               1                       1       Juan
+                    1       Tienda Virtual          1               1                       1       Juan
 
-            2       Diseño Web              1               2                       2       Andrea
+                    2       Diseño Web              1               2                       2       Andrea
 
-                                            2               2
+                                                    2               2
 
     
     DESCARGAMOS NODE.JS
@@ -245,27 +245,229 @@
                 - contraseña: FullstackPozuelo
                 - test ... Ok
                 - Connect
+            
+        - Crear una variable de entorno para MySQL -
+
+            - Nueva variable del sistema > Path > Nuevo > C:\Program Files\MySQL\MySQL Server 8.0\bin
+            - Me permite usar el lenguaje SQL en la terminal de comandos
+
+        
+    
+    - POWERSHELL -
+
+        Vamos a empezar a usar los comando de SQL
+
+        Necesitan un ';' al final porque sino NO SE EJECUTA
+
+        - Iniciar 
+
+            mysql -u root -p
+
+            contraseña ... (FullstackPozuelo)
+
+            SHOW DATABASES; --> Nos enseña las BBDD 
+
+                (Las sentencias van en mayúscula)
+            
+        - Crear BBDD
+
+            CREATE DATABASE peluqueria;
+            SHOW DATABASES;
+
+        - Usar BBDD
+
+            USE peluqueria;
+
+        - Sacar tablar por pantalla
+
+            SHOW TABLES;
+
+        - Crear tablas
+
+            ID          NOMBRE          PRECIO 
+
+            ...         ...             ...
+
+            CREATE TABLE servicios(
+                id INT(11) NOT NULL AUTO_INCREMENT,
+                nombre VARCHAR(60),
+                precio DECIMAL(5,2),
+                PRIMARY KEY (id)
+            );
+
+                id tipo_de_dato(máx_datos) NOT NULL AUTO_INCREMENT,
+                siguiente columna 
+                precio DECIMAL(Número máximo de nº, nº decimales)
+
+        - Tipos de datos
+
+            - Números
+
+                - Enteros
+
+                    -->     INT         -2100 Millones a 2100 Millones
+
+                    -->     TINYINT     -128 a 127
+
+                    -->     SMALLINT    
+
+                    -->     MEDIUMINT
+
+                    -->     BIGINT
+
+                - Decimales 
+
+                    --> FLOAT       Me muestra todos los decimales
+
+                    --> DOUBLE      Valores decimales grandes
+
+                    --> DECIMAL     Valores donde no se acepta redondeo
+            
+            - Cadena de texto
+
+                    --> VARCHAR     Texto corto o texto que varía en su extensión (hasta 255)
+
+                    --> CHAR        Corto, extensión fija (password encriptado)
+
+                    --> TEXT        Texto Largo (una entrada de blog)
+
+                    --> ENUM        Un valor de una lista enumerada
+
+                    --> BLOB        Imágenes, sonidos y archivos comprimidos
+
+            - Fechas y horas
+
+                    --> DATE 
+
+                    --> TIME
+
+                    --> DATETIME
+
+                    --> TIMESTAMP
+
+                    --> YEAR
+
+            - Los más comunes
+
+                    --> INT
+                    
+                    --> TINYINT
+
+                    --> DECIMAL
+
+                    --> VARCHAR
+
+                    --> TEXT
+                    
+                    --> DATETIME
 
 
+        - Ver detalles de tabla
+
+            DESCRIBE servicios;
+
+        - REGISTROS (CRUD)
+
+            - Crear / Leer / Actualizar / Eliminar
+
+            - Create / Read / Update / Delete
+
+            - CREAR REGISTROS (CREATE)
+
+                - Insertar registros
+
+                    INSERT INTO servicios (nombre,precio)
+                    VALUES ("Corte de Cabello Hombre",15);
+
+                    INSERT INTO servicios (nombre,precio)
+                    VALUES ("Corte de Cabello Niño", 12),
+                    ("Corte de Barba",8);
+
+            - VER CONTENIDO DE UNA TABLA (READ)
+
+                    SELECT*FROM servicios;
+
+                    SELECT nombre FROM servicios; (solo el nombre)
+                    SELECT nombre,precio FROM servicios; (nombre y precio)
+                    
+                    +----+-------------------------+--------+
+                    | id | nombre                  | precio |
+                    +----+-------------------------+--------+
+                    |  1 | Corte de Cabello Hombre |  15.00 |
+                    |  2 | Corte de Cabello Niño   |  12.00 |
+                    |  3 | Corte de Barba          |   8.00 |
+                    |  4 | Corte de Cabello Mujer  |  20.00 |
+                    |  5 | Corte de Cabello Niña   |  11.00 |
+                    |  6 | Tinte de pelo           |  30.00 |
+                    |  7 | Lavado de pelo          |   5.00 |
+                    |  8 | Mechas                  |  40.00 |
+                    +----+-------------------------+--------+
+
+                CONDICIONES
+
+                    Servicios cuyo precio sea >=10
+
+                        SELECT nombre,precio FROM servicios WHERE precio>=10; 
+
+                    Mostrar id, nombre, precio de los id>3 y precio<22
+
+                        SELECT * FROM servicios WHERE id>3 AND precio<22;
+
+                    Ponemos AND cuando queremos que cumpla varias condiciones
+
+                ORDENAR CONSULTA 
+
+                        SELECT * FROM servicios ORDER BY precio;
+
+            - ACTUALIZAR (UPDATE)
+
+                    UPDATE servicios SET precio=20 WHERE id=1;
+
+                    UPDATE servicios SET precio=100 WHERE id=2 OR id=3 OR id=4;
+
+                    UPDATE servicios SET precio=50 WHERE id IN(3,5)
+
+            - BORRAR (DELETE)
+
+                    DELETE FROM servicios WHERE id=1;
+
+                El id no se actualiza
+
+                Si añadimos un nuevo valor se añadirá al final del todo
+
+                Para eso tenemos que poner 
+                    
+                    INSERT INTO servicios(id, nombre, precio)
+                    VALUES(1,"Cortecito",30);
+
+            EJERCICIO
+
+                Crear una tabla nueva (tiempos) dentro de 'peluqueria' con campos de 'id', 'idservicio', 'valor', 'prioridad' entre 0 y 5. Por cada registro quiero 9 valores de tiempos
+
+                CREATE TABLE tiempos(
+                    id INT(11) NOT NULL AUTO_INCREMENT,
+                    idservicio INT(11) NOT NULL,
+                    valor INT(3),
+                    prioridad INT(1) NOT NULL,
+                    PRIMARY KEY(id),
+                    FOREIGN KEY(idservicio) REFERENCES servicios(id)
+                );
+
+                INSERT INTO tiempos (idservicio, valor, prioridad)
+                -> VALUES (1, 10, 1),
+                -> (2, 20, 2),
+                -> (3, 30, 1),
+                -> (4, 60, 5),
+                -> (5, 40, 4),
+                -> (6, 80, 5),
+                -> (7, 15, 1),
+                -> (8, 10, 1),
+                -> (9, 15, 3);
+
+                SELECT * FROM tiempos;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            
 
 
 
