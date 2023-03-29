@@ -475,106 +475,259 @@
     CREATE DATABASE aeropuerto;
     SHOW DATABASES;
 
-    vuelo:
-        - idVuelo
-        - nº vuelo
-        - compañia = idCompañia     
-        - nº pasajeros  
-        - nº asientos
-        - origen = idOrigen
-        - destino = idDestino
+    vuelo:                                      compania:                           pasajero:
+        - idVuelo                                   - idCompania                        - idPasajero
+        - nº vuelo                                  - nombre                            - nombre
+        - compañia = idCompañia                     - idioma                            - apellidos
+        - nº pasajeros                              - rating                            - dni
+        - nº asientos                                                                   - nacionalidad
+        - origen = idOrigen                                                             - telefono
+        - destino = idDestino                                                           - idVuelo
+                                                                                        - asiento
     
-    compañia:
-        - idCompañia
-        - nombre 
-        - idioma
-        - rating
-        - vuelos = idVuelo
-    
-    pasajero:
-        - idPasajero
-        - nombre
-        - apellidos
-        - dni
-        - nacionalidad
-        - telefono
-        - nº vuelo = idVuelo
-        - asiento
-
-    origen:
-        - idOrigen
-        - ciudad
-        - pais
-        - zona horaria
-        - idioma 
-        - hora salida
-    
-    destino:
-        - idDestino
-        - ciudad
-        - pais
-        - zona horaria
-        - idioma
-        - hora llegada
+    origen:                                     destino:
+        - idOrigen                                  - idDestino
+        - ciudad                                    - ciudad
+        - pais                                      - pais
+        - zona horaria                              - zona horaria
+        - idioma                                    - idioma
+        - hora salida                               - hora llegada
 
 
-CREATE TABLE origen (
-    idOrigen INT(11) NOT NULL AUTO_INCREMENT, 
-    ciudad VARCHAR(60),
-    pais VARCHAR(60),
-    zonaHoraria TIMESTAMP,
-    idioma CHAR(20),
-    horaSalida DATETIME,
-    PRIMARY KEY (idOrigen)
-    );
+        CREATE TABLE origen (
+            idOrigen INT(11) NOT NULL AUTO_INCREMENT, 
+            ciudad VARCHAR(60),
+            pais VARCHAR(60),
+            zonaHoraria TIMESTAMP,
+            idioma CHAR(20),
+            horaSalida DATETIME,
+            PRIMARY KEY (idOrigen)
+            );
 
-CREATE TABLE destino (
-    idDestino INT(11) NOT NULL AUTO_INCREMENT, 
-    ciudad VARCHAR(60),
-    pais VARCHAR(60),
-    zonaHoraria TIMESTAMP,
-    idioma CHAR(20),
-    horaLlegada DATETIME,
-    PRIMARY KEY (idDestino)
-    );
+                mysql> DESCRIBE origen;
+                +-------------+-------------+------+-----+---------+----------------+
+                | Field       | Type        | Null | Key | Default | Extra          |
+                +-------------+-------------+------+-----+---------+----------------+
+                | idOrigen    | int         | NO   | PRI | NULL    | auto_increment |
+                | ciudad      | varchar(60) | YES  |     | NULL    |                |
+                | pais        | varchar(60) | YES  |     | NULL    |                |
+                | zonaHoraria | timestamp   | YES  |     | NULL    |                |
+                | idioma      | char(20)    | YES  |     | NULL    |                |
+                | horaSalida  | datetime    | YES  |     | NULL    |                |
+                +-------------+-------------+------+-----+---------+----------------+
+
+        CREATE TABLE destino (
+            idDestino INT(11) NOT NULL AUTO_INCREMENT, 
+            ciudad VARCHAR(60),
+            pais VARCHAR(60),
+            zonaHoraria TIMESTAMP,
+            idioma CHAR(20),
+            horaLlegada DATETIME,
+            PRIMARY KEY (idDestino)
+            );
+
+                mysql> DESCRIBE destino;
+                +-------------+-------------+------+-----+---------+----------------+
+                | Field       | Type        | Null | Key | Default | Extra          |
+                +-------------+-------------+------+-----+---------+----------------+
+                | idDestino   | int         | NO   | PRI | NULL    | auto_increment |
+                | ciudad      | varchar(60) | YES  |     | NULL    |                |
+                | pais        | varchar(60) | YES  |     | NULL    |                |
+                | zonaHoraria | timestamp   | YES  |     | NULL    |                |
+                | idioma      | char(20)    | YES  |     | NULL    |                |
+                | horaLlegada | datetime    | YES  |     | NULL    |                |
+                +-------------+-------------+------+-----+---------+----------------+
 
 
-CREATE TABLE vuelo (
-    idVuelo INT(11) NOT NULL AUTO_INCREMENT,
-    numeroVuelo INT(20),
-    idCompania INT(11),
-    numeroPasajeros INT(3),
-    numeroAsientos INT(3),
-    idOrigen INT(11),
-    idDestino INT(11),
-    PRIMARY KEY (idVuelo),
-    FOREIGN KEY(idCompania) REFERENCES compania(idCompania), 
-    FOREIGN KEY(idOrigen) REFERENCES origen(idOrigen), 
-    FOREIGN KEY(idDestino) REFERENCES destino(idDestino) 
-);
+        CREATE TABLE compania (
+            idCompania INT(11) NOT NULL AUTO_INCREMENT,
+            nombre VARCHAR(60),
+            idioma CHAR(20),
+            rating INT(1),
+            PRIMARY KEY (idCompania)
+        );     
+
+                mysql> DESCRIBE compania;
+                +------------+-------------+------+-----+---------+----------------+
+                | Field      | Type        | Null | Key | Default | Extra          |
+                +------------+-------------+------+-----+---------+----------------+
+                | idCompania | int         | NO   | PRI | NULL    | auto_increment |
+                | nombre     | varchar(60) | YES  |     | NULL    |                |
+                | idioma     | char(20)    | YES  |     | NULL    |                |
+                | rating     | int         | YES  |     | NULL    |                |
+                +------------+-------------+------+-----+---------+----------------+
 
 
-CREATE TABLE compania (
-    idCompania INT(11) NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(60),
-    idioma CHAR(20),
-    rating INT(1),
-    PRIMARY KEY (idCompania)
-);        
+        CREATE TABLE vuelo (
+            idVuelo INT(11) NOT NULL AUTO_INCREMENT,
+            numeroVuelo INT(20),
+            idCompania INT(11),
+            numeroPasajeros INT(3),
+            numeroAsientos INT(3),
+            idOrigen INT(11),
+            idDestino INT(11),
+            PRIMARY KEY (idVuelo),
+            FOREIGN KEY(idCompania) REFERENCES compania(idCompania), 
+            FOREIGN KEY(idOrigen) REFERENCES origen(idOrigen), 
+            FOREIGN KEY(idDestino) REFERENCES destino(idDestino) 
+        );
+
+                mysql> DESCRIBE vuelo;
+                +-----------------+------+------+-----+---------+----------------+
+                | Field           | Type | Null | Key | Default | Extra          |
+                +-----------------+------+------+-----+---------+----------------+
+                | idVuelo         | int  | NO   | PRI | NULL    | auto_increment |
+                | numeroVuelo     | int  | YES  |     | NULL    |                |
+                | idCompania      | int  | YES  | MUL | NULL    |                |
+                | numeroPasajeros | int  | YES  |     | NULL    |                |
+                | numeroAsientos  | int  | YES  |     | NULL    |                |
+                | idOrigen        | int  | YES  | MUL | NULL    |                |
+                | idDestino       | int  | YES  | MUL | NULL    |                |
+                +-----------------+------+------+-----+---------+----------------+
 
 
-CREATE TABLE pasajero (
-    idPasajero INT(11) NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(60),
-    apellidos VARCHAR(100),
-    dni VARCHAR(9),
-    nacionalidad VARCHAR(20),
-    telefono INT (9),
-    idVuelo INT(11),
-    asiento INT(2),
-    PRIMARY KEY (idPasajero),
-    FOREIGN KEY(idVuelo) REFERENCES vuelo(idVuelo)
-);
+        CREATE TABLE pasajero (
+            idPasajero INT(11) NOT NULL AUTO_INCREMENT,
+            nombre VARCHAR(60),
+            apellidos VARCHAR(100),
+            dni VARCHAR(9),
+            nacionalidad VARCHAR(20),
+            telefono INT (9),
+            idVuelo INT(11),
+            asiento INT(2),
+            PRIMARY KEY (idPasajero),
+            FOREIGN KEY(idVuelo) REFERENCES vuelo(idVuelo)
+        );
+
+                mysql> DESCRIBE pasajero;
+                +--------------+--------------+------+-----+---------+----------------+
+                | Field        | Type         | Null | Key | Default | Extra          |
+                +--------------+--------------+------+-----+---------+----------------+
+                | idPasajero   | int          | NO   | PRI | NULL    | auto_increment |
+                | nombre       | varchar(60)  | YES  |     | NULL    |                |
+                | apellidos    | varchar(100) | YES  |     | NULL    |                |
+                | dni          | varchar(9)   | YES  |     | NULL    |                |
+                | nacionalidad | varchar(20)  | YES  |     | NULL    |                |
+                | telefono     | int          | YES  |     | NULL    |                |
+                | idVuelo      | int          | YES  | MUL | NULL    |                |
+                | asiento      | int          | YES  |     | NULL    |                |
+                +--------------+--------------+------+-----+---------+----------------+
+
+
+        AGREGAR COLUMNA
+
+                ALTER TABLE servicios ADD descripcion VARCHAR(100) NOT NULL
+
+                SELECT * FROM servicios;
+
+            Introducimos los registros necesarios
+
+                mysql> SELECT * FROM servicios;
+                +----+------------------------+--------+-------------+
+                | id | nombre                 | precio | descripcion |
+                +----+------------------------+--------+-------------+
+                |  1 | Cortecito              |  30.00 |             |
+                |  2 | Corte de Cabello Niño  | 100.00 |             |
+                |  3 | Corte de Barba         |  50.00 |             |
+                |  4 | Corte de Cabello Mujer | 100.00 |             |
+                |  5 | Corte de Cabello Niña  |  50.00 |             |
+                |  6 | Tinte de pelo          |  30.00 |             |
+                |  7 | Lavado de pelo         |   5.00 |             |
+                |  8 | Corte normal           |   4.00 |             |
+                |  9 | Corte mixto            |  40.00 |             |
+                +----+------------------------+--------+-------------+
+
+        MODIFICAR COLUMNA
+
+                ALTER TABLE servicios CHANGE descripcion nuevaDescripcion VARCHAR(40) NOT NULL
+
+            Puedo cambiarle el nombre poniéndole el nombre antiguo seguido del nuevo 'descripcion nuevaDescripcion'
+
+            Puedo cambiarle el () del tipo de variable pero NUNCA el tipo de variable. No puedo cambiar de VARCHAR a INT.
+
+                mysql> SELECT * FROM servicios;
+                +----+------------------------+--------+------------------+
+                | id | nombre                 | precio | nuevaDescripcion |
+                +----+------------------------+--------+------------------+
+                |  1 | Cortecito              |  30.00 |                  |
+                |  2 | Corte de Cabello Niño  | 100.00 |                  |
+                |  3 | Corte de Barba         |  50.00 |                  |
+                |  4 | Corte de Cabello Mujer | 100.00 |                  |
+                |  5 | Corte de Cabello Niña  |  50.00 |                  |
+                |  6 | Tinte de pelo          |  30.00 |                  |
+                |  7 | Lavado de pelo         |   5.00 |                  |
+                |  8 | Corte normal           |   4.00 |                  |
+                |  9 | Corte mixto            |  40.00 |                  |
+                +----+------------------------+--------+------------------+
+
+        BORRAR COLUMNA
+
+            ALTER TABLE servicios DROP COLUMN borrar;
+
+                mysql> SELECT * FROM servicios;
+                +----+------------------------+--------+------------------+--------+
+                | id | nombre                 | precio | nuevaDescripcion | borrar |
+                +----+------------------------+--------+------------------+--------+
+                |  1 | Cortecito              |  30.00 |                  |      0 |
+                |  2 | Corte de Cabello Niño  | 100.00 |                  |      0 |
+                |  3 | Corte de Barba         |  50.00 |                  |      0 |
+                |  4 | Corte de Cabello Mujer | 100.00 |                  |      0 |
+                |  5 | Corte de Cabello Niña  |  50.00 |                  |      0 |
+                |  6 | Tinte de pelo          |  30.00 |                  |      0 |
+                |  7 | Lavado de pelo         |   5.00 |                  |      0 |
+                |  8 | Corte normal           |   4.00 |                  |      0 |
+                |  9 | Corte mixto            |  40.00 |                  |      0 |
+                +----+------------------------+--------+------------------+--------+
+
+                mysql> ALTER TABLE servicios DROP COLUMN borrar;
+                Query OK, 0 rows affected (0.01 sec)
+                Records: 0  Duplicates: 0  Warnings: 0
+
+                mysql> SELECT * FROM servicios;
+                +----+------------------------+--------+-------------+
+                | id | nombre                 | precio | descripcion |
+                +----+------------------------+--------+-------------+
+                |  1 | Cortecito              |  30.00 |             |
+                |  2 | Corte de Cabello Niño  | 100.00 |             |
+                |  3 | Corte de Barba         |  50.00 |             |
+                |  4 | Corte de Cabello Mujer | 100.00 |             |
+                |  5 | Corte de Cabello Niña  |  50.00 |             |
+                |  6 | Tinte de pelo          |  30.00 |             |
+                |  7 | Lavado de pelo         |   5.00 |             |
+                |  8 | Corte normal           |   4.00 |             |
+                |  9 | Corte mixto            |  40.00 |             |
+                +----+------------------------+--------+-------------+
+
+        BORRAR TABLAS
+
+            DROP TABLE origen; 
+
+                mysql> SHOW TABLES;
+                +----------------------+
+                | Tables_in_peluqueria |
+                +----------------------+
+                | servicios            |
+                | tiempos              |
+                | origen               |
+                +----------------------+
+
+                mysql> DROP TABLE origen;
+                Query OK, 0 rows affected (0.02 sec)
+
+                mysql> SHOW TABLES;
+                +----------------------+
+                | Tables_in_peluqueria |
+                +----------------------+
+                | servicios            |
+                | tiempos              |
+                +----------------------+
+
+
+
+    - EJERCICIO -
+
+    Crear una nueva tabla llamada reservas con columas de 'idReserva' 'nombre' 'apellidos' 'hora' 'fecha' 'idServicio'
+    Crear 5 instancias
 
 
 
