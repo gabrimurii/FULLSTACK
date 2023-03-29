@@ -729,22 +729,207 @@
     Crear una nueva tabla llamada reservas con columas de 'idReserva' 'nombre' 'apellidos' 'hora' 'fecha' 'idServicio'
     Crear 5 instancias
 
+        mysql> CREATE TABLE reservas(
+            -> idReserva INT(11) NOT NULL AUTO_INCREMENT,
+            -> nombre VARCHAR(40) NOT NULL,
+            -> apellidos VARCHAR(80) NOT NULL,
+            -> hora TIME DEFAULT NULL,
+            -> fecha DATE DEFAULT NULL,
+            -> idservicio INT(11),
+            -> PRIMARY KEY (idReserva),
+            -> FOREIGN KEY(idservicio) REFERENCES servicios(id)
+            -> );
+        Query OK, 0 rows affected, 2 warnings (0.04 sec)
+
+            +-----------+-------------+--------------+----------+------------+------------+
+            | idReserva | nombre      | apellidos    | hora     | fecha      | idservicio |
+            +-----------+-------------+--------------+----------+------------+------------+
+            |         1 | Gabriel     | Murillo Peña | 00:00:01 | 2023-03-29 |          1 |
+            |         2 | Raquel      | Riesco Lopez | 00:00:15 | 2023-03-09 |          4 |
+            |         3 | Jose Manuel | Profe Profe  | 00:00:30 | 2023-03-09 |          7 |
+            |         4 | Adrian      | Murillo Peña | 00:00:45 | 2023-03-30 |          8 |
+            |         5 | Miguel      | Murillo Peña | 20:30:00 | 2023-04-01 |          3 |
+            |        14 | Pepe        | perez        | 12:01:13 | 2023-03-29 |          1 |
+            +-----------+-------------+--------------+----------+------------+------------+
+
+        Poner como valor CURTIME() y CURDATE para que seleccione el día y la hora actual 
+
+        Para ambas juntas creo que es NOW()
 
 
+        ORDENAR CONSULTA
+
+            SELECT * FROM reservas WHERE idReserva != 2 ORDER BY apellidos;
+
+        SELECCIONAR DATOS ENTRE DOS CONSULTAS    
+
+            SELECT * FROM reservas WHERE idReserva BETWEEN 3 AND 4;
 
 
+    FUNCIONES AGREGADORAS
+
+        CONTADOR
+
+            Cuenta el número de idReserva que hay por fecha y los agrupa
+
+                SELECT COUNT(idReserva), fecha
+                FROM reservas  
+                GROUP BY fecha;
+
+                +------------------+------------+
+                | COUNT(idReserva) | fecha      |
+                +------------------+------------+
+                |                2 | 2023-03-29 |
+                |                2 | 2023-03-09 |
+                |                1 | 2023-03-30 |
+                |                1 | 2023-04-01 |
+                +------------------+------------+
+
+                mysql> SELECT COUNT(idReserva), apellidos
+                    -> FROM reservas
+                    -> GROUP BY apellidos
+                    -> ORDER BY apellidos DESC;
+
+                +------------------+--------------+
+                | COUNT(idReserva) | apellidos    |
+                +------------------+--------------+
+                |                1 | Riesco Lopez |
+                |                1 | Profe Profe  |
+                |                1 | perez        |
+                |                3 | Murillo Peña |
+                +------------------+--------------+
 
 
+        SUMA
+
+            Crea un alias de manera virtual (puntual)
+
+                SELECT SUM(precio) AS totalServicios FROM servicios;
+
+                +----------------+
+                | totalServicios |
+                +----------------+
+                |         409.00 |
+                +----------------+
+
+            El alias totalServicios es un alias que se crea en es momento para mostrarlo y nada más, no existe en nuestra base de datos
+
+        
+        MINIMO / MAXIMO
+
+            Calcular el mínimo o el máximo
+
+                SELECT MIN(precio) AS precioMenor FROM servicios;
+
+                +-------------+
+                | precioMenor |
+                +-------------+
+                |        4.00 |
+                +-------------+
+
+                SELECT MAX(precio) AS precioMayor FROM servicios;
+
+                +-------------+
+                | precioMayor |
+                +-------------+
+                |      100.00 |
+                +-------------+
 
 
+        COMO BUSCAR EN BASE DE DATOS
+
+            Seleccionar todos los servicios que contengan la pantalla Corte
+
+                SELECT * FROM servicios WHERE nombre LIKE "%Corte%";
+
+                +----+------------------------+--------+--------------------------------------------------------------------------+
+                | id | nombre                 | precio | descripcion                                                              |
+                +----+------------------------+--------+--------------------------------------------------------------------------+
+                |  1 | Cortecito              |  30.00 | Pelo corto con maquinilla. Al 1, 2, 3 o 4                                |
+                |  2 | Corte de Cabello Niño  | 100.00 | Distintos estilos para los más pequeños. Enséñanos una foto y lo haremos |
+                |  3 | Corte de Barba         |  50.00 | Recorte de barba para cualquier longitud                                 |
+                |  4 | Corte de Cabello Mujer | 100.00 | Los mejores looks para las mujeres de todas las edades                   |
+                |  5 | Corte de Cabello Niña  |  50.00 | Para las más pequeñas, los estilos más modernos                          |
+                |  8 | Corte normal           |   4.00 | Corte al más estilo tradicional                                          |
+                |  9 | Corte mixto            |  40.00 | Para los indecisos                                                       |
+                +----+------------------------+--------+--------------------------------------------------------------------------+
+
+            Me busca el texto independientemente de su posición en el texto
+
+            LIKE busca en la columna nombre todos los registros que contengan la palabra 'Corte'
+
+            %corte  --> Todas las frases que terminen con 'corte'
+            corte%  --> Todas las frases que comiencen con 'corte'
+            %corte% --> independientemente de donde esté en el texto
 
 
+        CONCATENAR COLUMNAS
 
+            Crea un alias nuevo y junta campos de una tabla
 
+                SELECT CONCAT(nombre, " ", apellidos) AS nombreCompleto FROM reservas;
 
+                +-------------------------+
+                | nombreCompleto          |
+                +-------------------------+
+                | Gabriel Murillo Peña    |
+                | Raquel Riesco Lopez     |
+                | Jose Manuel Profe Profe |
+                | Adrian Murillo Peña     |
+                | Miguel Murillo Peña     |
+                | Pepe perez              |
+                +-------------------------+
 
+            Búsqueda + concatenacion
 
+                SELECT * FROM reservas WHERE CONCAT(nombre, " ", apellidos) LIKE "%Murillo%";
 
+                +-----------+---------+--------------+----------+------------+------------+
+                | idReserva | nombre  | apellidos    | hora     | fecha      | idservicio |
+                +-----------+---------+--------------+----------+------------+------------+
+                |         1 | Gabriel | Murillo Peña | 00:00:01 | 2023-03-29 |          1 |
+                |         4 | Adrian  | Murillo Peña | 00:00:45 | 2023-03-30 |          8 |
+                |         5 | Miguel  | Murillo Peña | 20:30:00 | 2023-04-01 |          3 |
+                +-----------+---------+--------------+----------+------------+------------+
 
+            Mostrar hora, fecha y nombre concatenado con apellido
+
+                SELECT hora, fecha, CONCAT(nombre, " ", apellidos) AS nombreCompleto FROM reservas;
+
+                +----------+------------+-------------------------+
+                | hora     | fecha      | nombreCompleto          |
+                +----------+------------+-------------------------+
+                | 00:00:01 | 2023-03-29 | Gabriel Murillo Peña    |
+                | 00:00:15 | 2023-03-09 | Raquel Riesco Lopez     |
+                | 00:00:30 | 2023-03-09 | Jose Manuel Profe Profe |
+                | 00:00:45 | 2023-03-30 | Adrian Murillo Peña     |
+                | 20:30:00 | 2023-04-01 | Miguel Murillo Peña     |
+                | 12:01:13 | 2023-03-29 | Pepe perez              |
+                +----------+------------+-------------------------+
+
+        
+        MULTIPLES CONDICIONES
+
+            Selecciona multiples valores
+
+                SELECT * FROM reservas WHERE idReserva IN(1, 3, 4);
+
+                +-----------+-------------+--------------+----------+------------+------------+
+                | idReserva | nombre      | apellidos    | hora     | fecha      | idservicio |
+                +-----------+-------------+--------------+----------+------------+------------+
+                |         1 | Gabriel     | Murillo Peña | 00:00:01 | 2023-03-29 |          1 |
+                |         3 | Jose Manuel | Profe Profe  | 00:00:30 | 2023-03-09 |          7 |
+                |         4 | Adrian      | Murillo Peña | 00:00:45 | 2023-03-30 |          8 |
+                +-----------+-------------+--------------+----------+------------+------------+
+
+            Selecciona multiples valores con multiples condiciones    
+                
+                SELECT * FROM reservas WHERE idReserva IN(1, 3, 4) AND idServicio=7;
+
+                +-----------+-------------+-------------+----------+------------+------------+
+                | idReserva | nombre      | apellidos   | hora     | fecha      | idservicio |
+                +-----------+-------------+-------------+----------+------------+------------+
+                |         3 | Jose Manuel | Profe Profe | 00:00:30 | 2023-03-09 |          7 |
+                +-----------+-------------+-------------+----------+------------+------------+
 
 
