@@ -500,7 +500,7 @@
             pais VARCHAR(60),
             zonaHoraria TIMESTAMP,
             idioma CHAR(20),
-            horaSalida DATETIME,
+            horaSalida DATETIME,            (BORRAR)
             PRIMARY KEY (idOrigen)
             );
 
@@ -513,7 +513,7 @@
                 | pais        | varchar(60) | YES  |     | NULL    |                |
                 | zonaHoraria | timestamp   | YES  |     | NULL    |                |
                 | idioma      | char(20)    | YES  |     | NULL    |                |
-                | horaSalida  | datetime    | YES  |     | NULL    |                |
+                | horaSalida  | datetime    | YES  |     | NULL    |                |       (BORRAR)
                 +-------------+-------------+------+-----+---------+----------------+
 
         CREATE TABLE destino (
@@ -565,7 +565,7 @@
             numeroPasajeros INT(3),
             numeroAsientos INT(3),
             idOrigen INT(11),
-            idDestino INT(11),
+            idDestino INT(11),  
             PRIMARY KEY (idVuelo),
             FOREIGN KEY(idCompania) REFERENCES compania(idCompania), 
             FOREIGN KEY(idOrigen) REFERENCES origen(idOrigen), 
@@ -932,4 +932,112 @@
                 |         3 | Jose Manuel | Profe Profe | 00:00:30 | 2023-03-09 |          7 |
                 +-----------+-------------+-------------+----------+------------+------------+
 
+
+    REGLAS DE NORMALIZACIÓN
+
+        Reglas que hay que llevar a cabo para estructurar bien nuestra base de datos
+        
+        Optimizan nuestras bases de datos
+
+        Existen muchas reglas de normalización pero las tres primeras son las más importantes
+
+        Siguen un orden a la hora de cumplirlas, si no cumple la anterior no puede cumplir la siguiente
+
+
+            PRIMERA REGLA DE NORMALIZACIÓN (1NF)
+
+                Una columna solo puede tener un valor y no debe haber grupos repetidos
+
+            
+            SEGUNDA REGLA DE NORMALIZACIÓN (2NF)
+
+                Una vez aplicada la primera regla aplicamos la segunda
+
+                Para evitar valores duplicados, creamos un 'id' y lo enlazamos con una tabla externa
+
+                2NF se utiliza en Llaves primarias compuestas
+
+                Cuando tenemos datos repetidos en una tabla (por ejemplo, un nombre), lo metemos en una tabla nueva y lo relacionamos con un ID
+
+            TERCERA REGLA DE NORMALIZACIÓN (3NF)
+
+                Se centra en las columnas que están fuera de la PK y la FK
+
+                No tiene sentido añadir campos que no tengan relación con la tabla
+
+    
+    DENORMALIZACIÓN
+
+        En algunos casos no se cumplen las Normas De Normalización.
+
+        Por ejemplo, si un cliente tiene dos números de teléfono.
+
+        Una tabla con dos columnas, una con teléfono y otra con teléfono2
+
+    
+    DIAGRAMAS ER (Diagramas Entidad Relación)
+
+        Son diagramas que contienen información de las tablas y las relaciones entre las mismas
+
+        Hay herramientas de pago y gratuitas para generar estos diagramas
+
+        1º Nombre de la tabla --- CLIENTES
+        2º Campos de la tabla --- idCliente / nombre / apellidos / teléfono / email
+        3º ¿Cuál es mi PK?    --- idCliente
+
+
+        +----------------+          +---------------+           +--------------+            +----------------------+
+            clientes                    servicios                    citas                      citaServicios
+        +----------------+          +---------------+           +--------------+            +----------------------+
+            idCliente (PK)              idservicio (PK)             idCita (PK)                 idCitaServicio (PK)
+            nombre                      nombre                      fecha                       idCita  (FK)
+            apellidos                   precio                      hora                        idServicio  (FK)
+            telefono                +---------------+               idCliente (FK)
+            email                                               +--------------+ 
+        +----------------+                                      
+
+        Un cliente puede tener muchas citas 1:N --> + idCliente (clientes) -> idCliente (citas)
+
+        Muchas citas pueden tener muchos servicios y viceversa N:N --> <- idCita (citas) -> idCita (citaServicios)
+
+        Muchos servicios pueden tener muchas citaServicios N:N --> <- idServicio (cita servicios) -> idServicio (servicios)
+
+
+
+
+    UNIR DOS TABLAS = INNER JOIN
+
+        Muestra por pantalla dos tablas relacionadas entre sí mediante su id
+
+            SELECT * FROM tablaActual
+            INNER JOIN tablaReferencia ON tablaReferencia.idReferencia = tablaActual.idActualReferencia
+                =
+            LEFT JOIN
+
+            RIGHT JOIN
+
+            mysql> SELECT * FROM citas
+                -> INNER JOIN clientes ON clientes.idClientes = citas.idClientes;
+            +---------+------------+----------+------------+------------+---------+----------------+-----------+-------------------------------+
+            | idCitas | fecha      | hora     | idClientes | idClientes | nombre  | apellidos      | telefono  | email                         |
+            +---------+------------+----------+------------+------------+---------+----------------+-----------+-------------------------------+
+            |       2 | 2023-03-30 | 14:06:50 |          1 |          1 | Gabriel | Murillo Peña   | 666666666 | gabrimurii@gmail.com          |
+            |       4 | 2023-04-01 | 14:36:18 |          1 |          1 | Gabriel | Murillo Peña   | 666666666 | gabrimurii@gmail.com          |
+            |       1 | 2023-03-30 | 14:06:50 |          2 |          2 | Raquel  | Riesco Lopez   | 777777777 | raquelriesco@gmail.com        |
+            |       3 | 2023-03-30 | 14:06:50 |          3 |          3 | Adrian  | Perez Gonzalez | 888888888 | adrianperezgonzalez@gmail.com |
+            +---------+------------+----------+------------+------------+---------+----------------+-----------+-------------------------------+
+
+
+    UNIR MÁS DE DOS TABLAS
+
+            mysql> SELECT * FROM citasServicios
+            -> LEFT JOIN citas ON citas.idCitas = citasServicios.idCitas
+            -> LEFT JOIN servicios ON servicios.id = citasServicios.idServicios;
+            +------------------+---------+-------------+---------+------------+----------+------------+------+-----------------------+--------+---------------------------------------------------+
+            | idCitasServicios | idCitas | idServicios | idCitas | fecha      | hora     | idClientes | id   | nombre                | precio | descripcion                                       |
+            +------------------+---------+-------------+---------+------------+----------+------------+------+-----------------------+--------+---------------------------------------------------+
+            |                1 |       1 |           9 |       1 | 2023-03-30 | 14:06:50 |          2 |    9 | Corte mixto           |  40.00 | Para los indecisos                                |
+            |                2 |       2 |           7 |       2 | 2023-03-30 | 14:06:50 |          1 |    7 | Lavado de pelo        |   5.00 | Lavado de pelo y masaje con los mejores productos |
+            |                3 |       3 |           5 |       3 | 2023-03-30 | 14:06:50 |          3 |    5 | Corte de Cabello Niña |  50.00 | Para las más pequeñas, los estilos más modernos   |
+            +------------------+---------+-------------+---------+------------+----------+------------+------+-----------------------+--------+---------------------------------------------------+
 
