@@ -1042,7 +1042,7 @@
             +------------------+---------+-------------+---------+------------+----------+------------+------+-----------------------+--------+---------------------------------------------------+
 
 
-    SACAR X PARAMETROS POR PANTALLA 
+    SACAR X INFORMACIÓN POR PANTALLA 
 
             mysql> SELECT citas.idCitas, servicios.nombre, citas.fecha FROM citasServicios
             -> LEFT JOIN citas ON citas.idCitas = citasServicios.idCitas
