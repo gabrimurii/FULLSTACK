@@ -1014,7 +1014,7 @@
                 =
             LEFT JOIN
 
-            RIGHT JOIN
+            RIGHT JOIN  --> Empieza a leer la información de derecha a izquierda. Lee antes la Referencia y a partir de ahí extrae los datos
 
             mysql> SELECT * FROM citas
                 -> INNER JOIN clientes ON clientes.idClientes = citas.idClientes;
