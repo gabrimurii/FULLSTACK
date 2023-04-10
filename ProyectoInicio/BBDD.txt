@@ -69,9 +69,11 @@
 
                         2            Andrea
 
-            Tabla CITAS con ID, CLIENTELD y SERVICIOS
+            Tabla CITAS con ID, CLIENTEID y SERVICIOS
 
-                        ID          CLIENTELD (FK)       SERVICIOS
+                Juan tiene 3 instancias
+
+                        ID          CLIENTEID (FK)       SERVICIOS
 
                         1           1                    Corte Cabello
                         
@@ -385,7 +387,7 @@
 
             - VER CONTENIDO DE UNA TABLA (READ)
 
-                    SELECT*FROM servicios;
+                    SELECT * FROM servicios;
 
                     SELECT nombre FROM servicios; (solo el nombre)
                     SELECT nombre,precio FROM servicios; (nombre y precio)
@@ -817,7 +819,7 @@
         
         MINIMO / MAXIMO
 
-            Calcular el mínimo o el máximo
+            Calcular el mínimo o el máximo y lo crea en un alias
 
                 SELECT MIN(precio) AS precioMenor FROM servicios;
 
@@ -838,7 +840,7 @@
 
         COMO BUSCAR EN BASE DE DATOS
 
-            Seleccionar todos los servicios que contengan la pantalla Corte
+            Seleccionar todos los servicios que contengan la palabra Corte
 
                 SELECT * FROM servicios WHERE nombre LIKE "%Corte%";
 
